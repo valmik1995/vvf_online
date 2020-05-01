@@ -24,7 +24,7 @@ SECRET_KEY = 'v66%u1k=(y^f11^3#b^#okyh&q*@7afu52ywz4_@=$r(e6cn8c'
 
 # SECURITY WARNING: don't run with debug turnedR
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['valeriopodrini.it']
 
 
 # Application definition
