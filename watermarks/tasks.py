@@ -1,6 +1,12 @@
 from __future__ import absolute_import, unicode_literals
-from celery import shared_task, current_task
+import os
 import time
+import subprocess
+from celery import shared_task, current_task
+from django.conf import settings
+from watermarks.models import Photo
+from PIL import Image
+from time import sleep
 
 @shared_task
 def add(x, y):
@@ -30,7 +36,7 @@ def photo_watermark():
 
         output_file_name = os.path.join('watermarks', '{}'.format(filename))
         output_file_path = os.path.join(settings.MEDIA_ROOT, output_file_name)
-        watermark = '/Users/valmik/PycharmProjects/vigilfuoco/multimedia/watermarks/IMG_4156.PNG'
+        watermark = '/Users/valmik/PycharmProjects/vvf_online/media/watermarks/IMG_4156.PNG'
 
         # subprocess.call(['/usr/local/bin/convert', input_file_path, '-resize', '64x64', output_file_path])
         def create_watermark(image_path, final_image_path, watermark):
