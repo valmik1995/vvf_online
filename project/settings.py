@@ -22,10 +22,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'v66%u1k=(y^f11^3#b^#okyh&q*@7afu52ywz4_@=$r(e6cn8c'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# SECURITY WARNING: don't run with debug turnedR
 
-ALLOWED_HOSTS = ['www.valeriopodrini.it', 'valeriopodrini.it']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -53,6 +52,9 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'project.urls'
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
 
 TEMPLATES = [
     {
@@ -118,7 +120,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'it'
 
 TIME_ZONE = 'UTC'
 
@@ -131,9 +133,18 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
-
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+# Django si aspetterà di trovare files in una cartella chiamata "static" presente in BASE_DIR.
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+
+
+MEDIA_URL = 'media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+IMAGES_DIR = os.path.join(MEDIA_ROOT, 'media/images')
+
+
 
 CELERY_BROKER_URL = 'amqp://localhost'
 CELERY_RESULT_BACKEND = 'db+postgresql://vvf:Dmdersse@12@localhost/vvf'

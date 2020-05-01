@@ -1,33 +1,36 @@
- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>{% block title %}Hello Celery{% endblock %}</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
+{% extends 'base.html' %}
 
-<nav class="navbar navbar-inverse" style="border-radius: 0px;">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Hello Celery</a>
+{% block content %}
+  <h1 class="page-header">
+    Foto
+    <small>/ {% block title %}{% endblock %}</small>
+  </h1>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Examples</h3>
+        </div>
+        <div class="list-group">
+          <a href="{% url 'watermarks:basic_upload' %}" class="list-group-item{% if request.path == '/watermarks/basic-upload/' %} active{% endif %}">
+            Basic Upload
+          </a>
+        </div>
+        <div class="list-group pt-1">
+          <form method="post" action="{% url 'watermarks:clear_database' %}">
+            {% csrf_token %}
+            <input type="hidden" name="next" value="{{ request.path }}">
+            <button type="submit" class="btn btn-danger pull-right">
+              <span class="glyphicon glyphicon-trash"></span> Clear Database
+            </button>
+          </form>
+
+        </div>
+      </div>
     </div>
-    <ul class="nav navbar-nav">
-      <li class="{% block home_active %}{% endblock %}">
-	<a href="{% url 'index' %}">Home</a></li>
-      <li class="{% block test_active %}{% endblock %}">
-	<a href="{% url 'test_page' %}">Test</a></li>
-    </ul>
+    <div class="col-md-9">
+      {% block photos_content %}
+      {% endblock %}
+    </div>
   </div>
-</nav>
-
-<div class="container-fluid">
-  {% block body %}
-  {% endblock %}
-</div>
-
-</body>
-</html> 
+{% endblock %}

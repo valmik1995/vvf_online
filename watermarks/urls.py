@@ -1,11 +1,18 @@
-from django.urls import include, path
 from django.conf.urls import url
-from watermarks.views import index, test_page, update_status, abort_test, start_test
 
-urlpatterns = [
-    path('index/', index, name='index'),
-    path('test_page/', test_page, name="test_page"),
-    path('start_test/', start_test, name="start_test"),
-    path('update/', update_status, name='update_status'),
-    path('abort_test/', abort_test, name="abort_test"),
+from . import views
+
+app_name = 'watermarks'
+
+urlpatterns= [
+    url(r'^index/$', views.index, name="index"),
+    url(r'^test_page/$', views.test_page, name="test_page"),
+    url(r'^start_test/$', views.start_test, name="start_test"),
+    url(r'^[\s\S]*/update_status/$', views.update_status, name='update_status'),
+    url(r'^abort_test/$', views.abort_test, name="abort_test"),
+]
+
+urlpatterns += [
+    url(r'^basic-upload/$', views.BasicUploadView.as_view(), name='basic_upload'),
+    url(r'^clear/$', views.clear_database, name='clear_database'),
 ]
