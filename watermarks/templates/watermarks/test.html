@@ -1,14 +1,14 @@
-{% extends 'watermarks/base.html' %}
+{% extends 'base.html' %}
 {% block title %}Celery Test{% endblock %}
 {% block test_active %}active{% endblock %}
 
-{% block body %}
+{% block content %}
 <div class="row">
   <div class="col-sm-8">
     <div class="page-header">
       <h2>Watch the numbers change</h2>
     </div>
-    <a href="{% url 'start_test' %}" role="button" class="btn btn-primary btn-lg btn-block">Start</a>
+    <a href="{% url 'watermarks:start_test' %}" role="button" class="btn btn-primary btn-lg btn-block">Start</a>
 
     <h3>Look under the process though JSON.</h3>
     <label>Data:</label><br>
