@@ -26,8 +26,8 @@ def increment(Limit, wait_time=0.5):
         time.sleep(wait_time)
 
 
-@shared_task
-def photo_watermark():
+@shared_task(bind=True)
+def photo_watermark(self):
     path = Photo.objects.all()
     for star in path.iterator():
         input_file_path = star.file.path
@@ -75,9 +75,12 @@ def photo_watermark():
             transparent2 = transparent.resize((basewidth,hsize), Image.ANTIALIAS)
             transparent2.save(final_image_path,'PNG', dpi=[300,300])
 
+
+
         create_watermark(input_file_path, output_file_path, watermark)
 
         # Save the new file in the database
         change = Photo.objects.get(id = star.id)
         change.file_watermark = output_file_name
         change.save()
+    

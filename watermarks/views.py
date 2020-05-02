@@ -32,7 +32,9 @@ class BasicUploadView(View):
 def clear_database(request):
     for photo in Photo.objects.all():
         photo.file.delete()
+        photo.file_watermark.delete()
         photo.delete()
+
     return redirect(request.POST.get('next'))
 
 
