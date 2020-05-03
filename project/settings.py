@@ -146,4 +146,4 @@ IMAGES_DIR = os.path.join(MEDIA_ROOT, 'media/images')
 
 
 CELERY_BROKER_URL = 'amqp://localhost'
-CELERY_RESULT_BACKEND = 'db+postgresql://vvf:Dmdersse@12@localhost/vvf'
+CELERY_RESULT_BACKEND = 'db+postgresql+psycopg2://vvf:Dmdersse@12@localhost/vvf'

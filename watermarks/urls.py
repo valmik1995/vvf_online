@@ -1,11 +1,12 @@
 from django.conf.urls import url
-
+from django.urls import path
 from . import views
+from .views import get_status
 
 app_name = 'watermarks'
 
 urlpatterns= [
-    url(r'^index/$', views.index, name="index"),
+    url(r'^$', views.index, name="index"),
     url(r'^test_page/$', views.test_page, name="test_page"),
     url(r'^start_test/$', views.start_test, name="start_test"),
     url(r'^[\s\S]*/update_status/$', views.update_status, name='update_status'),
@@ -15,4 +16,10 @@ urlpatterns= [
 urlpatterns += [
     url(r'^basic-upload/$', views.BasicUploadView.as_view(), name='basic_upload'),
     url(r'^clear/$', views.clear_database, name='clear_database'),
+    # path("basic-upload/<task_id>/", get_status, name="get_status"),
+]
+
+urlpatterns += [
+    # other url configs here here...
+    url(r'^(?P<task_id>[\w-]+)/$', views.get_progress, name='task_status')
 ]

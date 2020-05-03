@@ -2,7 +2,7 @@ from django.shortcuts import render, HttpResponse, redirect
 from django.http import HttpResponseRedirect, JsonResponse
 from django.urls import reverse
 from django.views import View
-
+from django.views.decorators.csrf import csrf_exempt
 from project.celery import app
 from django_celery_results.models import TaskResult
 from celery.result import AsyncResult
@@ -23,11 +23,26 @@ class BasicUploadView(View):
         form = PhotoForm(self.request.POST, self.request.FILES)
         if form.is_valid():
             photo = form.save()
-            data = {'is_valid': True, 'name': photo.file.name, 'url': photo.file.url}
             image_watermark = photo_watermark.delay()
+            data = {'is_valid': True,
+                'name': photo.file.name,
+                'url': photo.file.url,
+                'task_id': image_watermark.id,
+                'task_status': image_watermark.id }
+
         else:
             data = {'is_valid': False}
         return JsonResponse(data)
+
+@csrf_exempt
+def get_status(request, task_id):
+    task_result = AsyncResult(task_id)
+    result = {
+        "task_id": task_id,
+        "task_status": task_result.status,
+        "task_result": task_result.result
+    }
+    return JsonResponse(result, status=200)
 
 def clear_database(request):
     for photo in Photo.objects.all():
@@ -100,3 +115,11 @@ def abort_test(request):
         return HttpResponseRedirect(reverse('watermarks:start_test') + '?job=' + currentProcess.task_id)
     except:
         return HttpResponseRedirect(reverse('watermarks:start_test'))
+
+def get_progress(request, task_id):
+    result = AsyncResult(task_id)
+    response_data = {
+        'state': result.state,
+        'details': result.info,
+    }
+    return HttpResponse(json.dumps(response_data), content_type='application/json')

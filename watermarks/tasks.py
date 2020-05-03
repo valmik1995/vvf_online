@@ -83,4 +83,3 @@ def photo_watermark(self):
         change = Photo.objects.get(id = star.id)
         change.file_watermark = output_file_name
         change.save()
-    
