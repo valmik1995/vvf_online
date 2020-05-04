@@ -13,15 +13,15 @@
         </div>
         <div class="list-group">
           <a href="{% url 'watermarks:basic_upload' %}" class="list-group-item{% if request.path == '/watermarks/basic-upload/' %} active{% endif %}">
-            Basic Upload
+            Watermaks Semplice
           </a>
         </div>
-        <div class="list-group pt-1">
+        <div class="list-group mt-4">
           <form method="post" action="{% url 'watermarks:clear_database' %}">
             {% csrf_token %}
             <input type="hidden" name="next" value="{{ request.path }}">
             <button type="submit" class="btn btn-danger pull-right">
-              <span class="glyphicon glyphicon-trash"></span> Clear Database
+              <span class="glyphicon glyphicon-trash"></span> Cancella Photo
             </button>
           </form>
 

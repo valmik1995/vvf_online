@@ -2,7 +2,7 @@
 {% block uploads_active %}active{% endblock %}
 {% load static %}
 
-{% block title %}Basic Upload{% endblock %}
+{% block title %}Upload Watermarks{% endblock %}
 
 {% block javascript %}
 {# JQUERY FILE UPLOAD SCRIPTS #}
@@ -11,14 +11,14 @@
 <script src="{% static 'js/jquery-file-upload/jquery.fileupload.js' %}"></script>
 
 {# PHOTOS PAGE SCRIPTS #}
-<script src="{% static 'watermarks/js/uploads.js' %}"></script>
-<script src="{% static 'watermarks/js/main.js' %}"></script>
+<script src="{% static 'js/watermarks/uploads.js' %}"></script>
+<script src="{% static 'js/watermarks/main.js' %}"></script>
 {% endblock %}
 
 {% block photos_content %}
 <div style="margin-bottom: 20px;">
   <button type="button" class="btn btn-primary js-upload-photos">
-    <span class="glyphicon glyphicon-cloud-upload"></span> Upload photos
+    <span class="glyphicon glyphicon-cloud-upload"></span> Uploads Photo
   </button>
   <input id="fileupload" type="file" name="file" multiple style="display: none;" data-url="{% url 'watermarks:basic_upload' %}" data-form-data='{"csrfmiddlewaretoken": "{{ csrf_token }}"}'>
 </div>
@@ -26,7 +26,7 @@
 <!-- Gallery -->
 <div class="container" id="gallery">
 
-  <h1 class="font-weight-light text-left text-lg-left mt-4 mb-0">Gallery</h1>
+  <h1 class="font-weight-light text-left text-lg-left mt-4 mb-0">Galleria</h1>
 
   <hr class="mt-2 mb-5">
 
@@ -48,7 +48,7 @@
 <!-- Watermark -->
 <div class="container" id="watermark">
 
-  <h1 class="font-weight-light text-left text-lg-left mt-4 mb-0">Watermark Gallery</h1>
+  <h1 class="font-weight-light text-left text-lg-left mt-4 mb-0">Galleria Watermarks</h1>
 
   <hr class="mt-2 mb-5">
 

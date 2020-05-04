@@ -1,0 +1,82 @@
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-04 03:49:40,834: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-04 03:49:40,857: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-04 03:49:41,906: INFO/MainProcess] mingle: all alone
+[2020-05-04 03:49:41,927: WARNING/MainProcess] /home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py:203: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  leak, never use this setting in production environments!''')
+[2020-05-04 03:49:41,928: INFO/MainProcess] celery@AdiRimini.Org ready.
+[2020-05-04 03:49:41,930: INFO/MainProcess] Received task: watermarks.tasks.photo_watermark[941e0a23-8e88-4219-b596-8880f5d3a5bf]  
+[2020-05-04 03:49:41,931: INFO/MainProcess] Received task: watermarks.tasks.photo_watermark[150d0bed-ee7e-47fb-bea1-af5325e56f5b]  
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-04 03:49:42,201: INFO/ForkPoolWorker-7] Task watermarks.tasks.photo_watermark[941e0a23-8e88-4219-b596-8880f5d3a5bf] succeeded in 0.16253645904362202s: None
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-04 03:49:42,256: INFO/ForkPoolWorker-8] Task watermarks.tasks.photo_watermark[150d0bed-ee7e-47fb-bea1-af5325e56f5b] succeeded in 0.21703341975808144s: None
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-04 03:50:09,018: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-04 03:50:09,045: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-04 03:50:10,102: INFO/MainProcess] mingle: all alone
+[2020-05-04 03:50:10,121: WARNING/MainProcess] /home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py:203: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  leak, never use this setting in production environments!''')
+[2020-05-04 03:50:10,121: INFO/MainProcess] celery@AdiRimini.Org ready.
+[2020-05-04 03:50:30,564: INFO/MainProcess] Received task: watermarks.tasks.photo_watermark[6b2d1aff-c4f8-47a0-acf2-83873ba3823a]  
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-04 03:50:31,396: INFO/ForkPoolWorker-7] Task watermarks.tasks.photo_watermark[6b2d1aff-c4f8-47a0-acf2-83873ba3823a] succeeded in 0.824420016258955s: None
+[2020-05-04 04:03:20,565: INFO/MainProcess] Received task: watermarks.tasks.photo_watermark[845050dd-fa3b-4059-929c-4a441edc2e48]  
+[2020-05-04 04:03:21,694: ERROR/ForkPoolWorker-7] Task watermarks.tasks.photo_watermark[845050dd-fa3b-4059-929c-4a441edc2e48] raised unexpected: UnidentifiedImageError("cannot identify image file '/home/adirimini/vpodrini/project/media/photos/IMG_8297.HEIC'")
+Traceback (most recent call last):
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/app/trace.py", line 385, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/app/trace.py", line 650, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/adirimini/vpodrini/project/watermarks/tasks.py", line 80, in photo_watermark
+    create_watermark(input_file_path, output_file_path, watermark)
+  File "/home/adirimini/vpodrini/project/watermarks/tasks.py", line 43, in create_watermark
+    main = Image.open(image_path)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/PIL/Image.py", line 2896, in open
+    "cannot identify image file %r" % (filename if filename else fp)
+PIL.UnidentifiedImageError: cannot identify image file '/home/adirimini/vpodrini/project/media/photos/IMG_8297.HEIC'
+[2020-05-04 04:04:39,112: INFO/MainProcess] Received task: watermarks.tasks.photo_watermark[43d69e66-cb60-4b25-814e-27195f820c1a]  
+[2020-05-04 04:04:40,940: INFO/ForkPoolWorker-7] Task watermarks.tasks.photo_watermark[43d69e66-cb60-4b25-814e-27195f820c1a] succeeded in 1.8256291784346104s: None
+[2020-05-04 04:06:42,377: INFO/MainProcess] Received task: watermarks.tasks.photo_watermark[4f952ed7-83ac-4d37-b91e-a830c827f916]  
+[2020-05-04 04:06:44,267: INFO/ForkPoolWorker-7] Task watermarks.tasks.photo_watermark[4f952ed7-83ac-4d37-b91e-a830c827f916] succeeded in 1.888281075283885s: None
+[2020-05-04 04:08:24,889: INFO/MainProcess] Received task: watermarks.tasks.photo_watermark[046f780b-e666-42e0-bb48-666776f9ef95]  
+[2020-05-04 04:08:25,429: INFO/ForkPoolWorker-7] Task watermarks.tasks.photo_watermark[046f780b-e666-42e0-bb48-666776f9ef95] succeeded in 0.5387398023158312s: None

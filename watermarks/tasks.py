@@ -36,7 +36,7 @@ def photo_watermark(self):
 
         output_file_name = os.path.join('watermarks', '{}'.format(filename))
         output_file_path = os.path.join(settings.MEDIA_ROOT, output_file_name)
-        watermark = '/Users/valmik/PycharmProjects/vvf_online/media/watermarks/IMG_4156.PNG'
+        watermark = '/home/adirimini/vpodrini/project/media/watermarks/IMG_4156.PNG'
 
         # subprocess.call(['/usr/local/bin/convert', input_file_path, '-resize', '64x64', output_file_path])
         def create_watermark(image_path, final_image_path, watermark):

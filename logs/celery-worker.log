@@ -1,0 +1,21 @@
+ 
+ -------------- celery@AdiRimini.Org v4.4.2 (cliffs)
+--- ***** ----- 
+-- ******* ---- Linux-4.4.0-171-generic-x86_64-with-debian-stretch-sid 2020-05-04 03:49:38
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         project:0x7fbbd1df4630
+- ** ---------- .> transport:   amqp://guest:**@localhost:5672//
+- ** ---------- .> results:     postgresql+psycopg2://vvf:**@localhost/vvf
+- *** --- * --- .> concurrency: 10 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . watermarks.tasks.add
+  . watermarks.tasks.increment
+  . watermarks.tasks.photo_watermark
+

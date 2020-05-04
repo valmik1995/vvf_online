@@ -3,7 +3,7 @@
  <html lang="it">
 
  <head>
-   <title>{% block title %}Hello Celery{% endblock %}</title>
+   <title>{% block title %}CoEm VvF{% endblock %}</title>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -16,7 +16,7 @@
    <nav class="navbar navbar-inverse" style="border-radius: 0px;">
      <div class="container-fluid">
        <div class="navbar-header">
-         <a class="navbar-brand" href="#">Hello Celery</a>
+         <a class="navbar-brand" href="#">CoEm VvF</a>
        </div>
        <ul class="nav navbar-nav">
          <li class="{% block home_active %}{% endblock %}">
@@ -25,7 +25,7 @@
          <li class="{% block test_active %}{% endblock %}">
            <a href="{% url 'watermarks:test_page' %}">Test</a>
          <li class="{% block uploads_active %}{% endblock %}">
-           <a href="{% url 'watermarks:basic_upload' %}">Uploads</a>
+           <a href="{% url 'watermarks:basic_upload' %}">Watermarks</a>
          </li>
 
        </ul>
