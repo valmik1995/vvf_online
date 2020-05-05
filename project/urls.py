@@ -21,6 +21,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    url(r'^', include('caricamento.urls')),
     url(r'^', include('watermarks.urls')),
 ]
 

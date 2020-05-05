@@ -80,3 +80,717 @@ PIL.UnidentifiedImageError: cannot identify image file '/home/adirimini/vpodrini
 [2020-05-04 04:06:44,267: INFO/ForkPoolWorker-7] Task watermarks.tasks.photo_watermark[4f952ed7-83ac-4d37-b91e-a830c827f916] succeeded in 1.888281075283885s: None
 [2020-05-04 04:08:24,889: INFO/MainProcess] Received task: watermarks.tasks.photo_watermark[046f780b-e666-42e0-bb48-666776f9ef95]  
 [2020-05-04 04:08:25,429: INFO/ForkPoolWorker-7] Task watermarks.tasks.photo_watermark[046f780b-e666-42e0-bb48-666776f9ef95] succeeded in 0.5387398023158312s: None
+[2020-05-04 04:26:28,398: INFO/MainProcess] Received task: watermarks.tasks.photo_watermark[50d73653-df28-4ba5-ab3b-a72a57a4a396]  
+[2020-05-04 04:26:30,120: INFO/ForkPoolWorker-7] Task watermarks.tasks.photo_watermark[50d73653-df28-4ba5-ab3b-a72a57a4a396] succeeded in 1.7207992915064096s: None
+[2020-05-04 05:59:54,979: INFO/MainProcess] Received task: watermarks.tasks.photo_watermark[609dee83-72ca-41dc-a1eb-6cc6c38f2880]  
+[2020-05-04 05:59:56,820: INFO/ForkPoolWorker-7] Task watermarks.tasks.photo_watermark[609dee83-72ca-41dc-a1eb-6cc6c38f2880] succeeded in 1.8388151749968529s: None
+[2020-05-04 13:19:51,719: INFO/MainProcess] Received task: watermarks.tasks.increment[b06a8a17-fd21-4900-8e8f-723eb2b1c763]  
+[2020-05-04 13:19:51,729: WARNING/ForkPoolWorker-7] Counter: 0
+[2020-05-04 13:19:52,236: WARNING/ForkPoolWorker-7] Counter: 1
+[2020-05-04 13:19:52,747: WARNING/ForkPoolWorker-7] Counter: 2
+[2020-05-04 13:19:53,258: WARNING/ForkPoolWorker-7] Counter: 3
+[2020-05-04 13:19:53,767: WARNING/ForkPoolWorker-7] Counter: 4
+[2020-05-04 13:19:54,274: WARNING/ForkPoolWorker-7] Counter: 5
+[2020-05-04 13:19:54,783: WARNING/ForkPoolWorker-7] Counter: 6
+[2020-05-04 13:19:55,289: WARNING/ForkPoolWorker-7] Counter: 7
+[2020-05-04 13:19:55,800: WARNING/ForkPoolWorker-7] Counter: 8
+[2020-05-04 13:19:56,307: WARNING/ForkPoolWorker-7] Counter: 9
+[2020-05-04 13:19:56,816: WARNING/ForkPoolWorker-7] Counter: 10
+[2020-05-04 13:19:57,325: WARNING/ForkPoolWorker-7] Counter: 11
+[2020-05-04 13:19:57,836: WARNING/ForkPoolWorker-7] Counter: 12
+[2020-05-04 13:19:58,346: WARNING/ForkPoolWorker-7] Counter: 13
+[2020-05-04 13:19:58,855: WARNING/ForkPoolWorker-7] Counter: 14
+[2020-05-04 13:19:59,369: WARNING/ForkPoolWorker-7] Counter: 15
+[2020-05-04 13:19:59,879: WARNING/ForkPoolWorker-7] Counter: 16
+[2020-05-04 13:20:00,388: WARNING/ForkPoolWorker-7] Counter: 17
+[2020-05-04 13:20:00,898: WARNING/ForkPoolWorker-7] Counter: 18
+[2020-05-04 13:20:01,405: WARNING/ForkPoolWorker-7] Counter: 19
+[2020-05-04 13:20:01,912: WARNING/ForkPoolWorker-7] Counter: 20
+[2020-05-04 13:20:02,419: WARNING/ForkPoolWorker-7] Counter: 21
+[2020-05-04 13:20:02,952: WARNING/ForkPoolWorker-7] Counter: 22
+[2020-05-04 13:20:03,458: WARNING/ForkPoolWorker-7] Counter: 23
+[2020-05-04 13:20:03,970: WARNING/ForkPoolWorker-7] Counter: 24
+[2020-05-04 13:20:04,477: WARNING/ForkPoolWorker-7] Counter: 25
+[2020-05-04 13:20:04,984: WARNING/ForkPoolWorker-7] Counter: 26
+[2020-05-04 13:20:05,492: WARNING/ForkPoolWorker-7] Counter: 27
+[2020-05-04 13:20:06,002: WARNING/ForkPoolWorker-7] Counter: 28
+[2020-05-04 13:20:06,514: WARNING/ForkPoolWorker-7] Counter: 29
+[2020-05-04 13:20:07,021: WARNING/ForkPoolWorker-7] Counter: 30
+[2020-05-04 13:20:07,531: WARNING/ForkPoolWorker-7] Counter: 31
+[2020-05-04 13:20:08,041: WARNING/ForkPoolWorker-7] Counter: 32
+[2020-05-04 13:20:08,549: WARNING/ForkPoolWorker-7] Counter: 33
+[2020-05-04 13:20:09,059: WARNING/ForkPoolWorker-7] Counter: 34
+[2020-05-04 13:20:09,571: WARNING/ForkPoolWorker-7] Counter: 35
+[2020-05-04 13:20:10,081: WARNING/ForkPoolWorker-7] Counter: 36
+[2020-05-04 13:20:10,592: WARNING/ForkPoolWorker-7] Counter: 37
+[2020-05-04 13:20:11,181: WARNING/ForkPoolWorker-7] Counter: 38
+[2020-05-04 13:20:11,689: WARNING/ForkPoolWorker-7] Counter: 39
+[2020-05-04 13:20:12,199: WARNING/ForkPoolWorker-7] Counter: 40
+[2020-05-04 13:20:12,710: WARNING/ForkPoolWorker-7] Counter: 41
+[2020-05-04 13:20:13,220: WARNING/ForkPoolWorker-7] Counter: 42
+[2020-05-04 13:20:13,730: WARNING/ForkPoolWorker-7] Counter: 43
+[2020-05-04 13:20:14,235: WARNING/ForkPoolWorker-7] Counter: 44
+[2020-05-04 13:20:14,742: WARNING/ForkPoolWorker-7] Counter: 45
+[2020-05-04 13:20:15,253: WARNING/ForkPoolWorker-7] Counter: 46
+[2020-05-04 13:20:15,768: WARNING/ForkPoolWorker-7] Counter: 47
+[2020-05-04 13:20:16,377: WARNING/ForkPoolWorker-7] Counter: 48
+[2020-05-04 13:20:16,884: WARNING/ForkPoolWorker-7] Counter: 49
+[2020-05-04 13:20:17,391: WARNING/ForkPoolWorker-7] Counter: 50
+[2020-05-04 13:20:17,902: WARNING/ForkPoolWorker-7] Counter: 51
+[2020-05-04 13:20:18,412: WARNING/ForkPoolWorker-7] Counter: 52
+[2020-05-04 13:20:18,922: WARNING/ForkPoolWorker-7] Counter: 53
+[2020-05-04 13:20:19,432: WARNING/ForkPoolWorker-7] Counter: 54
+[2020-05-04 13:20:19,942: WARNING/ForkPoolWorker-7] Counter: 55
+[2020-05-04 13:20:20,452: WARNING/ForkPoolWorker-7] Counter: 56
+[2020-05-04 13:20:20,959: WARNING/ForkPoolWorker-7] Counter: 57
+[2020-05-04 13:20:21,469: WARNING/ForkPoolWorker-7] Counter: 58
+[2020-05-04 13:20:21,980: WARNING/ForkPoolWorker-7] Counter: 59
+[2020-05-04 13:20:22,490: WARNING/ForkPoolWorker-7] Counter: 60
+[2020-05-04 13:20:23,001: WARNING/ForkPoolWorker-7] Counter: 61
+[2020-05-04 13:20:23,513: WARNING/ForkPoolWorker-7] Counter: 62
+[2020-05-04 13:20:24,022: WARNING/ForkPoolWorker-7] Counter: 63
+[2020-05-04 13:20:24,531: WARNING/ForkPoolWorker-7] Counter: 64
+[2020-05-04 13:20:25,042: WARNING/ForkPoolWorker-7] Counter: 65
+[2020-05-04 13:20:25,551: WARNING/ForkPoolWorker-7] Counter: 66
+[2020-05-04 13:20:26,062: WARNING/ForkPoolWorker-7] Counter: 67
+[2020-05-04 13:20:26,574: WARNING/ForkPoolWorker-7] Counter: 68
+[2020-05-04 13:20:27,084: WARNING/ForkPoolWorker-7] Counter: 69
+[2020-05-04 13:20:27,593: WARNING/ForkPoolWorker-7] Counter: 70
+[2020-05-04 13:20:28,102: WARNING/ForkPoolWorker-7] Counter: 71
+[2020-05-04 13:20:28,612: WARNING/ForkPoolWorker-7] Counter: 72
+[2020-05-04 13:20:29,122: WARNING/ForkPoolWorker-7] Counter: 73
+[2020-05-04 13:20:29,633: WARNING/ForkPoolWorker-7] Counter: 74
+[2020-05-04 13:20:30,143: WARNING/ForkPoolWorker-7] Counter: 75
+[2020-05-04 13:20:30,655: WARNING/ForkPoolWorker-7] Counter: 76
+[2020-05-04 13:20:31,166: WARNING/ForkPoolWorker-7] Counter: 77
+[2020-05-04 13:20:31,678: WARNING/ForkPoolWorker-7] Counter: 78
+[2020-05-04 13:20:32,197: WARNING/ForkPoolWorker-7] Counter: 79
+[2020-05-04 13:20:32,704: WARNING/ForkPoolWorker-7] Counter: 80
+[2020-05-04 13:20:33,213: WARNING/ForkPoolWorker-7] Counter: 81
+[2020-05-04 13:20:33,720: WARNING/ForkPoolWorker-7] Counter: 82
+[2020-05-04 13:20:34,227: WARNING/ForkPoolWorker-7] Counter: 83
+[2020-05-04 13:20:34,734: WARNING/ForkPoolWorker-7] Counter: 84
+[2020-05-04 13:20:35,240: WARNING/ForkPoolWorker-7] Counter: 85
+[2020-05-04 13:20:35,748: WARNING/ForkPoolWorker-7] Counter: 86
+[2020-05-04 13:20:36,253: WARNING/ForkPoolWorker-7] Counter: 87
+[2020-05-04 13:20:36,764: WARNING/ForkPoolWorker-7] Counter: 88
+[2020-05-04 13:20:37,274: WARNING/ForkPoolWorker-7] Counter: 89
+[2020-05-04 13:20:37,781: WARNING/ForkPoolWorker-7] Counter: 90
+[2020-05-04 13:20:38,300: WARNING/ForkPoolWorker-7] Counter: 91
+[2020-05-04 13:20:38,814: WARNING/ForkPoolWorker-7] Counter: 92
+[2020-05-04 13:20:39,325: WARNING/ForkPoolWorker-7] Counter: 93
+[2020-05-04 13:20:39,833: WARNING/ForkPoolWorker-7] Counter: 94
+[2020-05-04 13:20:40,344: WARNING/ForkPoolWorker-7] Counter: 95
+[2020-05-04 13:20:40,851: WARNING/ForkPoolWorker-7] Counter: 96
+[2020-05-04 13:20:41,362: WARNING/ForkPoolWorker-7] Counter: 97
+[2020-05-04 13:20:41,869: WARNING/ForkPoolWorker-7] Counter: 98
+[2020-05-04 13:20:42,376: WARNING/ForkPoolWorker-7] Counter: 99
+[2020-05-04 13:20:42,884: WARNING/ForkPoolWorker-7] Counter: 100
+[2020-05-04 13:20:43,395: WARNING/ForkPoolWorker-7] Counter: 101
+[2020-05-04 13:20:43,904: WARNING/ForkPoolWorker-7] Counter: 102
+[2020-05-04 13:20:44,412: WARNING/ForkPoolWorker-7] Counter: 103
+[2020-05-04 13:20:44,921: WARNING/ForkPoolWorker-7] Counter: 104
+[2020-05-04 13:20:45,431: WARNING/ForkPoolWorker-7] Counter: 105
+[2020-05-04 13:20:45,940: WARNING/ForkPoolWorker-7] Counter: 106
+[2020-05-04 13:20:46,452: WARNING/ForkPoolWorker-7] Counter: 107
+[2020-05-04 13:20:46,962: WARNING/ForkPoolWorker-7] Counter: 108
+[2020-05-04 13:20:47,472: WARNING/ForkPoolWorker-7] Counter: 109
+[2020-05-04 13:20:47,982: WARNING/ForkPoolWorker-7] Counter: 110
+[2020-05-04 13:20:48,493: WARNING/ForkPoolWorker-7] Counter: 111
+[2020-05-04 13:20:49,002: WARNING/ForkPoolWorker-7] Counter: 112
+[2020-05-04 13:20:49,512: WARNING/ForkPoolWorker-7] Counter: 113
+[2020-05-04 13:20:50,023: WARNING/ForkPoolWorker-7] Counter: 114
+[2020-05-04 13:20:50,532: WARNING/ForkPoolWorker-7] Counter: 115
+[2020-05-04 13:20:51,041: WARNING/ForkPoolWorker-7] Counter: 116
+[2020-05-04 13:20:51,553: WARNING/ForkPoolWorker-7] Counter: 117
+[2020-05-04 13:20:52,063: WARNING/ForkPoolWorker-7] Counter: 118
+[2020-05-04 13:20:52,573: WARNING/ForkPoolWorker-7] Counter: 119
+[2020-05-04 13:20:53,083: INFO/ForkPoolWorker-7] Task watermarks.tasks.increment[b06a8a17-fd21-4900-8e8f-723eb2b1c763] succeeded in 61.361996319144964s: None
+[2020-05-05 00:08:40,526: INFO/MainProcess] Received task: watermarks.tasks.increment[2a3fb8b9-1567-424a-872a-b73e83c6d627]  
+[2020-05-05 00:08:40,614: WARNING/ForkPoolWorker-7] Counter: 0
+[2020-05-05 00:08:41,192: WARNING/ForkPoolWorker-7] Counter: 1
+[2020-05-05 00:08:41,744: WARNING/ForkPoolWorker-7] Counter: 2
+[2020-05-05 00:08:42,339: WARNING/ForkPoolWorker-7] Counter: 3
+[2020-05-05 00:08:42,944: WARNING/ForkPoolWorker-7] Counter: 4
+[2020-05-05 00:08:43,511: WARNING/ForkPoolWorker-7] Counter: 5
+[2020-05-05 00:08:44,022: WARNING/ForkPoolWorker-7] Counter: 6
+[2020-05-05 00:08:44,544: WARNING/ForkPoolWorker-7] Counter: 7
+[2020-05-05 00:08:45,129: WARNING/ForkPoolWorker-7] Counter: 8
+[2020-05-05 00:08:45,642: WARNING/ForkPoolWorker-7] Counter: 9
+[2020-05-05 00:08:46,248: WARNING/ForkPoolWorker-7] Counter: 10
+[2020-05-05 00:08:46,825: WARNING/ForkPoolWorker-7] Counter: 11
+[2020-05-05 00:08:47,412: WARNING/ForkPoolWorker-7] Counter: 12
+[2020-05-05 00:08:47,963: WARNING/ForkPoolWorker-7] Counter: 13
+[2020-05-05 00:08:48,527: WARNING/ForkPoolWorker-7] Counter: 14
+[2020-05-05 00:08:49,041: WARNING/ForkPoolWorker-7] Counter: 15
+[2020-05-05 00:08:49,662: WARNING/ForkPoolWorker-7] Counter: 16
+[2020-05-05 00:08:50,269: WARNING/ForkPoolWorker-7] Counter: 17
+[2020-05-05 00:08:50,859: WARNING/ForkPoolWorker-7] Counter: 18
+[2020-05-05 00:08:51,477: WARNING/ForkPoolWorker-7] Counter: 19
+[2020-05-05 00:08:52,084: WARNING/ForkPoolWorker-7] Counter: 20
+[2020-05-05 00:08:52,631: WARNING/ForkPoolWorker-7] Counter: 21
+[2020-05-05 00:08:53,237: WARNING/ForkPoolWorker-7] Counter: 22
+[2020-05-05 00:08:53,845: WARNING/ForkPoolWorker-7] Counter: 23
+[2020-05-05 00:08:54,352: WARNING/ForkPoolWorker-7] Counter: 24
+[2020-05-05 00:08:54,871: WARNING/ForkPoolWorker-7] Counter: 25
+[2020-05-05 00:08:55,380: WARNING/ForkPoolWorker-7] Counter: 26
+[2020-05-05 00:08:55,891: WARNING/ForkPoolWorker-7] Counter: 27
+[2020-05-05 00:08:56,398: WARNING/ForkPoolWorker-7] Counter: 28
+[2020-05-05 00:08:56,908: WARNING/ForkPoolWorker-7] Counter: 29
+[2020-05-05 00:08:57,418: WARNING/ForkPoolWorker-7] Counter: 30
+[2020-05-05 00:08:57,928: WARNING/ForkPoolWorker-7] Counter: 31
+[2020-05-05 00:08:58,439: WARNING/ForkPoolWorker-7] Counter: 32
+[2020-05-05 00:08:58,950: WARNING/ForkPoolWorker-7] Counter: 33
+[2020-05-05 00:08:59,756: WARNING/ForkPoolWorker-7] Counter: 34
+[2020-05-05 00:09:00,355: WARNING/ForkPoolWorker-7] Counter: 35
+[2020-05-05 00:09:00,870: WARNING/ForkPoolWorker-7] Counter: 36
+[2020-05-05 00:09:01,417: WARNING/ForkPoolWorker-7] Counter: 37
+[2020-05-05 00:09:02,007: WARNING/ForkPoolWorker-7] Counter: 38
+[2020-05-05 00:09:02,666: WARNING/ForkPoolWorker-7] Counter: 39
+[2020-05-05 00:09:03,189: WARNING/ForkPoolWorker-7] Counter: 40
+[2020-05-05 00:09:03,699: WARNING/ForkPoolWorker-7] Counter: 41
+[2020-05-05 00:09:04,260: WARNING/ForkPoolWorker-7] Counter: 42
+[2020-05-05 00:09:04,774: WARNING/ForkPoolWorker-7] Counter: 43
+[2020-05-05 00:09:05,316: WARNING/ForkPoolWorker-7] Counter: 44
+[2020-05-05 00:09:05,826: WARNING/ForkPoolWorker-7] Counter: 45
+[2020-05-05 00:09:06,335: WARNING/ForkPoolWorker-7] Counter: 46
+[2020-05-05 00:09:06,846: WARNING/ForkPoolWorker-7] Counter: 47
+[2020-05-05 00:09:07,374: WARNING/ForkPoolWorker-7] Counter: 48
+[2020-05-05 00:09:07,884: WARNING/ForkPoolWorker-7] Counter: 49
+[2020-05-05 00:09:08,394: WARNING/ForkPoolWorker-7] Counter: 50
+[2020-05-05 00:09:08,904: WARNING/ForkPoolWorker-7] Counter: 51
+[2020-05-05 00:09:09,416: WARNING/ForkPoolWorker-7] Counter: 52
+[2020-05-05 00:09:09,923: WARNING/ForkPoolWorker-7] Counter: 53
+[2020-05-05 00:09:10,433: WARNING/ForkPoolWorker-7] Counter: 54
+[2020-05-05 00:09:10,944: WARNING/ForkPoolWorker-7] Counter: 55
+[2020-05-05 00:09:11,453: WARNING/ForkPoolWorker-7] Counter: 56
+[2020-05-05 00:09:11,963: WARNING/ForkPoolWorker-7] Counter: 57
+[2020-05-05 00:09:12,472: WARNING/ForkPoolWorker-7] Counter: 58
+[2020-05-05 00:09:12,982: WARNING/ForkPoolWorker-7] Counter: 59
+[2020-05-05 00:09:13,492: WARNING/ForkPoolWorker-7] Counter: 60
+[2020-05-05 00:09:14,017: WARNING/ForkPoolWorker-7] Counter: 61
+[2020-05-05 00:09:14,526: WARNING/ForkPoolWorker-7] Counter: 62
+[2020-05-05 00:09:15,036: WARNING/ForkPoolWorker-7] Counter: 63
+[2020-05-05 00:09:15,707: WARNING/ForkPoolWorker-7] Counter: 64
+[2020-05-05 00:09:16,251: WARNING/ForkPoolWorker-7] Counter: 65
+[2020-05-05 00:09:16,759: WARNING/ForkPoolWorker-7] Counter: 66
+[2020-05-05 00:09:17,267: WARNING/ForkPoolWorker-7] Counter: 67
+[2020-05-05 00:09:17,776: WARNING/ForkPoolWorker-7] Counter: 68
+[2020-05-05 00:09:18,287: WARNING/ForkPoolWorker-7] Counter: 69
+[2020-05-05 00:09:18,798: WARNING/ForkPoolWorker-7] Counter: 70
+[2020-05-05 00:09:19,306: WARNING/ForkPoolWorker-7] Counter: 71
+[2020-05-05 00:09:19,812: WARNING/ForkPoolWorker-7] Counter: 72
+[2020-05-05 00:09:20,321: WARNING/ForkPoolWorker-7] Counter: 73
+[2020-05-05 00:09:20,831: WARNING/ForkPoolWorker-7] Counter: 74
+[2020-05-05 00:09:21,342: WARNING/ForkPoolWorker-7] Counter: 75
+[2020-05-05 00:09:21,852: WARNING/ForkPoolWorker-7] Counter: 76
+[2020-05-05 00:09:22,362: WARNING/ForkPoolWorker-7] Counter: 77
+[2020-05-05 00:09:22,872: WARNING/ForkPoolWorker-7] Counter: 78
+[2020-05-05 00:09:23,380: WARNING/ForkPoolWorker-7] Counter: 79
+[2020-05-05 00:09:23,899: WARNING/ForkPoolWorker-7] Counter: 80
+[2020-05-05 00:09:24,409: WARNING/ForkPoolWorker-7] Counter: 81
+[2020-05-05 00:09:24,922: WARNING/ForkPoolWorker-7] Counter: 82
+[2020-05-05 00:09:25,432: WARNING/ForkPoolWorker-7] Counter: 83
+[2020-05-05 00:09:25,942: WARNING/ForkPoolWorker-7] Counter: 84
+[2020-05-05 00:09:26,453: WARNING/ForkPoolWorker-7] Counter: 85
+[2020-05-05 00:09:26,962: WARNING/ForkPoolWorker-7] Counter: 86
+[2020-05-05 00:09:27,471: WARNING/ForkPoolWorker-7] Counter: 87
+[2020-05-05 00:09:27,983: WARNING/ForkPoolWorker-7] Counter: 88
+[2020-05-05 00:09:28,493: WARNING/ForkPoolWorker-7] Counter: 89
+[2020-05-05 00:09:29,001: WARNING/ForkPoolWorker-7] Counter: 90
+[2020-05-05 00:09:29,511: WARNING/ForkPoolWorker-7] Counter: 91
+[2020-05-05 00:09:30,095: WARNING/ForkPoolWorker-7] Counter: 92
+[2020-05-05 00:09:30,747: WARNING/ForkPoolWorker-7] Counter: 93
+[2020-05-05 00:09:31,336: WARNING/ForkPoolWorker-7] Counter: 94
+[2020-05-05 00:09:31,927: WARNING/ForkPoolWorker-7] Counter: 95
+[2020-05-05 00:09:32,534: WARNING/ForkPoolWorker-7] Counter: 96
+[2020-05-05 00:09:33,163: WARNING/ForkPoolWorker-7] Counter: 97
+[2020-05-05 00:09:33,795: WARNING/ForkPoolWorker-7] Counter: 98
+[2020-05-05 00:09:34,386: WARNING/ForkPoolWorker-7] Counter: 99
+[2020-05-05 00:09:34,990: WARNING/ForkPoolWorker-7] Counter: 100
+[2020-05-05 00:09:35,538: WARNING/ForkPoolWorker-7] Counter: 101
+[2020-05-05 00:09:36,108: WARNING/ForkPoolWorker-7] Counter: 102
+[2020-05-05 00:09:36,726: WARNING/ForkPoolWorker-7] Counter: 103
+[2020-05-05 00:09:37,300: WARNING/ForkPoolWorker-7] Counter: 104
+[2020-05-05 00:09:37,831: WARNING/ForkPoolWorker-7] Counter: 105
+[2020-05-05 00:09:38,453: WARNING/ForkPoolWorker-7] Counter: 106
+[2020-05-05 00:09:39,055: WARNING/ForkPoolWorker-7] Counter: 107
+[2020-05-05 00:09:39,683: WARNING/ForkPoolWorker-7] Counter: 108
+[2020-05-05 00:09:40,298: WARNING/ForkPoolWorker-7] Counter: 109
+[2020-05-05 00:09:40,849: WARNING/ForkPoolWorker-7] Counter: 110
+[2020-05-05 00:09:41,498: WARNING/ForkPoolWorker-7] Counter: 111
+[2020-05-05 00:09:42,136: WARNING/ForkPoolWorker-7] Counter: 112
+[2020-05-05 00:09:42,766: WARNING/ForkPoolWorker-7] Counter: 113
+[2020-05-05 00:09:43,402: WARNING/ForkPoolWorker-7] Counter: 114
+[2020-05-05 00:09:44,023: WARNING/ForkPoolWorker-7] Counter: 115
+[2020-05-05 00:09:44,643: WARNING/ForkPoolWorker-7] Counter: 116
+[2020-05-05 00:09:45,273: WARNING/ForkPoolWorker-7] Counter: 117
+[2020-05-05 00:09:46,036: WARNING/ForkPoolWorker-7] Counter: 118
+[2020-05-05 00:09:46,727: WARNING/ForkPoolWorker-7] Counter: 119
+[2020-05-05 00:09:47,312: INFO/ForkPoolWorker-7] Task watermarks.tasks.increment[2a3fb8b9-1567-424a-872a-b73e83c6d627] succeeded in 66.7845521364361s: None
+[2020-05-05 03:15:22,081: INFO/MainProcess] Received task: watermarks.tasks.photo_watermark[fe274b12-a76e-4c2b-ac9e-ae4a53e0ac6e]  
+[2020-05-05 03:15:22,971: INFO/ForkPoolWorker-7] Task watermarks.tasks.photo_watermark[fe274b12-a76e-4c2b-ac9e-ae4a53e0ac6e] succeeded in 0.8879325520247221s: None
+[2020-05-05 03:15:39,901: INFO/MainProcess] Received task: watermarks.tasks.increment[2ea18d02-3b89-494d-96cb-2e118086a9f5]  
+[2020-05-05 03:15:39,954: WARNING/ForkPoolWorker-7] Counter: 0
+[2020-05-05 03:15:40,466: WARNING/ForkPoolWorker-7] Counter: 1
+[2020-05-05 03:15:40,974: WARNING/ForkPoolWorker-7] Counter: 2
+[2020-05-05 03:15:41,484: WARNING/ForkPoolWorker-7] Counter: 3
+[2020-05-05 03:15:41,995: WARNING/ForkPoolWorker-7] Counter: 4
+[2020-05-05 03:15:42,505: WARNING/ForkPoolWorker-7] Counter: 5
+[2020-05-05 03:15:43,030: WARNING/ForkPoolWorker-7] Counter: 6
+[2020-05-05 03:15:43,610: WARNING/ForkPoolWorker-7] Counter: 7
+[2020-05-05 03:15:44,170: WARNING/ForkPoolWorker-7] Counter: 8
+[2020-05-05 03:15:44,680: WARNING/ForkPoolWorker-7] Counter: 9
+[2020-05-05 03:15:45,233: WARNING/ForkPoolWorker-7] Counter: 10
+[2020-05-05 03:15:45,744: WARNING/ForkPoolWorker-7] Counter: 11
+[2020-05-05 03:15:46,254: WARNING/ForkPoolWorker-7] Counter: 12
+[2020-05-05 03:15:46,764: WARNING/ForkPoolWorker-7] Counter: 13
+[2020-05-05 03:15:47,273: WARNING/ForkPoolWorker-7] Counter: 14
+[2020-05-05 03:15:47,782: WARNING/ForkPoolWorker-7] Counter: 15
+[2020-05-05 03:15:48,290: WARNING/ForkPoolWorker-7] Counter: 16
+[2020-05-05 03:15:48,805: WARNING/ForkPoolWorker-7] Counter: 17
+[2020-05-05 03:15:49,313: WARNING/ForkPoolWorker-7] Counter: 18
+[2020-05-05 03:15:49,823: WARNING/ForkPoolWorker-7] Counter: 19
+[2020-05-05 03:15:50,333: WARNING/ForkPoolWorker-7] Counter: 20
+[2020-05-05 03:15:50,848: WARNING/ForkPoolWorker-7] Counter: 21
+[2020-05-05 03:15:51,358: WARNING/ForkPoolWorker-7] Counter: 22
+[2020-05-05 03:15:51,945: WARNING/ForkPoolWorker-7] Counter: 23
+[2020-05-05 03:15:52,516: WARNING/ForkPoolWorker-7] Counter: 24
+[2020-05-05 03:15:53,028: WARNING/ForkPoolWorker-7] Counter: 25
+[2020-05-05 03:15:53,618: WARNING/ForkPoolWorker-7] Counter: 26
+[2020-05-05 03:15:54,231: WARNING/ForkPoolWorker-7] Counter: 27
+[2020-05-05 03:15:54,826: WARNING/ForkPoolWorker-7] Counter: 28
+[2020-05-05 03:15:55,419: WARNING/ForkPoolWorker-7] Counter: 29
+[2020-05-05 03:15:55,985: WARNING/ForkPoolWorker-7] Counter: 30
+[2020-05-05 03:15:56,511: WARNING/ForkPoolWorker-7] Counter: 31
+[2020-05-05 03:15:57,046: WARNING/ForkPoolWorker-7] Counter: 32
+[2020-05-05 03:15:57,674: WARNING/ForkPoolWorker-7] Counter: 33
+[2020-05-05 03:15:58,205: WARNING/ForkPoolWorker-7] Counter: 34
+[2020-05-05 03:15:58,723: WARNING/ForkPoolWorker-7] Counter: 35
+[2020-05-05 03:15:59,323: WARNING/ForkPoolWorker-7] Counter: 36
+[2020-05-05 03:15:59,850: WARNING/ForkPoolWorker-7] Counter: 37
+[2020-05-05 03:16:00,461: WARNING/ForkPoolWorker-7] Counter: 38
+[2020-05-05 03:16:01,035: WARNING/ForkPoolWorker-7] Counter: 39
+[2020-05-05 03:16:01,666: WARNING/ForkPoolWorker-7] Counter: 40
+[2020-05-05 03:16:02,283: WARNING/ForkPoolWorker-7] Counter: 41
+[2020-05-05 03:16:02,835: WARNING/ForkPoolWorker-7] Counter: 42
+[2020-05-05 03:16:03,401: WARNING/ForkPoolWorker-7] Counter: 43
+[2020-05-05 03:16:03,926: WARNING/ForkPoolWorker-7] Counter: 44
+[2020-05-05 03:16:04,437: WARNING/ForkPoolWorker-7] Counter: 45
+[2020-05-05 03:16:05,077: WARNING/ForkPoolWorker-7] Counter: 46
+[2020-05-05 03:16:05,698: WARNING/ForkPoolWorker-7] Counter: 47
+[2020-05-05 03:16:06,251: WARNING/ForkPoolWorker-7] Counter: 48
+[2020-05-05 03:16:06,817: WARNING/ForkPoolWorker-7] Counter: 49
+[2020-05-05 03:16:07,429: WARNING/ForkPoolWorker-7] Counter: 50
+[2020-05-05 03:16:08,045: WARNING/ForkPoolWorker-7] Counter: 51
+[2020-05-05 03:16:08,556: WARNING/ForkPoolWorker-7] Counter: 52
+[2020-05-05 03:16:09,065: WARNING/ForkPoolWorker-7] Counter: 53
+[2020-05-05 03:16:09,640: WARNING/ForkPoolWorker-7] Counter: 54
+[2020-05-05 03:16:10,162: WARNING/ForkPoolWorker-7] Counter: 55
+[2020-05-05 03:16:10,760: WARNING/ForkPoolWorker-7] Counter: 56
+[2020-05-05 03:16:11,389: WARNING/ForkPoolWorker-7] Counter: 57
+[2020-05-05 03:16:12,010: WARNING/ForkPoolWorker-7] Counter: 58
+[2020-05-05 03:16:12,553: WARNING/ForkPoolWorker-7] Counter: 59
+[2020-05-05 03:16:13,161: WARNING/ForkPoolWorker-7] Counter: 60
+[2020-05-05 03:16:13,798: WARNING/ForkPoolWorker-7] Counter: 61
+[2020-05-05 03:16:14,306: WARNING/ForkPoolWorker-7] Counter: 62
+[2020-05-05 03:16:14,817: WARNING/ForkPoolWorker-7] Counter: 63
+[2020-05-05 03:16:15,328: WARNING/ForkPoolWorker-7] Counter: 64
+[2020-05-05 03:16:15,838: WARNING/ForkPoolWorker-7] Counter: 65
+[2020-05-05 03:16:16,348: WARNING/ForkPoolWorker-7] Counter: 66
+[2020-05-05 03:16:16,855: WARNING/ForkPoolWorker-7] Counter: 67
+[2020-05-05 03:16:17,366: WARNING/ForkPoolWorker-7] Counter: 68
+[2020-05-05 03:16:17,874: WARNING/ForkPoolWorker-7] Counter: 69
+[2020-05-05 03:16:18,381: WARNING/ForkPoolWorker-7] Counter: 70
+[2020-05-05 03:16:18,973: WARNING/ForkPoolWorker-7] Counter: 71
+[2020-05-05 03:16:19,566: WARNING/ForkPoolWorker-7] Counter: 72
+[2020-05-05 03:16:20,174: WARNING/ForkPoolWorker-7] Counter: 73
+[2020-05-05 03:16:20,812: WARNING/ForkPoolWorker-7] Counter: 74
+[2020-05-05 03:16:21,417: WARNING/ForkPoolWorker-7] Counter: 75
+[2020-05-05 03:16:22,001: WARNING/ForkPoolWorker-7] Counter: 76
+[2020-05-05 03:16:22,614: WARNING/ForkPoolWorker-7] Counter: 77
+[2020-05-05 03:16:23,236: WARNING/ForkPoolWorker-7] Counter: 78
+[2020-05-05 03:16:23,866: WARNING/ForkPoolWorker-7] Counter: 79
+[2020-05-05 03:16:24,488: WARNING/ForkPoolWorker-7] Counter: 80
+[2020-05-05 03:16:25,087: WARNING/ForkPoolWorker-7] Counter: 81
+[2020-05-05 03:16:25,716: WARNING/ForkPoolWorker-7] Counter: 82
+[2020-05-05 03:16:26,369: WARNING/ForkPoolWorker-7] Counter: 83
+[2020-05-05 03:16:27,003: WARNING/ForkPoolWorker-7] Counter: 84
+[2020-05-05 03:16:27,634: WARNING/ForkPoolWorker-7] Counter: 85
+[2020-05-05 03:16:28,243: WARNING/ForkPoolWorker-7] Counter: 86
+[2020-05-05 03:16:28,872: WARNING/ForkPoolWorker-7] Counter: 87
+[2020-05-05 03:16:29,387: WARNING/ForkPoolWorker-7] Counter: 88
+[2020-05-05 03:16:29,994: WARNING/ForkPoolWorker-7] Counter: 89
+[2020-05-05 03:16:30,626: WARNING/ForkPoolWorker-7] Counter: 90
+[2020-05-05 03:16:31,139: WARNING/ForkPoolWorker-7] Counter: 91
+[2020-05-05 03:16:31,716: WARNING/ForkPoolWorker-7] Counter: 92
+[2020-05-05 03:16:32,321: WARNING/ForkPoolWorker-7] Counter: 93
+[2020-05-05 03:16:32,833: WARNING/ForkPoolWorker-7] Counter: 94
+[2020-05-05 03:16:33,344: WARNING/ForkPoolWorker-7] Counter: 95
+[2020-05-05 03:16:33,854: WARNING/ForkPoolWorker-7] Counter: 96
+[2020-05-05 03:16:34,360: WARNING/ForkPoolWorker-7] Counter: 97
+[2020-05-05 03:16:34,870: WARNING/ForkPoolWorker-7] Counter: 98
+[2020-05-05 03:16:35,379: WARNING/ForkPoolWorker-7] Counter: 99
+[2020-05-05 03:16:35,891: WARNING/ForkPoolWorker-7] Counter: 100
+[2020-05-05 03:16:36,400: WARNING/ForkPoolWorker-7] Counter: 101
+[2020-05-05 03:16:36,910: WARNING/ForkPoolWorker-7] Counter: 102
+[2020-05-05 03:16:37,422: WARNING/ForkPoolWorker-7] Counter: 103
+[2020-05-05 03:16:37,928: WARNING/ForkPoolWorker-7] Counter: 104
+[2020-05-05 03:16:38,512: WARNING/ForkPoolWorker-7] Counter: 105
+[2020-05-05 03:16:39,118: WARNING/ForkPoolWorker-7] Counter: 106
+[2020-05-05 03:16:39,748: WARNING/ForkPoolWorker-7] Counter: 107
+[2020-05-05 03:16:40,384: WARNING/ForkPoolWorker-7] Counter: 108
+[2020-05-05 03:16:41,106: WARNING/ForkPoolWorker-7] Counter: 109
+[2020-05-05 03:16:41,706: WARNING/ForkPoolWorker-7] Counter: 110
+[2020-05-05 03:16:42,320: WARNING/ForkPoolWorker-7] Counter: 111
+[2020-05-05 03:16:42,948: WARNING/ForkPoolWorker-7] Counter: 112
+[2020-05-05 03:16:43,550: WARNING/ForkPoolWorker-7] Counter: 113
+[2020-05-05 03:16:44,166: WARNING/ForkPoolWorker-7] Counter: 114
+[2020-05-05 03:16:44,891: WARNING/ForkPoolWorker-7] Counter: 115
+[2020-05-05 03:16:45,493: WARNING/ForkPoolWorker-7] Counter: 116
+[2020-05-05 03:16:46,102: WARNING/ForkPoolWorker-7] Counter: 117
+[2020-05-05 03:16:46,671: WARNING/ForkPoolWorker-7] Counter: 118
+[2020-05-05 03:16:47,298: WARNING/ForkPoolWorker-7] Counter: 119
+[2020-05-05 03:16:47,917: INFO/ForkPoolWorker-7] Task watermarks.tasks.increment[2ea18d02-3b89-494d-96cb-2e118086a9f5] succeeded in 68.014563228935s: None
+[2020-05-05 04:48:49,896: INFO/MainProcess] Received task: watermarks.tasks.increment[68e7a14f-de86-4a1b-bd34-ddb9e5230d3d]  
+[2020-05-05 04:48:49,908: WARNING/ForkPoolWorker-7] Counter: 0
+[2020-05-05 04:48:50,415: WARNING/ForkPoolWorker-7] Counter: 1
+[2020-05-05 04:48:50,924: WARNING/ForkPoolWorker-7] Counter: 2
+[2020-05-05 04:48:51,432: WARNING/ForkPoolWorker-7] Counter: 3
+[2020-05-05 04:48:51,939: WARNING/ForkPoolWorker-7] Counter: 4
+[2020-05-05 04:48:52,446: WARNING/ForkPoolWorker-7] Counter: 5
+[2020-05-05 04:48:52,955: WARNING/ForkPoolWorker-7] Counter: 6
+[2020-05-05 04:48:53,465: WARNING/ForkPoolWorker-7] Counter: 7
+[2020-05-05 04:48:53,976: WARNING/ForkPoolWorker-7] Counter: 8
+[2020-05-05 04:48:54,486: WARNING/ForkPoolWorker-7] Counter: 9
+[2020-05-05 04:48:54,997: WARNING/ForkPoolWorker-7] Counter: 10
+[2020-05-05 04:48:55,509: WARNING/ForkPoolWorker-7] Counter: 11
+[2020-05-05 04:48:56,017: WARNING/ForkPoolWorker-7] Counter: 12
+[2020-05-05 04:48:56,539: WARNING/ForkPoolWorker-7] Counter: 13
+[2020-05-05 04:48:57,045: WARNING/ForkPoolWorker-7] Counter: 14
+[2020-05-05 04:48:57,556: WARNING/ForkPoolWorker-7] Counter: 15
+[2020-05-05 04:48:58,066: WARNING/ForkPoolWorker-7] Counter: 16
+[2020-05-05 04:48:58,577: WARNING/ForkPoolWorker-7] Counter: 17
+[2020-05-05 04:48:59,083: WARNING/ForkPoolWorker-7] Counter: 18
+[2020-05-05 04:48:59,594: WARNING/ForkPoolWorker-7] Counter: 19
+[2020-05-05 04:49:00,106: WARNING/ForkPoolWorker-7] Counter: 20
+[2020-05-05 04:49:00,617: WARNING/ForkPoolWorker-7] Counter: 21
+[2020-05-05 04:49:01,127: WARNING/ForkPoolWorker-7] Counter: 22
+[2020-05-05 04:49:01,634: WARNING/ForkPoolWorker-7] Counter: 23
+[2020-05-05 04:49:02,143: WARNING/ForkPoolWorker-7] Counter: 24
+[2020-05-05 04:49:02,654: WARNING/ForkPoolWorker-7] Counter: 25
+[2020-05-05 04:49:03,161: WARNING/ForkPoolWorker-7] Counter: 26
+[2020-05-05 04:49:03,671: WARNING/ForkPoolWorker-7] Counter: 27
+[2020-05-05 04:49:04,180: WARNING/ForkPoolWorker-7] Counter: 28
+[2020-05-05 04:49:04,690: WARNING/ForkPoolWorker-7] Counter: 29
+[2020-05-05 04:49:05,203: WARNING/ForkPoolWorker-7] Counter: 30
+[2020-05-05 04:49:05,708: WARNING/ForkPoolWorker-7] Counter: 31
+[2020-05-05 04:49:06,219: WARNING/ForkPoolWorker-7] Counter: 32
+[2020-05-05 04:49:06,728: WARNING/ForkPoolWorker-7] Counter: 33
+[2020-05-05 04:49:07,236: WARNING/ForkPoolWorker-7] Counter: 34
+[2020-05-05 04:49:07,747: WARNING/ForkPoolWorker-7] Counter: 35
+[2020-05-05 04:49:08,257: WARNING/ForkPoolWorker-7] Counter: 36
+[2020-05-05 04:49:08,767: WARNING/ForkPoolWorker-7] Counter: 37
+[2020-05-05 04:49:09,277: WARNING/ForkPoolWorker-7] Counter: 38
+[2020-05-05 04:49:09,786: WARNING/ForkPoolWorker-7] Counter: 39
+[2020-05-05 04:49:10,293: WARNING/ForkPoolWorker-7] Counter: 40
+[2020-05-05 04:49:10,802: WARNING/ForkPoolWorker-7] Counter: 41
+[2020-05-05 04:49:11,310: WARNING/ForkPoolWorker-7] Counter: 42
+[2020-05-05 04:49:11,820: WARNING/ForkPoolWorker-7] Counter: 43
+[2020-05-05 04:49:12,329: WARNING/ForkPoolWorker-7] Counter: 44
+[2020-05-05 04:49:12,837: WARNING/ForkPoolWorker-7] Counter: 45
+[2020-05-05 04:49:13,348: WARNING/ForkPoolWorker-7] Counter: 46
+[2020-05-05 04:49:13,854: WARNING/ForkPoolWorker-7] Counter: 47
+[2020-05-05 04:49:14,363: WARNING/ForkPoolWorker-7] Counter: 48
+[2020-05-05 04:49:14,870: WARNING/ForkPoolWorker-7] Counter: 49
+[2020-05-05 04:49:15,378: WARNING/ForkPoolWorker-7] Counter: 50
+[2020-05-05 04:49:15,885: WARNING/ForkPoolWorker-7] Counter: 51
+[2020-05-05 04:49:16,392: WARNING/ForkPoolWorker-7] Counter: 52
+[2020-05-05 04:49:16,903: WARNING/ForkPoolWorker-7] Counter: 53
+[2020-05-05 04:49:17,415: WARNING/ForkPoolWorker-7] Counter: 54
+[2020-05-05 04:49:17,935: WARNING/ForkPoolWorker-7] Counter: 55
+[2020-05-05 04:49:18,444: WARNING/ForkPoolWorker-7] Counter: 56
+[2020-05-05 04:49:18,955: WARNING/ForkPoolWorker-7] Counter: 57
+[2020-05-05 04:49:19,466: WARNING/ForkPoolWorker-7] Counter: 58
+[2020-05-05 04:49:19,977: WARNING/ForkPoolWorker-7] Counter: 59
+[2020-05-05 04:49:20,502: WARNING/ForkPoolWorker-7] Counter: 60
+[2020-05-05 04:49:21,013: WARNING/ForkPoolWorker-7] Counter: 61
+[2020-05-05 04:49:21,524: WARNING/ForkPoolWorker-7] Counter: 62
+[2020-05-05 04:49:22,034: WARNING/ForkPoolWorker-7] Counter: 63
+[2020-05-05 04:49:22,545: WARNING/ForkPoolWorker-7] Counter: 64
+[2020-05-05 04:49:23,055: WARNING/ForkPoolWorker-7] Counter: 65
+[2020-05-05 04:49:23,565: WARNING/ForkPoolWorker-7] Counter: 66
+[2020-05-05 04:49:24,115: WARNING/ForkPoolWorker-7] Counter: 67
+[2020-05-05 04:49:24,622: WARNING/ForkPoolWorker-7] Counter: 68
+[2020-05-05 04:49:25,131: WARNING/ForkPoolWorker-7] Counter: 69
+[2020-05-05 04:49:25,642: WARNING/ForkPoolWorker-7] Counter: 70
+[2020-05-05 04:49:26,148: WARNING/ForkPoolWorker-7] Counter: 71
+[2020-05-05 04:49:26,658: WARNING/ForkPoolWorker-7] Counter: 72
+[2020-05-05 04:49:27,170: WARNING/ForkPoolWorker-7] Counter: 73
+[2020-05-05 04:49:27,675: WARNING/ForkPoolWorker-7] Counter: 74
+[2020-05-05 04:49:28,185: WARNING/ForkPoolWorker-7] Counter: 75
+[2020-05-05 04:49:28,694: WARNING/ForkPoolWorker-7] Counter: 76
+[2020-05-05 04:49:29,205: WARNING/ForkPoolWorker-7] Counter: 77
+[2020-05-05 04:49:29,717: WARNING/ForkPoolWorker-7] Counter: 78
+[2020-05-05 04:49:30,223: WARNING/ForkPoolWorker-7] Counter: 79
+[2020-05-05 04:49:30,733: WARNING/ForkPoolWorker-7] Counter: 80
+[2020-05-05 04:49:31,243: WARNING/ForkPoolWorker-7] Counter: 81
+[2020-05-05 04:49:31,750: WARNING/ForkPoolWorker-7] Counter: 82
+[2020-05-05 04:49:32,258: WARNING/ForkPoolWorker-7] Counter: 83
+[2020-05-05 04:49:32,768: WARNING/ForkPoolWorker-7] Counter: 84
+[2020-05-05 04:49:33,276: WARNING/ForkPoolWorker-7] Counter: 85
+[2020-05-05 04:49:33,786: WARNING/ForkPoolWorker-7] Counter: 86
+[2020-05-05 04:49:34,293: WARNING/ForkPoolWorker-7] Counter: 87
+[2020-05-05 04:49:34,800: WARNING/ForkPoolWorker-7] Counter: 88
+[2020-05-05 04:49:35,307: WARNING/ForkPoolWorker-7] Counter: 89
+[2020-05-05 04:49:35,817: WARNING/ForkPoolWorker-7] Counter: 90
+[2020-05-05 04:49:36,328: WARNING/ForkPoolWorker-7] Counter: 91
+[2020-05-05 04:49:36,838: WARNING/ForkPoolWorker-7] Counter: 92
+[2020-05-05 04:49:37,348: WARNING/ForkPoolWorker-7] Counter: 93
+[2020-05-05 04:49:37,858: WARNING/ForkPoolWorker-7] Counter: 94
+[2020-05-05 04:49:38,366: WARNING/ForkPoolWorker-7] Counter: 95
+[2020-05-05 04:49:38,876: WARNING/ForkPoolWorker-7] Counter: 96
+[2020-05-05 04:49:39,386: WARNING/ForkPoolWorker-7] Counter: 97
+[2020-05-05 04:49:39,894: WARNING/ForkPoolWorker-7] Counter: 98
+[2020-05-05 04:49:40,404: WARNING/ForkPoolWorker-7] Counter: 99
+[2020-05-05 04:49:40,916: WARNING/ForkPoolWorker-7] Counter: 100
+[2020-05-05 04:49:41,427: WARNING/ForkPoolWorker-7] Counter: 101
+[2020-05-05 04:49:41,937: WARNING/ForkPoolWorker-7] Counter: 102
+[2020-05-05 04:49:42,446: WARNING/ForkPoolWorker-7] Counter: 103
+[2020-05-05 04:49:42,956: WARNING/ForkPoolWorker-7] Counter: 104
+[2020-05-05 04:49:43,467: WARNING/ForkPoolWorker-7] Counter: 105
+[2020-05-05 04:49:43,974: WARNING/ForkPoolWorker-7] Counter: 106
+[2020-05-05 04:49:44,491: WARNING/ForkPoolWorker-7] Counter: 107
+[2020-05-05 04:49:45,001: WARNING/ForkPoolWorker-7] Counter: 108
+[2020-05-05 04:49:45,512: WARNING/ForkPoolWorker-7] Counter: 109
+[2020-05-05 04:49:46,023: WARNING/ForkPoolWorker-7] Counter: 110
+[2020-05-05 04:49:46,534: WARNING/ForkPoolWorker-7] Counter: 111
+[2020-05-05 04:49:47,043: WARNING/ForkPoolWorker-7] Counter: 112
+[2020-05-05 04:49:47,552: WARNING/ForkPoolWorker-7] Counter: 113
+[2020-05-05 04:49:48,060: WARNING/ForkPoolWorker-7] Counter: 114
+[2020-05-05 04:49:48,570: WARNING/ForkPoolWorker-7] Counter: 115
+[2020-05-05 04:49:49,080: WARNING/ForkPoolWorker-7] Counter: 116
+[2020-05-05 04:49:49,587: WARNING/ForkPoolWorker-7] Counter: 117
+[2020-05-05 04:49:50,097: WARNING/ForkPoolWorker-7] Counter: 118
+[2020-05-05 04:49:50,603: WARNING/ForkPoolWorker-7] Counter: 119
+[2020-05-05 04:49:51,113: INFO/ForkPoolWorker-7] Task watermarks.tasks.increment[68e7a14f-de86-4a1b-bd34-ddb9e5230d3d] succeeded in 61.214858224615455s: None
+[2020-05-05 04:49:51,446: INFO/MainProcess] Received task: watermarks.tasks.photo_watermark[adbc6e2f-3627-4f48-8f9a-c1b809dbaa4e]  
+[2020-05-05 04:49:53,227: INFO/ForkPoolWorker-7] Task watermarks.tasks.photo_watermark[adbc6e2f-3627-4f48-8f9a-c1b809dbaa4e] succeeded in 1.7790056876838207s: None
+[2020-05-05 04:49:58,705: INFO/MainProcess] Received task: watermarks.tasks.photo_watermark[807d6f1d-16e1-4801-9e72-d71e2775edda]  
+[2020-05-05 04:50:01,580: INFO/ForkPoolWorker-7] Task watermarks.tasks.photo_watermark[807d6f1d-16e1-4801-9e72-d71e2775edda] succeeded in 2.8739758282899857s: None
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-05 14:51:17,302: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-05 14:51:17,333: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-05 14:51:18,379: INFO/MainProcess] mingle: all alone
+[2020-05-05 14:51:18,427: INFO/MainProcess] celery@AdiRimini.Org ready.
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-05 14:55:03,429: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-05 14:55:03,464: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-05 14:55:04,505: INFO/MainProcess] mingle: all alone
+[2020-05-05 14:55:04,539: INFO/MainProcess] celery@AdiRimini.Org ready.
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-05 15:25:11,461: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-05 15:25:11,498: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-05 15:25:12,556: INFO/MainProcess] mingle: all alone
+[2020-05-05 15:25:12,588: INFO/MainProcess] celery@AdiRimini.Org ready.
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-05 15:25:57,755: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-05 15:25:57,785: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-05 15:25:58,855: INFO/MainProcess] mingle: all alone
+[2020-05-05 15:25:58,903: WARNING/MainProcess] /home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py:203: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  leak, never use this setting in production environments!''')
+[2020-05-05 15:25:58,903: INFO/MainProcess] celery@AdiRimini.Org ready.
+[2020-05-05 15:28:44,498: INFO/MainProcess] Received task: watermarks.tasks.photo_watermark[dd8eb8a9-c071-45fa-817f-68bd504fb565]  
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-05 15:28:46,273: INFO/ForkPoolWorker-7] Task watermarks.tasks.photo_watermark[dd8eb8a9-c071-45fa-817f-68bd504fb565] succeeded in 1.769215328618884s: None
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-05 16:25:14,781: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-05 16:25:14,805: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-05 16:25:15,845: INFO/MainProcess] mingle: all alone
+[2020-05-05 16:25:15,886: WARNING/MainProcess] /home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py:203: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  leak, never use this setting in production environments!''')
+[2020-05-05 16:25:15,887: INFO/MainProcess] celery@AdiRimini.Org ready.
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-05 16:27:45,514: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-05 16:27:45,564: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-05 16:27:46,619: INFO/MainProcess] mingle: all alone
+[2020-05-05 16:27:46,654: WARNING/MainProcess] /home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py:203: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  leak, never use this setting in production environments!''')
+[2020-05-05 16:27:46,654: INFO/MainProcess] celery@AdiRimini.Org ready.
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-05 16:33:04,664: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-05 16:33:04,687: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-05 16:33:05,731: INFO/MainProcess] mingle: all alone
+[2020-05-05 16:33:05,769: WARNING/MainProcess] /home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py:203: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  leak, never use this setting in production environments!''')
+[2020-05-05 16:33:05,770: INFO/MainProcess] celery@AdiRimini.Org ready.
+[2020-05-05 16:33:20,991: INFO/MainProcess] Received task: caricamento.tasks.process_file[004e5886-eae6-4a64-a078-e4fd9e9841cd]  
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-05 16:33:21,812: ERROR/ForkPoolWorker-7] Task caricamento.tasks.process_file[004e5886-eae6-4a64-a078-e4fd9e9841cd] raised unexpected: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/app/trace.py", line 385, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/app/trace.py", line 650, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/adirimini/vpodrini/project/caricamento/tasks.py", line 16, in process_file
+    watermark = Image.open('/Users/valmik/PycharmProjects/vvf_online/media/watermarks/IMG_4156.PNG').convert("RGBA")
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/PIL/Image.py", line 2843, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/valmik/PycharmProjects/vvf_online/media/watermarks/IMG_4156.PNG'
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-05 16:35:04,023: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-05 16:35:04,052: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-05 16:35:05,089: INFO/MainProcess] mingle: all alone
+[2020-05-05 16:35:05,127: WARNING/MainProcess] /home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py:203: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  leak, never use this setting in production environments!''')
+[2020-05-05 16:35:05,127: INFO/MainProcess] celery@AdiRimini.Org ready.
+[2020-05-05 16:35:26,552: INFO/MainProcess] Received task: caricamento.tasks.process_file[45ea4eae-2dc4-45e4-a801-7ef944b46c33]  
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-05 16:35:26,738: ERROR/ForkPoolWorker-7] Task caricamento.tasks.process_file[45ea4eae-2dc4-45e4-a801-7ef944b46c33] raised unexpected: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/app/trace.py", line 385, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/app/trace.py", line 650, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/adirimini/vpodrini/project/caricamento/tasks.py", line 16, in process_file
+    watermark = Image.open('/home/adirimini/vpodrini/vvf_online/project/media/watermarks/IMG_4156.PNG').convert("RGBA")
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/PIL/Image.py", line 2843, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/home/adirimini/vpodrini/vvf_online/project/media/watermarks/IMG_4156.PNG'
+[2020-05-05 16:35:40,927: INFO/MainProcess] Received task: caricamento.tasks.process_file[f00b63ac-d517-422c-8f56-f3ef96d93e04]  
+[2020-05-05 16:35:41,039: ERROR/ForkPoolWorker-7] Task caricamento.tasks.process_file[f00b63ac-d517-422c-8f56-f3ef96d93e04] raised unexpected: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/app/trace.py", line 385, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/app/trace.py", line 650, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/adirimini/vpodrini/project/caricamento/tasks.py", line 16, in process_file
+    watermark = Image.open('/home/adirimini/vpodrini/vvf_online/project/media/watermarks/IMG_4156.PNG').convert("RGBA")
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/PIL/Image.py", line 2843, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/home/adirimini/vpodrini/vvf_online/project/media/watermarks/IMG_4156.PNG'
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-05 16:37:37,557: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-05 16:37:37,595: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-05 16:37:38,646: INFO/MainProcess] mingle: all alone
+[2020-05-05 16:37:38,675: WARNING/MainProcess] /home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py:203: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  leak, never use this setting in production environments!''')
+[2020-05-05 16:37:38,675: INFO/MainProcess] celery@AdiRimini.Org ready.
+[2020-05-05 16:37:53,600: INFO/MainProcess] Received task: caricamento.tasks.process_file[e5cf8cd6-1459-4ea7-adfb-0519d1243f2a]  
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-05 16:37:54,487: INFO/ForkPoolWorker-7] Task caricamento.tasks.process_file[e5cf8cd6-1459-4ea7-adfb-0519d1243f2a] succeeded in 0.8812844771891832s: None

@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django_celery_results',
     'celery',
     'watermarks',
+    'caricamento',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
