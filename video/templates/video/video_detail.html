@@ -2,4 +2,10 @@
 
 {% block content %}
 <h1>{{ object.title }}</h1>
+<p>{{ object.content }}</p>
+<div align="center" class="embed-responsive embed-responsive-16by9">
+    <video autoplay loop controls class="embed-responsive-item">
+        <source src="/{{ object.video.url }}" type="video/mp4">
+    </video>
+</div>
 {% endblock %}

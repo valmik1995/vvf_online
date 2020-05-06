@@ -38,6 +38,9 @@
         <li class="{% block index_active %}{% endblock %}">
           <a href="{% url 'caricamento:upload_index' %}">Upload Files</a>
         </li>
+        <li class="{% block video_active %}{% endblock %}">
+          <a href="{% url 'video:video-create' %}">Video Files</a>
+        </li>
 
       </ul>
     </div>
