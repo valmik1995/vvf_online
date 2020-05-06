@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^', include('caricamento.urls')),
     url(r'^', include('watermarks.urls')),
+    path('video/', include('video.urls'))
 ]
 
 if settings.DEBUG:

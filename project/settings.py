@@ -24,7 +24,7 @@ SECRET_KEY = 'v66%u1k=(y^f11^3#b^#okyh&q*@7afu52ywz4_@=$r(e6cn8c'
 
 # SECURITY WARNING: don't run with debug turnedR
 
-ALLOWED_HOSTS = ['valeriopodrini.it']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'watermarks',
     'caricamento',
     'crispy_forms',
+    'video',
 ]
 
 MIDDLEWARE = [
@@ -73,6 +74,8 @@ TEMPLATES = [
         },
     },
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 WSGI_APPLICATION = 'project.wsgi.application'
 
@@ -138,7 +141,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 # Django si aspetterà di trovare files in una cartella chiamata "static" presente in BASE_DIR.
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "watermarks", "static")]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 
 MEDIA_URL = 'media/'
