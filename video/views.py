@@ -3,7 +3,7 @@ from django.urls import reverse_lazy, reverse
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import VideoForm
 from .models import Video
-from .tasks import video_720
+from .tasks import watermark
 
 class VideoCreateView(View):
     form_class = VideoForm
@@ -20,7 +20,7 @@ class VideoCreateView(View):
             newpost = form.save(commit=False)
             newpost.save()
             form.save()
-            video = video_720.delay(newpost.pk, 720)
+            video = watermark.delay(newpost.pk)
             return redirect(self.success_url)
         else:
             return render(request, self.template_name, {'form': form})

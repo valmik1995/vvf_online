@@ -1,15 +1,15 @@
-{% extends 'base.html' %}
+{% extends 'video/base.html' %}
 
-{% block content %}
+{% block video_content %}
 
 
 
 {% for instance in object_list %}
 
      <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-        <p>{{ instance.id }} - <a href='{{ instance.get_absolute_url }}'>{{ instance.title }}</a></p>
-       <div class="btn-group mr-2" role="group" aria-label="First group">
-        <button type="button" class="btn btn-primary">Update</button>
+        <p  style="float: left">{{ instance.id }} - <a href='{{ instance.get_absolute_url }}'>{{ instance.title }}</a></p>
+       <div class="btn-group mr-5" role="group" aria-label="First group">
+        <button type="button" class="btn btn-primary"><a href="../{{ instance.id }}/update" style="color:inherit">Update</a></button>
        </div>
        <div class="btn-group mr-2" role="group" aria-label="Second group">
          <button type="button" class="btn btn-danger"><a href="../{{ instance.id }}/delete" style="color:inherit">Delete</a></button>
