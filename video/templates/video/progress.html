@@ -1,0 +1,56 @@
+{% extends 'video/base.html' %}
+{% block video_active %}active{% endblock %}
+{% load crispy_forms_tags %}
+{% block video_content %}
+<h1>select your file to process it!</h1>
+<progress id="progress-bar" value="0" max="100" style="display:none; margin-bottom: 1em;"></progress>
+
+<form id="process-raw-data" action="." method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{  form|crispy  }}
+    <input type="submit" class="btn btn-primary" value="Submit" />
+</form>
+
+{% if task_id %}
+<script type="text/javascript">
+    var taskid = "{{task_id}}";
+    var frm = $('#process-raw-data');
+    var pgrbar = $('#progress-bar');
+
+    get_task_info(taskid);
+
+    function get_task_info(tid) {
+        $.ajax({
+            type: 'get',
+            url: '{% url 'video:video_get_task_info' %}',
+            data: {'task_id': tid},
+            success: function (data) {
+                frm.html('');
+                if (data.state == 'PENDING') {
+                    frm.html('Please wait...');
+                }
+                else if (data.state == 'PROGRESS') {
+                    pgrbar.css('display', 'inline');
+                    pgrbar.val(data.result.percent);
+                    frm.html('lines processed ' + data.result.current + ' out of ' + data.result.total);
+                }
+                else if(data.state == 'SUCCESS'){
+                    pgrbar.css('display', 'none');
+                    frm.html('Successfully Completed!');
+
+                }
+                if (data.state != 'SUCCESS') {
+                    setTimeout(function () {
+                        get_task_info(tid)
+                    }, 500);
+                }
+            },
+            error: function (data) {
+                frm.html("error!");
+            }
+        });
+    }
+</script>
+{% endif %}
+
+{% endblock %}

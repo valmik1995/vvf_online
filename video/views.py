@@ -1,3 +1,4 @@
+import json
 from django.views.generic import View, DetailView, ListView, UpdateView, DeleteView
 from django.urls import reverse_lazy, reverse
 from django.shortcuts import render, redirect, get_object_or_404
@@ -5,23 +6,29 @@ from .forms import VideoForm
 from .models import Video
 from .tasks import watermark
 
+from celery.result import AsyncResult
+from django.http import HttpResponseRedirect, JsonResponse, HttpResponse
+
 class VideoCreateView(View):
+
     form_class = VideoForm
     success_url = reverse_lazy('video:video-list')
-    template_name = 'video/video_create.html'
+    template_name = 'video/progress.html'
 
     def get(self, request, *args, **kwargs):
         form = self.form_class()
         return render(request, self.template_name, {'form': form})
 
     def post(self, request, *args, **kwargs):
+        cntx = {}
         form = self.form_class(request.POST, request.FILES)
         if form.is_valid():
             newpost = form.save(commit=False)
             newpost.save()
             form.save()
             video = watermark.delay(newpost.pk)
-            return redirect(self.success_url)
+            cntx['task_id'] = video.id
+            return render(request, 'video/progress.html', cntx)
         else:
             return render(request, self.template_name, {'form': form})
 
@@ -58,6 +65,18 @@ class VideoUpdateView(UpdateView):
 #
 #     def get_success_url(self):
 #         return reverse('video:video-list')
+
+def GetTaskInfo(request):
+    task_id = request.GET.get('task_id', None)
+    if task_id is not None:
+        task = AsyncResult(task_id)
+        data = {
+            'state': task.state,
+            'result': task.result,
+        }
+        return HttpResponse(json.dumps(data), content_type='application/json')
+    else:
+        return HttpResponse('No job id given.')
 
 
 def video_delete_view(request, id):
