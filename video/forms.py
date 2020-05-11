@@ -7,5 +7,6 @@ class VideoForm(forms.ModelForm):
         fields = [
             'title',
             'content',
+            'formato',
             'video'
         ]

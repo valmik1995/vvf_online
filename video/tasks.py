@@ -56,15 +56,10 @@ def watermark(id):
     # SUBPROCESS OUTPUT INVECE PERCORSO ASSOLUTO PER SALVARE
     output = os.path.join(settings.MEDIA_ROOT, output_file_name)
 
-
-    # input_01 = '/Users/valmik/Downloads/VID_20200425_163715.mp4'
-    input ='/Users/valmik/Downloads/FFmpegProject.mp4'
     watermark = '/Users/valmik/PycharmProjects/vvf_online/media/watermarks/logo.png'
-    scaled = '/Users/valmik/Pictures/scaled.png'
-    # output = '/Users/valmik/Downloads/FFmpeg-Codino.mp4'
     codino = '/Users/valmik/PycharmProjects/vvf_online/media/watermarks/CoEmSicurezza.mov'
 
-    width = 1280
+    width = int(video.formato)
     height = int(width/16*9)
 
     if width == 1920:
@@ -81,8 +76,9 @@ def watermark(id):
     '-f', 'lavfi', '-t', '0.1', '-i', 'anullsrc', #TRACCIA FITTIZIA AUDIO [3:a]
     '-filter_complex',
     '[0:v] scale=w={0}:h={1}, setsar=1 [video-scaled]; \
+    [1:v] scale=w={0}:h={1}, setsar=1 [video-watermarks]; \
     [2:v] scale=w={0}:h={1}, setsar=1 [video2]; \
-    [video-scaled][1:v]overlay=0:0 [video0]; \
+    [video-scaled][video-watermarks]overlay=0:0 [video0]; \
     [video0][0:a][video2][3:a] concat=n=2:v=1:a=1[v][a]'.format(width, height),
     '-map', '[v]',
     '-map', '[a]',

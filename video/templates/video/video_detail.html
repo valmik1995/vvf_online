@@ -3,14 +3,11 @@
 {% block video_content %}
 <h1>{{ object.title }}</h1>
 <p>{{ object.content }}</p>
-<div align="center" class="embed-responsive embed-responsive-16by9">
-    <video autoplay loop controls class="embed-responsive-item">
-        <source src="/{{ object.video.url }}" type="video/mp4">
-    </video>
-</div>
-<div align="center" class="embed-responsive embed-responsive-16by9">
-    <video loop controls class="embed-responsive-item">
+<div><button type="button" class="btn btn-success"><a href="/{{ object.video_720.url }}" download="">Download</a></button></</div>
+<div align="center" class="pt-4 embed-responsive embed-responsive-16by9">
+    <video loop muted playsinline controls='true' class="embed-responsive-item">
         <source src="/{{ object.video_720.url }}" type="video/mp4">
     </video>
+
 </div>
 {% endblock %}

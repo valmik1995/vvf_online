@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'caricamento',
     'crispy_forms',
     'video',
+    'compressor',
 ]
 
 MIDDLEWARE = [
@@ -139,6 +140,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 STATIC_URL = '/static/'
+
 # Django si aspetterà di trovare files in una cartella chiamata "static" presente in BASE_DIR.
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
@@ -149,6 +151,17 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 IMAGES_DIR = os.path.join(MEDIA_ROOT, 'media/images')
 
 
+STATIC_ROOT = '/Users/valmik/PycharmProjects/vvf_online/project/static/'
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
+)
+
+COMPRESS_PRECOMPILERS = (
+    ('text/x-scss', 'django_libsass.SassCompiler'),
+    ('text/x-sass', 'django_libsass.SassCompiler'),
+)
 
 CELERY_BROKER_URL = 'amqp://localhost'
 CELERY_RESULT_BACKEND = 'db+postgresql+psycopg2://vvf:Dmdersse@12@localhost/vvf'
