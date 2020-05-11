@@ -8,5 +8,7 @@ class VideoForm(forms.ModelForm):
             'title',
             'content',
             'formato',
+            'posizione',
+            'codino',
             'video'
         ]
