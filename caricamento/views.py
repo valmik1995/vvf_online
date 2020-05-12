@@ -83,7 +83,7 @@ class FileFieldView(FormView):
         files = request.FILES.getlist('file_field')
         if form.is_valid():
             for f in files:
-                 with open('/Users/valmik/Downloads/Django_' + f.name, 'wb+') as destination:
+                 with open('/home/adirimini/Django_' + f.name, 'wb+') as destination:
                     for chunk in f.chunks():
                         destination.write(chunk)
             return self.form_valid(form)

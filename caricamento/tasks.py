@@ -13,7 +13,7 @@ from time import sleep
 @shared_task(bind=True)
 def process_file(self, photos_name):
     image = Image.open(photos_name).convert("RGBA")
-    watermark = Image.open('/Users/valmik/PycharmProjects/vvf_online/media/watermarks/IMG_4156.PNG').convert("RGBA")
+    watermark = Image.open('/home/adirimini/vpodrini/project/media/watermarks/IMG_4156.PNG').convert("RGBA")
     main = image
     mark = watermark
 

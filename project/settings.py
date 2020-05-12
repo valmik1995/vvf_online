@@ -24,7 +24,7 @@ SECRET_KEY = 'v66%u1k=(y^f11^3#b^#okyh&q*@7afu52ywz4_@=$r(e6cn8c'
 
 # SECURITY WARNING: don't run with debug turnedR
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['valeriopodrini.it']
 
 
 # Application definition
@@ -151,7 +151,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 IMAGES_DIR = os.path.join(MEDIA_ROOT, 'media/images')
 
 
-STATIC_ROOT = '/Users/valmik/PycharmProjects/vvf_online/project/static/'
+#STATIC_ROOT = '/home/adirimini/vpodrini/project/static/'
+STATIC_ROOT = os.path.join(BASE_DIR,"/static/")
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',

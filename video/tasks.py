@@ -9,7 +9,7 @@ from video.models import Video
 def video_720(id, height):
         width = int(height * 16/9)
         video = Video.objects.get(id= id)
-        watermark = '/Users/valmik/PycharmProjects/vvf_online/media/watermarks/IMG_4156.PNG'
+        watermark = '/home/adirimini/vpodrini/project/media/watermarks/IMG_4156.PNG'
         if height == 720:
             bitrate = '4000k'
         else:
@@ -55,7 +55,7 @@ def watermark(id):
 
     # SUBPROCESS OUTPUT INVECE PERCORSO ASSOLUTO PER SALVARE
     output = os.path.join(settings.MEDIA_ROOT, output_file_name)
-    codino = '/Users/valmik/PycharmProjects/vvf_online/media/watermarks/CoEmSicurezza.mov'
+    codino = '/home/adirimini/vpodrini/project/media/watermarks/CoEmSicurezza.mov'
 
     width = int(video.formato)
     height = int(width/16*9)
@@ -69,7 +69,7 @@ def watermark(id):
         bitrate = '4000k'
 
     if posizione == 'ORIZ' and codin == 'CODIN' and logo == 'LOGO':
-        watermark = '/Users/valmik/PycharmProjects/vvf_online/media/watermarks/logo.png'
+        watermark = '/home/adirimini/vpodrini/project/media/watermarks/logo.png'
         subprocess.call(['ffmpeg',
         '-y', '-loglevel', 'warning', '-i',
         input,
@@ -84,13 +84,14 @@ def watermark(id):
         [video0][0:a][video2][3:a] concat=n=2:v=1:a=1[v][a]'.format(width, height),
         '-map', '[v]',
         '-map', '[a]',
-        '-vcodec',
-        'mpeg4',
-        '-b:v', bitrate,
+	'-crf', '18',
+	'-preset', 'veryfast',
+	'-f', 'mp4',
+	'-strict', '-2',
         output
         ])
     elif posizione == 'VERT'and codin == 'CODIN' and logo == 'LOGO':
-        watermark = '/Users/valmik/PycharmProjects/vvf_online/media/watermarks/logo_vertical.png'
+        watermark = '/home/adirimini/vpodrini/project/media/watermarks/logo_vertical.png'
         subprocess.call(['ffmpeg',
         '-y', '-loglevel', 'warning', '-i',
         input,
@@ -108,13 +109,14 @@ def watermark(id):
         [video0][0:a][video2][3:a] concat=n=2:v=1:a=1[v][a]'.format(width, height),
         '-map', '[v]',
         '-map', '[a]',
-        '-vcodec',
-        'mpeg4',
-        '-b:v', bitrate,
+        '-crf', '18',
+        '-preset', 'veryfast',
+        '-f', 'mp4',
+        '-strict', '-2',
         output
         ])
     elif posizione == 'ORIZ' and codin == 'SENZA' and logo == 'LOGO':
-        watermark = '/Users/valmik/PycharmProjects/vvf_online/media/watermarks/logo.png'
+        watermark = '/home/adirimini/vpodrini/project/media/watermarks/logo.png'
         subprocess.call(['ffmpeg',
         '-i', input,
         '-i', watermark,
@@ -122,13 +124,14 @@ def watermark(id):
         '[0:v] scale=w={0}:h={1}, setsar=1 [video-scaled]; \
         [1:v] scale=w={0}:h={1}, setsar=1 [wm-scaled]; \
         [video-scaled][wm-scaled]overlay=0:0'.format(width, height),
-        '-vcodec',
-        'mpeg4',
-        '-b:v', bitrate,
+        '-crf', '18',
+        '-preset', 'veryfast',
+        '-f', 'mp4',
+        '-strict', '-2',
         output
         ])
     elif posizione == 'VERT' and codin == 'SENZA' and logo == 'LOGO':
-        watermark = '/Users/valmik/PycharmProjects/vvf_online/media/watermarks/logo_vertical.png'
+        watermark = '/home/adirimini/vpodrini/project/media/watermarks/logo_vertical.png'
         subprocess.call(['ffmpeg',
         '-i', input,
         '-i', watermark,
@@ -139,9 +142,10 @@ def watermark(id):
         [1:v] scale=w={0}:h={1}, setsar=1 [wm-scaled]; \
         [bg0][video0-2-scaled] overlay=x=(W-w)/2:y=(H-h)/2 [video-scaled]; \
         [video-scaled][wm-scaled]overlay=0:0'.format(width, height),
-        '-vcodec',
-        'mpeg4',
-        '-b:v', bitrate,
+        '-crf', '18',
+        '-preset', 'veryfast',
+        '-f', 'mp4',
+        '-strict', '-2',
         output
         ])
     elif posizione == 'ORIZ' and codin == 'CODIN' and logo == 'SENZ':
@@ -156,9 +160,10 @@ def watermark(id):
         [video-scaled][0:a][video1][2:a] concat=n=2:v=1:a=1[v][a]'.format(width, height),
         '-map', '[v]',
         '-map', '[a]',
-        '-vcodec',
-        'mpeg4',
-        '-b:v', bitrate,
+        '-crf', '18',
+        '-preset', 'veryfast',
+        '-f', 'mp4',
+        '-strict', '-2',
         output
         ])
     else:

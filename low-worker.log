@@ -794,3 +794,328 @@ User information: uid=0 euid=0 gid=0 egid=0
 
   uid=uid, euid=euid, gid=gid, egid=egid,
 [2020-05-05 16:37:54,487: INFO/ForkPoolWorker-7] Task caricamento.tasks.process_file[e5cf8cd6-1459-4ea7-adfb-0519d1243f2a] succeeded in 0.8812844771891832s: None
+Traceback (most recent call last):
+  File "/home/adirimini/vpodrini/project/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 495, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    return self.handle_argv(self.prog_name, argv[1:])
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 487, in handle_argv
+    return self.execute(command, argv)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 419, in execute
+    ).run_from_argv(self.prog_name, argv[1:], command=argv[0])
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/worker.py", line 223, in run_from_argv
+    return self(*args, **options)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/base.py", line 253, in __call__
+    ret = self.run(*args, **kwargs)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/worker.py", line 258, in run
+    **kwargs)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/worker/worker.py", line 96, in __init__
+    self.app.loader.init_worker()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/loaders/base.py", line 114, in init_worker
+    self.import_default_modules()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/loaders/base.py", line 108, in import_default_modules
+    raise response
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/utils/dispatch/signal.py", line 288, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py", line 84, in on_import_modules
+    self.worker_fixup.validate_models()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py", line 122, in validate_models
+    self.django_setup()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py", line 118, in django_setup
+    django.setup()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/apps/registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/apps/config.py", line 90, in create
+    module = import_module(entry)
+  File "/usr/local/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 965, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'compressor'
+Traceback (most recent call last):
+  File "/home/adirimini/vpodrini/project/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 495, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    return self.handle_argv(self.prog_name, argv[1:])
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 487, in handle_argv
+    return self.execute(command, argv)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 419, in execute
+    ).run_from_argv(self.prog_name, argv[1:], command=argv[0])
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/worker.py", line 223, in run_from_argv
+    return self(*args, **options)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/base.py", line 253, in __call__
+    ret = self.run(*args, **kwargs)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/worker.py", line 258, in run
+    **kwargs)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/worker/worker.py", line 96, in __init__
+    self.app.loader.init_worker()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/loaders/base.py", line 114, in init_worker
+    self.import_default_modules()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/loaders/base.py", line 108, in import_default_modules
+    raise response
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/utils/dispatch/signal.py", line 288, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py", line 84, in on_import_modules
+    self.worker_fixup.validate_models()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py", line 122, in validate_models
+    self.django_setup()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py", line 118, in django_setup
+    django.setup()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/apps/registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/apps/config.py", line 90, in create
+    module = import_module(entry)
+  File "/usr/local/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 965, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'compressor'
+Traceback (most recent call last):
+  File "/home/adirimini/vpodrini/project/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 495, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    return self.handle_argv(self.prog_name, argv[1:])
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 487, in handle_argv
+    return self.execute(command, argv)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 419, in execute
+    ).run_from_argv(self.prog_name, argv[1:], command=argv[0])
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/worker.py", line 223, in run_from_argv
+    return self(*args, **options)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/base.py", line 253, in __call__
+    ret = self.run(*args, **kwargs)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/worker.py", line 258, in run
+    **kwargs)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/worker/worker.py", line 96, in __init__
+    self.app.loader.init_worker()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/loaders/base.py", line 114, in init_worker
+    self.import_default_modules()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/loaders/base.py", line 108, in import_default_modules
+    raise response
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/utils/dispatch/signal.py", line 288, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py", line 84, in on_import_modules
+    self.worker_fixup.validate_models()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py", line 122, in validate_models
+    self.django_setup()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py", line 118, in django_setup
+    django.setup()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/apps/registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/apps/config.py", line 90, in create
+    module = import_module(entry)
+  File "/usr/local/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 965, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'compressor'
+Traceback (most recent call last):
+  File "/home/adirimini/vpodrini/project/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 495, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    return self.handle_argv(self.prog_name, argv[1:])
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 487, in handle_argv
+    return self.execute(command, argv)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 419, in execute
+    ).run_from_argv(self.prog_name, argv[1:], command=argv[0])
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/worker.py", line 223, in run_from_argv
+    return self(*args, **options)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/base.py", line 253, in __call__
+    ret = self.run(*args, **kwargs)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/worker.py", line 258, in run
+    **kwargs)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/worker/worker.py", line 96, in __init__
+    self.app.loader.init_worker()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/loaders/base.py", line 114, in init_worker
+    self.import_default_modules()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/loaders/base.py", line 108, in import_default_modules
+    raise response
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/utils/dispatch/signal.py", line 288, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py", line 84, in on_import_modules
+    self.worker_fixup.validate_models()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py", line 122, in validate_models
+    self.django_setup()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py", line 118, in django_setup
+    django.setup()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/apps/registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/apps/config.py", line 90, in create
+    module = import_module(entry)
+  File "/usr/local/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 965, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'compressor'
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-12 05:52:23,872: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-12 05:52:23,931: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-12 05:52:24,968: INFO/MainProcess] mingle: all alone
+[2020-05-12 05:52:25,002: WARNING/MainProcess] /home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py:203: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  leak, never use this setting in production environments!''')
+[2020-05-12 05:52:25,003: INFO/MainProcess] celery@AdiRimini.Org ready.
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-12 05:52:41,518: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-12 05:52:41,545: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-12 05:52:42,603: INFO/MainProcess] mingle: all alone
+[2020-05-12 05:52:42,655: WARNING/MainProcess] /home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py:203: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  leak, never use this setting in production environments!''')
+[2020-05-12 05:52:42,655: INFO/MainProcess] celery@AdiRimini.Org ready.
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-12 05:53:52,602: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-12 05:53:52,649: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-12 05:53:53,719: INFO/MainProcess] mingle: all alone
+[2020-05-12 05:53:53,757: WARNING/MainProcess] /home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py:203: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  leak, never use this setting in production environments!''')
+[2020-05-12 05:53:53,757: INFO/MainProcess] celery@AdiRimini.Org ready.
+[2020-05-12 05:58:36,896: INFO/MainProcess] Received task: video.tasks.watermark[c94322d7-3e8a-4c3b-a5d0-60bcf0954ab9]  
+/home/adirimini/vpodrini/project/media/video/watermark/WhatsApp848verticale_7jhUBEr.mp4: No such file or directory
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-12 05:58:38,577: INFO/ForkPoolWorker-7] Task video.tasks.watermark[c94322d7-3e8a-4c3b-a5d0-60bcf0954ab9] succeeded in 1.676346866413951s: None
+[2020-05-12 05:59:15,368: INFO/MainProcess] Received task: video.tasks.watermark[2dc92c7a-c1e9-4c10-ba88-21b344d9b638]  
+/home/adirimini/vpodrini/project/media/video/watermark/WhatsApp640.mp4: No such file or directory
+[2020-05-12 05:59:16,018: INFO/ForkPoolWorker-7] Task video.tasks.watermark[2dc92c7a-c1e9-4c10-ba88-21b344d9b638] succeeded in 0.6477420441806316s: None
+[2020-05-12 06:01:13,922: INFO/MainProcess] Received task: video.tasks.watermark[a89e2297-d08a-4bcf-a487-aa62617bee6e]  
+[aac @ 0x225e900] The encoder 'aac' is experimental but experimental codecs are not enabled, add '-strict -2' if you want to use it.
+[2020-05-12 06:01:14,389: INFO/ForkPoolWorker-7] Task video.tasks.watermark[a89e2297-d08a-4bcf-a487-aa62617bee6e] succeeded in 0.4625168386846781s: None
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-12 06:02:56,519: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-12 06:02:56,560: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-12 06:02:57,597: INFO/MainProcess] mingle: all alone
+[2020-05-12 06:02:57,645: WARNING/MainProcess] /home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py:203: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  leak, never use this setting in production environments!''')
+[2020-05-12 06:02:57,645: INFO/MainProcess] celery@AdiRimini.Org ready.
+[2020-05-12 06:03:19,926: INFO/MainProcess] Received task: video.tasks.watermark[a703f466-a156-47ff-a8ce-bd565cf56b25]  
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-12 06:03:27,724: INFO/ForkPoolWorker-7] Task video.tasks.watermark[a703f466-a156-47ff-a8ce-bd565cf56b25] succeeded in 7.791690202429891s: None
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-12 06:05:19,308: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-12 06:05:19,343: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-12 06:05:20,398: INFO/MainProcess] mingle: all alone
+[2020-05-12 06:05:20,449: WARNING/MainProcess] /home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py:203: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  leak, never use this setting in production environments!''')
+[2020-05-12 06:05:20,450: INFO/MainProcess] celery@AdiRimini.Org ready.
+[2020-05-12 06:05:52,424: INFO/MainProcess] Received task: video.tasks.watermark[f03d06c6-a8bd-4554-837d-dec19862faa7]  
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-12 06:05:58,554: INFO/ForkPoolWorker-7] Task video.tasks.watermark[f03d06c6-a8bd-4554-837d-dec19862faa7] succeeded in 6.125670783221722s: None
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-12 06:07:35,329: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-12 06:07:35,353: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-12 06:07:36,406: INFO/MainProcess] mingle: all alone
+[2020-05-12 06:07:36,451: WARNING/MainProcess] /home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py:203: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  leak, never use this setting in production environments!''')
+[2020-05-12 06:07:36,452: INFO/MainProcess] celery@AdiRimini.Org ready.
