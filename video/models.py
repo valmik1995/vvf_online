@@ -15,12 +15,17 @@ class Video(models.Model):
     ("SENZA", "Senza"),
     ("CODIN", "Codino"),
     )
+    LOGO_CHOICES = (
+    ("SENZ", "Senza"),
+    ("LOGO", "Logo"),
+    )
 
     title   = models.CharField(max_length=120)
     content = models.TextField()
     formato = models.CharField(max_length=4, choices=FORMATO_VIDEO_CHOICES, default=1280)
     posizione = models.CharField(max_length=4, choices=POSIZIONE_VIDEO_CHOICES, default='ORIZ')
     codino = models.CharField(max_length=5, choices=CODINO_CHOICES, default='CODIN')
+    logo = models.CharField(max_length=4, choices=LOGO_CHOICES, default='LOGO')
     video = models.FileField(upload_to='video/original', default='')
     video_480 = models.FileField(upload_to='video/mp4_480', blank=True, null=True)
     video_720 = models.FileField(upload_to='video/mp4_720',blank=True, null=True)

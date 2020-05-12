@@ -46,54 +46,54 @@ def video_720(id, height):
 @shared_task
 def watermark(id):
     video = Video.objects.get(id= id)
-    input_01 = video.video.path
-    input_01_name = video.video.name
-    filename = os.path.basename(input_01)
+    input = video.video.path
+    input_name = video.video.name
+    filename = os.path.basename(input)
 
     # SALVARE NEL DATABASE NON IL PERCORSO ASSOLUTO
     output_file_name = os.path.join('video/watermark', '{}'.format(filename))
 
     # SUBPROCESS OUTPUT INVECE PERCORSO ASSOLUTO PER SALVARE
     output = os.path.join(settings.MEDIA_ROOT, output_file_name)
-
-
     codino = '/Users/valmik/PycharmProjects/vvf_online/media/watermarks/CoEmSicurezza.mov'
 
     width = int(video.formato)
     height = int(width/16*9)
     posizione = video.posizione
     codin = video.codino
+    logo = video.logo
 
     if width == 1920:
         bitrate = '10000k'
     else:
         bitrate = '4000k'
 
-    if posizione == 'ORIZ':
+    if posizione == 'ORIZ' and codin == 'CODIN' and logo == 'LOGO':
         watermark = '/Users/valmik/PycharmProjects/vvf_online/media/watermarks/logo.png'
         subprocess.call(['ffmpeg',
         '-y', '-loglevel', 'warning', '-i',
-        input_01,
+        input,
         '-i', watermark,
         '-i', codino,
         '-f', 'lavfi', '-t', '0.1', '-i', 'anullsrc', #TRACCIA FITTIZIA AUDIO [3:a]
         '-filter_complex',
         '[0:v] scale=w={0}:h={1}, setsar=1 [video-scaled]; \
-        [1:v] scale=w={0}:h={1}, setsar=1 [video-watermarks]; \
+        [1:v] scale=w={0}:h={1}, setsar=1 [wm-watermarks]; \
         [2:v] scale=w={0}:h={1}, setsar=1 [video2]; \
-        [video-scaled][video-watermarks]overlay=0:0 [video0]; \
+        [video-scaled][wm-watermarks]overlay=0:0 [video0]; \
         [video0][0:a][video2][3:a] concat=n=2:v=1:a=1[v][a]'.format(width, height),
         '-map', '[v]',
         '-map', '[a]',
-        '-crf', '18',
-        '-preset', 'veryfast', '-f', 'mp4',
+        '-vcodec',
+        'mpeg4',
+        '-b:v', bitrate,
         output
         ])
-    else:
+    elif posizione == 'VERT'and codin == 'CODIN' and logo == 'LOGO':
         watermark = '/Users/valmik/PycharmProjects/vvf_online/media/watermarks/logo_vertical.png'
         subprocess.call(['ffmpeg',
         '-y', '-loglevel', 'warning', '-i',
-        input_01,
+        input,
         '-i', watermark,
         '-i', codino,
         '-f', 'lavfi', '-t', '0.1', '-i', 'anullsrc', #TRACCIA FITTIZIA AUDIO [3:a]
@@ -108,10 +108,61 @@ def watermark(id):
         [video0][0:a][video2][3:a] concat=n=2:v=1:a=1[v][a]'.format(width, height),
         '-map', '[v]',
         '-map', '[a]',
-        '-crf', '18',
-        '-preset', 'veryfast', '-f', 'mp4',
+        '-vcodec',
+        'mpeg4',
+        '-b:v', bitrate,
         output
         ])
+    elif posizione == 'ORIZ' and codin == 'SENZA' and logo == 'LOGO':
+        watermark = '/Users/valmik/PycharmProjects/vvf_online/media/watermarks/logo.png'
+        subprocess.call(['ffmpeg',
+        '-i', input,
+        '-i', watermark,
+        '-filter_complex',
+        '[0:v] scale=w={0}:h={1}, setsar=1 [video-scaled]; \
+        [1:v] scale=w={0}:h={1}, setsar=1 [wm-scaled]; \
+        [video-scaled][wm-scaled]overlay=0:0'.format(width, height),
+        '-vcodec',
+        'mpeg4',
+        '-b:v', bitrate,
+        output
+        ])
+    elif posizione == 'VERT' and codin == 'SENZA' and logo == 'LOGO':
+        watermark = '/Users/valmik/PycharmProjects/vvf_online/media/watermarks/logo_vertical.png'
+        subprocess.call(['ffmpeg',
+        '-i', input,
+        '-i', watermark,
+        '-filter_complex',
+        '[0:v] split=2 [video0-1][video0-2]; \
+        [video0-1] scale=w={0}:h={1},boxblur=luma_radius=min(h\,w)/20:luma_power=1:chroma_radius=min(cw\,ch)/20:chroma_power=1, setsar=1 [bg0]; \
+        [video0-2] scale=-1:{1}, setsar=1 [video0-2-scaled]; \
+        [1:v] scale=w={0}:h={1}, setsar=1 [wm-scaled]; \
+        [bg0][video0-2-scaled] overlay=x=(W-w)/2:y=(H-h)/2 [video-scaled]; \
+        [video-scaled][wm-scaled]overlay=0:0'.format(width, height),
+        '-vcodec',
+        'mpeg4',
+        '-b:v', bitrate,
+        output
+        ])
+    elif posizione == 'ORIZ' and codin == 'CODIN' and logo == 'SENZ':
+        subprocess.call(['ffmpeg',
+        '-y', '-loglevel', 'warning',
+        '-i', input,
+        '-i', codino,
+        '-f', 'lavfi', '-t', '0.1', '-i', 'anullsrc', #TRACCIA FITTIZIA AUDIO [3:a]
+        '-filter_complex',
+        '[0:v] scale=w={0}:h={1}, setsar=1 [video-scaled]; \
+        [1:v] scale=w={0}:h={1}, setsar=1 [video1]; \
+        [video-scaled][0:a][video1][2:a] concat=n=2:v=1:a=1[v][a]'.format(width, height),
+        '-map', '[v]',
+        '-map', '[a]',
+        '-vcodec',
+        'mpeg4',
+        '-b:v', bitrate,
+        output
+        ])
+    else:
+        pass
 
     # Save the new file in the database
     video.video_720.name = output_file_name
