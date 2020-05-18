@@ -6,7 +6,6 @@ class VideoForm(forms.ModelForm):
         model = Video
         fields = [
             'title',
-            'content',
             'formato',
             'posizione',
             'codino',

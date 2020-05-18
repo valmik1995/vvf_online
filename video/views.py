@@ -42,10 +42,10 @@ class VideoDetailView(DetailView):
 
 class VideoListView(ListView):
     template_name = 'video/video_list.html'
-    queryset = Video.objects.all() # <blog>/<modelname>_list.html
+    queryset = Video.objects.all().order_by('-id').reverse() # <blog>/<modelname>_list.html
 
 class VideoUpdateView(UpdateView):
-    template_name = 'video/video_create.html'
+    template_name = 'video/progress.html'
     form_class = VideoForm
 
     def get_object(self):

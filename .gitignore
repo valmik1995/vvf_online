@@ -6,3 +6,5 @@ lib
 low-worker.log
 logs
 .DS_Store
+media
+static/CACHE

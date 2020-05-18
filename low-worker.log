@@ -1119,3 +1119,1270 @@ User information: uid=0 euid=0 gid=0 egid=0
             leak, never use this setting in production environments!
   leak, never use this setting in production environments!''')
 [2020-05-12 06:07:36,452: INFO/MainProcess] celery@AdiRimini.Org ready.
+[2020-05-12 06:10:12,480: INFO/MainProcess] Received task: video.tasks.watermark[b7487203-957f-494f-91f4-07096d5515a6]  
+ffmpeg version 2.8.15-0ubuntu0.16.04.1 Copyright (c) 2000-2018 the FFmpeg developers
+  built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.10) 20160609
+  configuration: --prefix=/usr --extra-version=0ubuntu0.16.04.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --cc=cc --cxx=g++ --enable-gpl --enable-shared --disable-stripping --disable-decoder=libopenjpeg --disable-decoder=libschroedinger --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxvid --enable-libzvbi --enable-openal --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-frei0r --enable-libx264 --enable-libopencv
+  libavutil      54. 31.100 / 54. 31.100
+  libavcodec     56. 60.100 / 56. 60.100
+  libavformat    56. 40.101 / 56. 40.101
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 40.101 /  5. 40.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.101 /  1.  2.101
+  libpostproc    53.  3.100 / 53.  3.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/home/adirimini/vpodrini/project/media/video/original/WhatsApp848verticale_lkRg6Bu.mp4':
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 1
+    compatible_brands: isommp41mp42
+    creation_time   : 2020-04-02 13:14:00
+  Duration: 00:00:38.33, start: 0.000000, bitrate: 1702 kb/s
+    Stream #0:0(und): Video: h264 (Baseline) (avc1 / 0x31637661), yuv420p(tv, bt709), 848x480, 1636 kb/s, 29.97 fps, 29.97 tbr, 600 tbn, 1200 tbc (default)
+    Metadata:
+      rotate          : 90
+      creation_time   : 2020-04-02 13:14:00
+      handler_name    : Core Media Video
+    Side data:
+      displaymatrix: rotation of -90.00 degrees
+    Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 63 kb/s (default)
+    Metadata:
+      creation_time   : 2020-04-02 13:14:00
+      handler_name    : Core Media Audio
+Input #1, png_pipe, from '/home/adirimini/vpodrini/project/media/watermarks/logo_vertical.png':
+  Duration: N/A, bitrate: N/A
+    Stream #1:0: Video: png, rgba(pc), 1920x1080 [SAR 2835:2835 DAR 16:9], 25 tbr, 25 tbn, 25 tbc
+[libx264 @ 0x233cc00] using SAR=1/1
+[libx264 @ 0x233cc00] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 AVX2 LZCNT BMI2
+[libx264 @ 0x233cc00] profile High, level 3.1
+[libx264 @ 0x233cc00] 264 - core 148 r2643 5c65704 - H.264/MPEG-4 AVC codec - Copyleft 2003-2015 - http://www.videolan.org/x264.html - options: cabac=1 ref=1 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=2 psy=1 psy_rd=1.00:0.00 mixed_ref=0 me_range=16 chroma_me=1 trellis=0 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=0 threads=15 lookahead_threads=5 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=1 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=10 rc=crf mbtree=1 crf=18.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to '/home/adirimini/vpodrini/project/media/video/watermark/WhatsApp848verticale_lkRg6Bu.mp4':
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 1
+    compatible_brands: isommp41mp42
+    encoder         : Lavf56.40.101
+    Stream #0:0: Video: h264 (libx264) ([33][0][0][0] / 0x0021), yuv420p, 1280x720 [SAR 1:1 DAR 16:9], q=-1--1, 29.97 fps, 30k tbn, 29.97 tbc (default)
+    Metadata:
+      encoder         : Lavc56.60.100 libx264
+    Stream #0:1(und): Audio: aac ([64][0][0][0] / 0x0040), 44100 Hz, stereo, fltp, 128 kb/s (default)
+    Metadata:
+      creation_time   : 2020-04-02 13:14:00
+      handler_name    : Core Media Audio
+      encoder         : Lavc56.60.100 aac
+Stream mapping:
+  Stream #0:0 (h264) -> split (graph 0)
+  Stream #1:0 (png) -> scale (graph 0)
+  overlay (graph 0) -> Stream #0:0 (libx264)
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+frame=    9 fps=0.0 q=0.0 size=       0kB time=00:00:01.57 bitrate=   0.2kbits/s    frame=   24 fps= 24 q=0.0 size=       0kB time=00:00:02.08 bitrate=   0.2kbits/s    frame=   40 fps= 26 q=24.0 size=     146kB time=00:00:02.62 bitrate= 456.5kbits/s    frame=   59 fps= 29 q=24.0 size=     357kB time=00:00:03.25 bitrate= 899.4kbits/s    frame=   75 fps= 30 q=24.0 size=     502kB time=00:00:03.78 bitrate=1086.7kbits/s    frame=   95 fps= 31 q=24.0 size=     695kB time=00:00:04.45 bitrate=1276.9kbits/s    frame=  112 fps= 31 q=24.0 size=     843kB time=00:00:05.01 bitrate=1377.1kbits/s    frame=  128 fps= 31 q=24.0 size=     967kB time=00:00:05.54 bitrate=1427.3kbits/s    frame=  149 fps= 32 q=24.0 size=    1114kB time=00:00:06.26 bitrate=1455.1kbits/s    frame=  164 fps= 32 q=24.0 size=    1234kB time=00:00:06.75 bitrate=1496.5kbits/s    frame=  182 fps= 32 q=24.0 size=    1374kB time=00:00:07.36 bitrate=1529.0kbits/s    frame=  201 fps= 33 q=24.0 size=    1496kB time=00:00:07.98 bitrate=1534.7kbits/s    frame=  219 fps= 33 q=24.0 size=    1605kB time=00:00:08.59 bitrate=1530.8kbits/s    frame=  236 fps= 33 q=24.0 size=    1728kB time=00:00:09.17 bitrate=1543.0kbits/s    frame=  252 fps= 33 q=24.0 size=    1840kB time=00:00:09.70 bitrate=1553.0kbits/s    frame=  269 fps= 33 q=24.0 size=    1971kB time=00:00:10.26 bitrate=1573.6kbits/s    frame=  292 fps= 34 q=24.0 size=    2163kB time=00:00:11.02 bitrate=1606.9kbits/s    frame=  309 fps= 34 q=24.0 size=    2261kB time=00:00:11.60 bitrate=1595.3kbits/s    frame=  327 fps= 34 q=24.0 size=    2363kB time=00:00:12.19 bitrate=1588.2kbits/s    frame=  345 fps= 34 q=24.0 size=    2474kB time=00:00:12.79 bitrate=1583.9kbits/s    frame=  363 fps= 34 q=24.0 size=    2593kB time=00:00:13.39 bitrate=1585.4kbits/s    frame=  382 fps= 34 q=24.0 size=    2688kB time=00:00:14.02 bitrate=1570.2kbits/s    frame=  401 fps= 34 q=24.0 size=    2792kB time=00:00:14.67 bitrate=1558.4kbits/s    frame=  421 fps= 34 q=24.0 size=    2916kB time=00:00:15.34 bitrate=1556.3kbits/s    frame=  439 fps= 34 q=24.0 size=    3024kB time=00:00:15.92 bitrate=1555.1kbits/s    frame=  457 fps= 34 q=24.0 size=    3180kB time=00:00:16.53 bitrate=1575.8kbits/s    frame=  477 fps= 34 q=24.0 size=    3338kB time=00:00:17.20 bitrate=1589.3kbits/s    frame=  494 fps= 34 q=24.0 size=    3469kB time=00:00:17.76 bitrate=1599.8kbits/s    frame=  514 fps= 34 q=24.0 size=    3683kB time=00:00:18.43 bitrate=1636.4kbits/s    frame=  532 fps= 34 q=24.0 size=    3975kB time=00:00:19.04 bitrate=1710.1kbits/s    frame=  552 fps= 35 q=24.0 size=    4253kB time=00:00:19.71 bitrate=1767.2kbits/s    frame=  571 fps= 35 q=24.0 size=    4529kB time=00:00:20.34 bitrate=1824.1kbits/s    frame=  588 fps= 35 q=24.0 size=    4719kB time=00:00:20.89 bitrate=1849.9kbits/s    frame=  605 fps= 34 q=24.0 size=    4944kB time=00:00:21.47 bitrate=1885.7kbits/s    frame=  622 fps= 34 q=24.0 size=    5140kB time=00:00:22.03 bitrate=1910.9kbits/s    frame=  641 fps= 34 q=24.0 size=    5408kB time=00:00:22.66 bitrate=1954.7kbits/s    frame=  659 fps= 34 q=24.0 size=    5642kB time=00:00:23.26 bitrate=1986.5kbits/s    frame=  679 fps= 35 q=24.0 size=    5959kB time=00:00:23.93 bitrate=2039.1kbits/s    frame=  698 fps= 35 q=24.0 size=    6237kB time=00:00:24.56 bitrate=2079.8kbits/s    frame=  717 fps= 35 q=24.0 size=    6518kB time=00:00:25.21 bitrate=2117.4kbits/s    frame=  736 fps= 35 q=24.0 size=    6788kB time=00:00:25.84 bitrate=2151.6kbits/s    frame=  756 fps= 35 q=24.0 size=    7074kB time=00:00:26.51 bitrate=2185.4kbits/s    frame=  774 fps= 35 q=24.0 size=    7314kB time=00:00:27.12 bitrate=2209.2kbits/s    frame=  794 fps= 35 q=24.0 size=    7647kB time=00:00:27.77 bitrate=2255.8kbits/s    frame=  814 fps= 35 q=24.0 size=    7930kB time=00:00:28.44 bitrate=2283.9kbits/s    frame=  831 fps= 35 q=24.0 size=    8176kB time=00:00:29.02 bitrate=2307.6kbits/s    frame=  845 fps= 35 q=24.0 size=    8366kB time=00:00:29.48 bitrate=2323.9kbits/s    frame=  860 fps= 35 q=24.0 size=    8561kB time=00:00:29.97 bitrate=2339.4kbits/s    frame=  875 fps= 35 q=24.0 size=    8768kB time=00:00:30.48 bitrate=2355.9kbits/s    frame=  893 fps= 35 q=24.0 size=    9015kB time=00:00:31.09 bitrate=2375.2kbits/s    frame=  911 fps= 35 q=24.0 size=    9268kB time=00:00:31.67 bitrate=2397.2kbits/s    frame=  927 fps= 35 q=24.0 size=    9446kB time=00:00:32.20 bitrate=2402.6kbits/s    frame=  946 fps= 35 q=24.0 size=    9651kB time=00:00:32.85 bitrate=2406.3kbits/s    frame=  962 fps= 35 q=24.0 size=    9832kB time=00:00:33.39 bitrate=2412.1kbits/s    frame=  981 fps= 35 q=24.0 size=   10074kB time=00:00:34.01 bitrate=2426.0kbits/s    frame= 1000 fps= 35 q=24.0 size=   10373kB time=00:00:34.64 bitrate=2452.9kbits/s    frame= 1019 fps= 35 q=24.0 size=   10645kB time=00:00:35.29 bitrate=2470.8kbits/s    frame= 1038 fps= 35 q=24.0 size=   10967kB time=00:00:35.92 bitrate=2501.1kbits/s    frame= 1055 fps= 35 q=24.0 size=   11165kB time=00:00:36.47 bitrate=2507.4kbits/s    frame= 1074 fps= 35 q=24.0 size=   11347kB time=00:00:37.12 bitrate=2503.6kbits/s    frame= 1090 fps= 35 q=24.0 size=   11558kB time=00:00:37.66 bitrate=2513.9kbits/s    frame= 1109 fps= 35 q=24.0 size=   11777kB time=00:00:38.28 bitrate=2519.7kbits/s    frame= 1130 fps= 35 q=24.0 size=   12004kB time=00:00:38.33 bitrate=2565.1kbits/s    frame= 1148 fps= 35 q=24.0 size=   12186kB time=00:00:38.33 bitrate=2604.1kbits/s    frame= 1149 fps= 35 q=-1.0 Lsize=   12425kB time=00:00:38.38 bitrate=2651.9kbits/s    
+video:11768kB audio:617kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.326364%
+[libx264 @ 0x233cc00] frame I:5     Avg QP:15.37  size: 64185
+[libx264 @ 0x233cc00] frame P:620   Avg QP:17.47  size: 16261
+[libx264 @ 0x233cc00] frame B:524   Avg QP:19.35  size:  3144
+[libx264 @ 0x233cc00] consecutive B-frames: 20.5% 52.6% 10.2% 16.7%
+[libx264 @ 0x233cc00] mb I  I16..4: 36.0% 36.9% 27.1%
+[libx264 @ 0x233cc00] mb P  I16..4: 14.8%  4.7%  0.4%  P16..4: 30.8% 13.1%  5.6%  0.0%  0.0%    skip:30.5%
+[libx264 @ 0x233cc00] mb B  I16..4:  2.1%  0.3%  0.0%  B16..8: 14.9%  4.8%  0.4%  direct: 6.4%  skip:71.1%  L0:40.6% L1:47.8% BI:11.6%
+[libx264 @ 0x233cc00] 8x8 transform intra:23.3% inter:28.5%
+[libx264 @ 0x233cc00] coded y,uvDC,uvAC intra: 11.9% 29.4% 5.8% inter: 10.2% 13.5% 0.8%
+[libx264 @ 0x233cc00] i16 v,h,dc,p: 37% 44% 11%  7%
+[libx264 @ 0x233cc00] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 13% 52% 25%  1%  2%  1%  3%  1%  2%
+[libx264 @ 0x233cc00] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 23% 27% 23%  4%  6%  4%  6%  3%  5%
+[libx264 @ 0x233cc00] i8c dc,h,v,p: 59% 27%  8%  6%
+[libx264 @ 0x233cc00] Weighted P-Frames: Y:1.3% UV:0.3%
+[libx264 @ 0x233cc00] kb/s:2514.42
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-12 06:10:46,578: INFO/ForkPoolWorker-7] Task video.tasks.watermark[b7487203-957f-494f-91f4-07096d5515a6] succeeded in 34.09331603720784s: None
+[2020-05-12 06:17:19,627: INFO/MainProcess] Received task: video.tasks.watermark[9d0ff2d2-7f39-45b4-87cb-f70c42b65312]  
+[2020-05-12 06:17:24,518: INFO/ForkPoolWorker-7] Task video.tasks.watermark[9d0ff2d2-7f39-45b4-87cb-f70c42b65312] succeeded in 4.888344196602702s: None
+[2020-05-12 07:07:13,688: INFO/MainProcess] Received task: video.tasks.watermark[d9199083-2c0b-4c4e-b646-e58951b67369]  
+[2020-05-12 07:07:16,255: INFO/ForkPoolWorker-7] Task video.tasks.watermark[d9199083-2c0b-4c4e-b646-e58951b67369] succeeded in 2.5626767221838236s: None
+[2020-05-12 07:09:02,782: INFO/MainProcess] Received task: video.tasks.watermark[c3c8eedf-8ab2-4e36-9f5b-342807732b3d]  
+[swscaler @ 0x1ff11e0] deprecated pixel format used, make sure you did set range correctly
+[2020-05-12 07:09:07,390: INFO/ForkPoolWorker-7] Task video.tasks.watermark[c3c8eedf-8ab2-4e36-9f5b-342807732b3d] succeeded in 4.6046376302838326s: None
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-12 07:45:30,965: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-12 07:45:30,997: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-12 07:45:32,056: INFO/MainProcess] mingle: all alone
+[2020-05-12 07:45:32,076: INFO/MainProcess] celery@AdiRimini.Org ready.
+[2020-05-12 07:46:13,893: INFO/MainProcess] Received task: video.tasks.watermark[3c60e4e0-bef6-4798-9026-3d7e52714526]  
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-12 07:46:19,591: INFO/ForkPoolWorker-7] Task video.tasks.watermark[3c60e4e0-bef6-4798-9026-3d7e52714526] succeeded in 5.691664177924395s: None
+[2020-05-12 07:47:16,960: INFO/MainProcess] Received task: video.tasks.watermark[96dec753-54b7-4015-93e1-98209e25c7ce]  
+[2020-05-12 07:47:22,285: INFO/ForkPoolWorker-7] Task video.tasks.watermark[96dec753-54b7-4015-93e1-98209e25c7ce] succeeded in 5.323356214910746s: None
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-12 08:00:34,507: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-12 08:00:34,537: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-12 08:00:35,580: INFO/MainProcess] mingle: all alone
+[2020-05-12 08:00:35,604: INFO/MainProcess] celery@AdiRimini.Org ready.
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-12 08:02:09,716: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-12 08:02:09,745: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-12 08:02:10,803: INFO/MainProcess] mingle: all alone
+[2020-05-12 08:02:10,846: INFO/MainProcess] celery@AdiRimini.Org ready.
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-12 08:06:39,004: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-12 08:06:39,052: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-12 08:06:40,125: INFO/MainProcess] mingle: all alone
+[2020-05-12 08:06:40,151: INFO/MainProcess] celery@AdiRimini.Org ready.
+[2020-05-12 08:07:28,199: INFO/MainProcess] Received task: video.tasks.watermark[7068f298-118b-41f3-b823-732da168839d]  
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-12 08:07:33,722: INFO/ForkPoolWorker-7] Task video.tasks.watermark[7068f298-118b-41f3-b823-732da168839d] succeeded in 5.515748163685203s: None
+[2020-05-12 08:09:10,201: INFO/MainProcess] Received task: video.tasks.watermark[1b979fd6-a440-476f-9b00-8bbfa2c49714]  
+[2020-05-12 08:09:13,444: INFO/ForkPoolWorker-7] Task video.tasks.watermark[1b979fd6-a440-476f-9b00-8bbfa2c49714] succeeded in 3.2392037827521563s: None
+[2020-05-12 08:24:51,809: INFO/MainProcess] Received task: video.tasks.watermark[f9325507-209e-49a9-8a97-d4bfbd0bc8be]  
+[2020-05-12 08:24:56,239: INFO/ForkPoolWorker-7] Task video.tasks.watermark[f9325507-209e-49a9-8a97-d4bfbd0bc8be] succeeded in 4.4277122262865305s: None
+[2020-05-12 08:29:54,000: INFO/MainProcess] Received task: video.tasks.watermark[025c0eed-e138-4b4c-8822-f55997b70277]  
+[2020-05-12 08:29:56,902: INFO/ForkPoolWorker-7] Task video.tasks.watermark[025c0eed-e138-4b4c-8822-f55997b70277] succeeded in 2.898670630529523s: None
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-12 11:13:18,582: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-12 11:13:18,618: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-12 11:13:19,663: INFO/MainProcess] mingle: all alone
+[2020-05-12 11:13:19,720: INFO/MainProcess] celery@AdiRimini.Org ready.
+[2020-05-12 12:01:44,858: INFO/MainProcess] Received task: video.tasks.watermark[9ab2f9c7-efe5-46c4-b1e6-5cbdb2a63f26]  
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-12 12:01:51,023: INFO/ForkPoolWorker-7] Task video.tasks.watermark[9ab2f9c7-efe5-46c4-b1e6-5cbdb2a63f26] succeeded in 6.157999709248543s: None
+[2020-05-12 13:48:25,363: INFO/MainProcess] Received task: video.tasks.watermark[17779293-5eab-4444-9477-8c52f61b283f]  
+[2020-05-12 13:48:39,519: INFO/ForkPoolWorker-7] Task video.tasks.watermark[17779293-5eab-4444-9477-8c52f61b283f] succeeded in 14.152024483308196s: None
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-12 17:28:09,493: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-12 17:28:09,537: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-12 17:28:10,579: INFO/MainProcess] mingle: all alone
+[2020-05-12 17:28:10,623: INFO/MainProcess] celery@AdiRimini.Org ready.
+[2020-05-12 18:42:55,691: INFO/MainProcess] Received task: video.tasks.watermark[10fa1d67-a0f5-44f6-b853-6369069f9984]  
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-12 18:43:00,112: INFO/ForkPoolWorker-7] Task video.tasks.watermark[10fa1d67-a0f5-44f6-b853-6369069f9984] succeeded in 4.417143965139985s: None
+[2020-05-12 18:44:37,346: INFO/MainProcess] Received task: video.tasks.watermark[a518f227-b22e-499b-920d-e4d7166cf017]  
+[2020-05-12 18:44:42,032: INFO/ForkPoolWorker-7] Task video.tasks.watermark[a518f227-b22e-499b-920d-e4d7166cf017] succeeded in 4.682537041604519s: None
+[2020-05-12 18:46:13,526: INFO/MainProcess] Received task: video.tasks.watermark[fd8e9b7f-d4e5-49e4-9a6d-a81617b9b0a7]  
+[2020-05-12 18:46:21,591: INFO/ForkPoolWorker-7] Task video.tasks.watermark[fd8e9b7f-d4e5-49e4-9a6d-a81617b9b0a7] succeeded in 8.061185292899609s: None
+[2020-05-12 19:00:32,531: INFO/MainProcess] Received task: video.tasks.watermark[a1a59a2d-9e65-4cee-ab2c-adc8715e3873]  
+[2020-05-12 19:00:38,701: INFO/ForkPoolWorker-7] Task video.tasks.watermark[a1a59a2d-9e65-4cee-ab2c-adc8715e3873] succeeded in 6.166344178840518s: None
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-13 09:27:46,547: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-13 09:27:46,583: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-13 09:27:47,629: INFO/MainProcess] mingle: all alone
+[2020-05-13 09:27:47,659: INFO/MainProcess] celery@AdiRimini.Org ready.
+[2020-05-13 09:29:00,279: INFO/MainProcess] Received task: video.tasks.watermark[fae3c377-2b71-481d-b114-7b5cb1acf5cf]  
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-13 09:29:12,964: INFO/ForkPoolWorker-7] Task video.tasks.watermark[fae3c377-2b71-481d-b114-7b5cb1acf5cf] succeeded in 12.680316511541605s: None
+[2020-05-13 09:30:20,281: INFO/MainProcess] Received task: video.tasks.watermark[fd4c490f-beac-4179-a620-2237bdbe3f91]  
+[2020-05-13 09:30:31,925: INFO/ForkPoolWorker-7] Task video.tasks.watermark[fd4c490f-beac-4179-a620-2237bdbe3f91] succeeded in 11.640860030427575s: None
+[2020-05-13 09:32:38,353: INFO/MainProcess] Received task: video.tasks.watermark[a58e04e5-b6b0-4735-86ca-b30bf398f374]  
+[2020-05-13 09:32:50,832: INFO/ForkPoolWorker-7] Task video.tasks.watermark[a58e04e5-b6b0-4735-86ca-b30bf398f374] succeeded in 12.47573040984571s: None
+[2020-05-13 09:33:55,612: INFO/MainProcess] Received task: video.tasks.watermark[3df5cbc9-8bd9-4e6d-8fe4-c41978a08b80]  
+[2020-05-13 09:34:20,116: INFO/MainProcess] Received task: video.tasks.watermark[8ddffe08-ffd8-4587-b1d1-f381917f05fc]  
+[2020-05-13 09:34:25,993: INFO/ForkPoolWorker-7] Task video.tasks.watermark[3df5cbc9-8bd9-4e6d-8fe4-c41978a08b80] succeeded in 30.379371654242277s: None
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-13 09:34:49,335: INFO/ForkPoolWorker-8] Task video.tasks.watermark[8ddffe08-ffd8-4587-b1d1-f381917f05fc] succeeded in 29.213678123429418s: None
+[2020-05-13 09:35:47,088: INFO/MainProcess] Received task: video.tasks.watermark[23fcc378-8984-4c66-bcee-7f76d29cc833]  
+Stream specifier ':a' in filtergraph description [0:v] split=2 [video0-1][video0-2];         [video0-1] scale=w=1280:h=720,boxblur=luma_radius=min(h\,w)/20:luma_power=1:chroma_radius=min(cw\,ch)/20:chroma_power=1, setsar=1  [bg0];         [video0-2] scale=-1:720, setsar=1 [video0-2-scaled];         [bg0][video0-2-scaled] overlay=x=(W-w)/2:y=(H-h)/2 [video-scaled];         [1:v] scale=w=1280:h=720, setsar=1 [video-watermarks];         [2:v] scale=w=1280:h=720, setsar=1 [video2];         [video-scaled][video-watermarks]overlay=0:0 [video0];         [video0][0:a][video2][3:a] concat=n=2:v=1:a=1[v][a] matches no streams.
+[2020-05-13 09:35:47,785: INFO/ForkPoolWorker-7] Task video.tasks.watermark[23fcc378-8984-4c66-bcee-7f76d29cc833] succeeded in 0.6945848446339369s: None
+[2020-05-13 09:36:23,274: INFO/MainProcess] Received task: video.tasks.watermark[1fae362e-73d8-445d-b271-62c14a8b15dd]  
+[2020-05-13 09:36:53,328: INFO/ForkPoolWorker-7] Task video.tasks.watermark[1fae362e-73d8-445d-b271-62c14a8b15dd] succeeded in 30.04956654459238s: None
+[2020-05-13 09:37:38,702: INFO/MainProcess] Received task: video.tasks.watermark[c6775eb8-0217-4b38-8c37-82ca7f0158fa]  
+[2020-05-13 09:37:46,914: INFO/ForkPoolWorker-7] Task video.tasks.watermark[c6775eb8-0217-4b38-8c37-82ca7f0158fa] succeeded in 8.208660244941711s: None
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-13 09:48:20,963: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-13 09:48:20,986: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-13 09:48:22,040: INFO/MainProcess] mingle: all alone
+[2020-05-13 09:48:22,088: INFO/MainProcess] celery@AdiRimini.Org ready.
+[2020-05-13 09:48:42,894: INFO/MainProcess] Received task: video.tasks.watermark[a9e45a7b-3ea3-401e-8874-0ae20b02f44b]  
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-13 09:48:48,480: INFO/ForkPoolWorker-7] Task video.tasks.watermark[a9e45a7b-3ea3-401e-8874-0ae20b02f44b] succeeded in 5.581615166738629s: None
+[2020-05-13 09:50:24,857: INFO/MainProcess] Received task: video.tasks.watermark[b948a6c2-24e9-4de3-ad96-e32e7601cb16]  
+[2020-05-13 09:50:30,330: INFO/ForkPoolWorker-7] Task video.tasks.watermark[b948a6c2-24e9-4de3-ad96-e32e7601cb16] succeeded in 5.469378056004643s: None
+[2020-05-13 09:52:41,938: INFO/MainProcess] Received task: video.tasks.watermark[ae85c6d9-2cab-4a99-b968-8fa5a1de5d71]  
+[2020-05-13 09:52:52,063: INFO/ForkPoolWorker-7] Task video.tasks.watermark[ae85c6d9-2cab-4a99-b968-8fa5a1de5d71] succeeded in 10.120831955224276s: None
+[2020-05-13 10:17:05,079: INFO/MainProcess] Received task: video.tasks.watermark[4f236849-dbca-4171-bc02-cb52fb962471]  
+[2020-05-13 10:17:13,669: INFO/ForkPoolWorker-7] Task video.tasks.watermark[4f236849-dbca-4171-bc02-cb52fb962471] succeeded in 8.586216025054455s: None
+[2020-05-13 10:27:03,167: INFO/MainProcess] Received task: video.tasks.watermark[c8374fca-b008-4c38-8441-47318ee4a207]  
+[2020-05-13 10:27:09,431: INFO/ForkPoolWorker-7] Task video.tasks.watermark[c8374fca-b008-4c38-8441-47318ee4a207] succeeded in 6.2605654541403055s: None
+[2020-05-13 10:29:31,777: INFO/MainProcess] Received task: video.tasks.watermark[7110a190-0aa6-4cdc-8665-bb9ad7dc75d3]  
+[2020-05-13 10:29:37,920: INFO/MainProcess] Received task: video.tasks.watermark[75a0de71-f07c-4a6c-bfa2-68eac447b280]  
+[2020-05-13 10:29:38,358: INFO/ForkPoolWorker-7] Task video.tasks.watermark[7110a190-0aa6-4cdc-8665-bb9ad7dc75d3] succeeded in 6.577495206147432s: None
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-13 10:29:44,296: INFO/ForkPoolWorker-8] Task video.tasks.watermark[75a0de71-f07c-4a6c-bfa2-68eac447b280] succeeded in 6.369783191010356s: None
+[2020-05-13 10:38:50,450: INFO/MainProcess] Received task: video.tasks.watermark[44abbff2-1606-4963-9e23-45d308a8e7d7]  
+Stream specifier ':a' in filtergraph description [0:v] scale=w=1280:h=720, setsar=1 [video-scaled];         [1:v] scale=w=1280:h=720, setsar=1 [wm-watermarks];         [2:v] scale=w=1280:h=720, setsar=1 [video2];         [video-scaled][wm-watermarks]overlay=0:0 [video0];         [video0][0:a][video2][3:a] concat=n=2:v=1:a=1[v][a] matches no streams.
+[2020-05-13 10:38:50,875: INFO/ForkPoolWorker-7] Task video.tasks.watermark[44abbff2-1606-4963-9e23-45d308a8e7d7] succeeded in 0.4217142965644598s: None
+[2020-05-13 10:44:20,090: INFO/MainProcess] Received task: video.tasks.watermark[1ed5e5c9-66db-4eb0-8a90-ad19ffe6b26b]  
+[swscaler @ 0xbec600] deprecated pixel format used, make sure you did set range correctly
+[2020-05-13 10:44:24,761: INFO/ForkPoolWorker-7] Task video.tasks.watermark[1ed5e5c9-66db-4eb0-8a90-ad19ffe6b26b] succeeded in 4.66856574267149s: None
+[2020-05-13 11:21:22,297: INFO/MainProcess] Received task: video.tasks.watermark[32cdd97b-e51c-4109-80f3-19e61f01240d]  
+[2020-05-13 11:21:42,493: INFO/ForkPoolWorker-7] Task video.tasks.watermark[32cdd97b-e51c-4109-80f3-19e61f01240d] succeeded in 20.193900376558304s: None
+[2020-05-13 11:36:53,306: INFO/MainProcess] Received task: video.tasks.watermark[d27c0331-3d8d-4327-8a96-5a2fa2d9717f]  
+[2020-05-13 11:37:00,881: INFO/ForkPoolWorker-7] Task video.tasks.watermark[d27c0331-3d8d-4327-8a96-5a2fa2d9717f] succeeded in 7.572334600612521s: None
+[2020-05-13 11:38:10,231: INFO/MainProcess] Received task: video.tasks.watermark[4baca262-9a13-4c6d-9094-5aa82d243856]  
+[swscaler @ 0xa0eb40] deprecated pixel format used, make sure you did set range correctly
+[2020-05-13 11:38:14,755: INFO/ForkPoolWorker-7] Task video.tasks.watermark[4baca262-9a13-4c6d-9094-5aa82d243856] succeeded in 4.5215781554579735s: None
+[2020-05-13 11:39:38,328: INFO/MainProcess] Received task: video.tasks.watermark[661ab7fa-f665-45cf-a043-7b2ba76f47f0]  
+[swscaler @ 0x1f28460] deprecated pixel format used, make sure you did set range correctly
+[swscaler @ 0x1f7ddc0] deprecated pixel format used, make sure you did set range correctly
+[2020-05-13 11:39:50,658: INFO/ForkPoolWorker-7] Task video.tasks.watermark[661ab7fa-f665-45cf-a043-7b2ba76f47f0] succeeded in 12.327407367527485s: None
+[2020-05-13 13:41:48,188: INFO/MainProcess] Received task: video.tasks.watermark[4b6682f1-d6e7-4f0c-ad93-6063d8aed1c2]  
+[2020-05-13 13:41:56,488: INFO/ForkPoolWorker-7] Task video.tasks.watermark[4b6682f1-d6e7-4f0c-ad93-6063d8aed1c2] succeeded in 8.29732316173613s: None
+[2020-05-13 13:43:15,874: INFO/MainProcess] Received task: video.tasks.watermark[02f847bc-eae9-4584-a633-6c90449de637]  
+[2020-05-13 13:43:26,779: INFO/ForkPoolWorker-7] Task video.tasks.watermark[02f847bc-eae9-4584-a633-6c90449de637] succeeded in 10.902917550876737s: None
+[2020-05-13 13:53:41,505: INFO/MainProcess] Received task: video.tasks.watermark[368b51fc-ebff-4c43-8346-090c9b8a2f52]  
+ffmpeg version 2.8.15-0ubuntu0.16.04.1 Copyright (c) 2000-2018 the FFmpeg developers
+  built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.10) 20160609
+  configuration: --prefix=/usr --extra-version=0ubuntu0.16.04.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --cc=cc --cxx=g++ --enable-gpl --enable-shared --disable-stripping --disable-decoder=libopenjpeg --disable-decoder=libschroedinger --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxvid --enable-libzvbi --enable-openal --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-frei0r --enable-libx264 --enable-libopencv
+  libavutil      54. 31.100 / 54. 31.100
+  libavcodec     56. 60.100 / 56. 60.100
+  libavformat    56. 40.101 / 56. 40.101
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 40.101 /  5. 40.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.101 /  1.  2.101
+  libpostproc    53.  3.100 / 53.  3.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/home/adirimini/vpodrini/project/media/video/original/20200513_155321.mp4':
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 0
+    compatible_brands: isommp42
+    creation_time   : 2020-05-13 13:53:28
+    location        : +45.6427+013.7576/
+    location-eng    : +45.6427+013.7576/
+  Duration: 00:00:06.54, start: 0.000000, bitrate: 9407 kb/s
+    Stream #0:0(eng): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709/bt709/smpte170m), 1280x720, 9147 kb/s, SAR 1:1 DAR 16:9, 29.98 fps, 30 tbr, 90k tbn, 180k tbc (default)
+    Metadata:
+      creation_time   : 2020-05-13 13:53:28
+      handler_name    : VideoHandle
+    Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 256 kb/s (default)
+    Metadata:
+      creation_time   : 2020-05-13 13:53:28
+      handler_name    : SoundHandle
+Input #1, png_pipe, from '/home/adirimini/vpodrini/project/media/watermarks/logo.png':
+  Duration: N/A, bitrate: N/A
+    Stream #1:0: Video: png, rgba(pc), 1920x1080 [SAR 2835:2835 DAR 16:9], 25 tbr, 25 tbn, 25 tbc
+[libx264 @ 0xedc160] using SAR=1/1
+[libx264 @ 0xedc160] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 AVX2 LZCNT BMI2
+[libx264 @ 0xedc160] profile High, level 3.1
+[libx264 @ 0xedc160] 264 - core 148 r2643 5c65704 - H.264/MPEG-4 AVC codec - Copyleft 2003-2015 - http://www.videolan.org/x264.html - options: cabac=1 ref=1 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=2 psy=1 psy_rd=1.00:0.00 mixed_ref=0 me_range=16 chroma_me=1 trellis=0 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=0 threads=15 lookahead_threads=5 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=1 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=10 rc=crf mbtree=1 crf=18.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to '/home/adirimini/vpodrini/project/media/video/watermark/20200513_155321.mp4':
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 0
+    compatible_brands: isommp42
+    location-eng    : +45.6427+013.7576/
+    location        : +45.6427+013.7576/
+    encoder         : Lavf56.40.101
+    Stream #0:0: Video: h264 (libx264) ([33][0][0][0] / 0x0021), yuv420p, 1280x720 [SAR 1:1 DAR 16:9], q=-1--1, 30 fps, 15360 tbn, 30 tbc (default)
+    Metadata:
+      encoder         : Lavc56.60.100 libx264
+    Stream #0:1(eng): Audio: aac ([64][0][0][0] / 0x0040), 48000 Hz, stereo, fltp, 128 kb/s (default)
+    Metadata:
+      creation_time   : 2020-05-13 13:53:28
+      handler_name    : SoundHandle
+      encoder         : Lavc56.60.100 aac
+Stream mapping:
+  Stream #0:0 (h264) -> scale (graph 0)
+  Stream #1:0 (png) -> scale (graph 0)
+  overlay (graph 0) -> Stream #0:0 (libx264)
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+frame=   13 fps=0.0 q=0.0 size=       0kB time=00:00:01.00 bitrate=   0.4kbits/s    frame=   54 fps= 53 q=24.0 size=     301kB time=00:00:02.92 bitrate= 844.8kbits/s    frame=  116 fps= 76 q=24.0 size=     954kB time=00:00:04.54 bitrate=1720.2kbits/s    frame=  172 fps= 85 q=24.0 size=    1516kB time=00:00:06.01 bitrate=2064.0kbits/s    frame=  196 fps= 86 q=-1.0 Lsize=    2070kB time=00:00:06.48 bitrate=2614.4kbits/s    
+video:1950kB audio:111kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.402059%
+[libx264 @ 0xedc160] frame I:1     Avg QP:18.08  size: 49779
+[libx264 @ 0xedc160] frame P:49    Avg QP:18.48  size: 21123
+[libx264 @ 0xedc160] frame B:146   Avg QP:19.64  size:  6243
+[libx264 @ 0xedc160] consecutive B-frames:  0.5%  0.0%  1.5% 98.0%
+[libx264 @ 0xedc160] mb I  I16..4: 33.5% 49.8% 16.6%
+[libx264 @ 0xedc160] mb P  I16..4:  7.5%  5.7%  0.3%  P16..4: 52.0% 18.6%  9.0%  0.0%  0.0%    skip: 6.9%
+[libx264 @ 0xedc160] mb B  I16..4:  2.5%  0.6%  0.0%  B16..8: 22.0%  5.9%  0.1%  direct:17.0%  skip:51.9%  L0:41.0% L1:46.3% BI:12.7%
+[libx264 @ 0xedc160] 8x8 transform intra:33.9% inter:52.0%
+[libx264 @ 0xedc160] coded y,uvDC,uvAC intra: 77.2% 41.0% 3.4% inter: 16.0% 16.2% 0.1%
+[libx264 @ 0xedc160] i16 v,h,dc,p: 10% 30% 50% 10%
+[libx264 @ 0xedc160] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 11% 32% 37%  3%  3%  3%  4%  3%  5%
+[libx264 @ 0xedc160] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 18% 45% 22%  3%  2%  2%  3%  2%  3%
+[libx264 @ 0xedc160] i8c dc,h,v,p: 52% 35% 11%  3%
+[libx264 @ 0xedc160] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0xedc160] kb/s:2444.44
+[2020-05-13 13:53:44,680: INFO/ForkPoolWorker-7] Task video.tasks.watermark[368b51fc-ebff-4c43-8346-090c9b8a2f52] succeeded in 3.1738040782511234s: None
+[2020-05-13 13:54:38,913: INFO/MainProcess] Received task: video.tasks.watermark[19c1c6ef-f606-40a2-b41c-1ae301d53033]  
+ffmpeg version 2.8.15-0ubuntu0.16.04.1 Copyright (c) 2000-2018 the FFmpeg developers
+  built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.10) 20160609
+  configuration: --prefix=/usr --extra-version=0ubuntu0.16.04.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --cc=cc --cxx=g++ --enable-gpl --enable-shared --disable-stripping --disable-decoder=libopenjpeg --disable-decoder=libschroedinger --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxvid --enable-libzvbi --enable-openal --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-frei0r --enable-libx264 --enable-libopencv
+  libavutil      54. 31.100 / 54. 31.100
+  libavcodec     56. 60.100 / 56. 60.100
+  libavformat    56. 40.101 / 56. 40.101
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 40.101 /  5. 40.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.101 /  1.  2.101
+  libpostproc    53.  3.100 / 53.  3.100
+[mjpeg @ 0x249bd20] Changeing bps to 8
+Input #0, image2, from '/home/adirimini/vpodrini/project/media/video/original/20200512_161633.jpg':
+  Duration: 00:00:00.04, start: 0.000000, bitrate: 512128 kb/s
+    Stream #0:0: Video: mjpeg, yuvj420p(pc, bt470bg/unknown/unknown), 4032x3024, 25 tbr, 25 tbn, 25 tbc
+Input #1, png_pipe, from '/home/adirimini/vpodrini/project/media/watermarks/logo.png':
+  Duration: N/A, bitrate: N/A
+    Stream #1:0: Video: png, rgba(pc), 1920x1080 [SAR 2835:2835 DAR 16:9], 25 tbr, 25 tbn, 25 tbc
+[swscaler @ 0x24c3480] deprecated pixel format used, make sure you did set range correctly
+[libx264 @ 0x24a0620] using SAR=1/1
+[libx264 @ 0x24a0620] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 AVX2 LZCNT BMI2
+[libx264 @ 0x24a0620] profile High, level 3.1
+[libx264 @ 0x24a0620] 264 - core 148 r2643 5c65704 - H.264/MPEG-4 AVC codec - Copyleft 2003-2015 - http://www.videolan.org/x264.html - options: cabac=1 ref=1 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=2 psy=1 psy_rd=1.00:0.00 mixed_ref=0 me_range=16 chroma_me=1 trellis=0 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=0 threads=15 lookahead_threads=5 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=1 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=10 rc=crf mbtree=1 crf=18.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to '/home/adirimini/vpodrini/project/media/video/watermark/20200512_161633.jpg':
+  Metadata:
+    encoder         : Lavf56.40.101
+    Stream #0:0: Video: h264 (libx264) ([33][0][0][0] / 0x0021), yuv420p, 1280x720 [SAR 1:1 DAR 16:9], q=-1--1, 25 fps, 12800 tbn, 25 tbc (default)
+    Metadata:
+      encoder         : Lavc56.60.100 libx264
+Stream mapping:
+  Stream #0:0 (mjpeg) -> scale
+  Stream #1:0 (png) -> scale
+  overlay -> Stream #0:0 (libx264)
+Press [q] to stop, [?] for help
+frame=    1 fps=0.0 q=23.0 Lsize=      54kB time=00:00:00.04 bitrate=11108.0kbits/s    
+video:53kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 1.461454%
+[libx264 @ 0x24a0620] frame I:1     Avg QP:21.00  size: 54051
+[libx264 @ 0x24a0620] mb I  I16..4: 15.8% 51.7% 32.5%
+[libx264 @ 0x24a0620] 8x8 transform intra:51.7%
+[libx264 @ 0x24a0620] coded y,uvDC,uvAC intra: 75.6% 63.4% 32.5%
+[libx264 @ 0x24a0620] i16 v,h,dc,p: 29% 24% 23% 24%
+[libx264 @ 0x24a0620] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 13% 26% 20%  7%  5%  4%  8%  5% 13%
+[libx264 @ 0x24a0620] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 19% 23% 11%  8%  7%  7%  8%  6% 11%
+[libx264 @ 0x24a0620] i8c dc,h,v,p: 46% 30% 16%  8%
+[libx264 @ 0x24a0620] kb/s:10810.20
+[2020-05-13 13:54:39,887: INFO/ForkPoolWorker-7] Task video.tasks.watermark[19c1c6ef-f606-40a2-b41c-1ae301d53033] succeeded in 0.9717600774019957s: None
+[2020-05-13 13:59:28,992: INFO/MainProcess] Received task: video.tasks.watermark[18dbff0f-bb68-44ef-bd91-44db0d3095cc]  
+ffmpeg version 2.8.15-0ubuntu0.16.04.1 Copyright (c) 2000-2018 the FFmpeg developers
+  built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.10) 20160609
+  configuration: --prefix=/usr --extra-version=0ubuntu0.16.04.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --cc=cc --cxx=g++ --enable-gpl --enable-shared --disable-stripping --disable-decoder=libopenjpeg --disable-decoder=libschroedinger --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxvid --enable-libzvbi --enable-openal --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-frei0r --enable-libx264 --enable-libopencv
+  libavutil      54. 31.100 / 54. 31.100
+  libavcodec     56. 60.100 / 56. 60.100
+  libavformat    56. 40.101 / 56. 40.101
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 40.101 /  5. 40.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.101 /  1.  2.101
+  libpostproc    53.  3.100 / 53.  3.100
+[mjpeg @ 0x1946d60] Changeing bps to 8
+Input #0, image2, from '/home/adirimini/vpodrini/project/media/video/original/20200512_161633_ywc5teR.jpg':
+  Duration: 00:00:00.04, start: 0.000000, bitrate: 512128 kb/s
+    Stream #0:0: Video: mjpeg, yuvj420p(pc, bt470bg/unknown/unknown), 4032x3024, 25 tbr, 25 tbn, 25 tbc
+Input #1, png_pipe, from '/home/adirimini/vpodrini/project/media/watermarks/logo.png':
+  Duration: N/A, bitrate: N/A
+    Stream #1:0: Video: png, rgba(pc), 1920x1080 [SAR 2835:2835 DAR 16:9], 25 tbr, 25 tbn, 25 tbc
+[swscaler @ 0x1969b40] deprecated pixel format used, make sure you did set range correctly
+[libx264 @ 0x194cea0] using SAR=1/1
+[libx264 @ 0x194cea0] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 AVX2 LZCNT BMI2
+[libx264 @ 0x194cea0] profile High, level 3.1
+[libx264 @ 0x194cea0] 264 - core 148 r2643 5c65704 - H.264/MPEG-4 AVC codec - Copyleft 2003-2015 - http://www.videolan.org/x264.html - options: cabac=1 ref=1 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=2 psy=1 psy_rd=1.00:0.00 mixed_ref=0 me_range=16 chroma_me=1 trellis=0 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=0 threads=15 lookahead_threads=5 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=1 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=10 rc=crf mbtree=1 crf=18.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to '/home/adirimini/vpodrini/project/media/video/watermark/20200512_161633_ywc5teR.jpg':
+  Metadata:
+    encoder         : Lavf56.40.101
+    Stream #0:0: Video: h264 (libx264) ([33][0][0][0] / 0x0021), yuv420p, 1280x720 [SAR 1:1 DAR 16:9], q=-1--1, 25 fps, 12800 tbn, 25 tbc (default)
+    Metadata:
+      encoder         : Lavc56.60.100 libx264
+Stream mapping:
+  Stream #0:0 (mjpeg) -> scale
+  Stream #1:0 (png) -> scale
+  overlay -> Stream #0:0 (libx264)
+Press [q] to stop, [?] for help
+frame=    1 fps=0.0 q=23.0 Lsize=      54kB time=00:00:00.04 bitrate=11108.0kbits/s    
+video:53kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 1.461454%
+[libx264 @ 0x194cea0] frame I:1     Avg QP:21.00  size: 54051
+[libx264 @ 0x194cea0] mb I  I16..4: 15.8% 51.7% 32.5%
+[libx264 @ 0x194cea0] 8x8 transform intra:51.7%
+[libx264 @ 0x194cea0] coded y,uvDC,uvAC intra: 75.6% 63.4% 32.5%
+[libx264 @ 0x194cea0] i16 v,h,dc,p: 29% 24% 23% 24%
+[libx264 @ 0x194cea0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 13% 26% 20%  7%  5%  4%  8%  5% 13%
+[libx264 @ 0x194cea0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 19% 23% 11%  8%  7%  7%  8%  6% 11%
+[libx264 @ 0x194cea0] i8c dc,h,v,p: 46% 30% 16%  8%
+[libx264 @ 0x194cea0] kb/s:10810.20
+[2020-05-13 13:59:29,977: INFO/ForkPoolWorker-7] Task video.tasks.watermark[18dbff0f-bb68-44ef-bd91-44db0d3095cc] succeeded in 0.9804937187582254s: None
+[2020-05-13 14:03:05,293: INFO/MainProcess] Received task: video.tasks.watermark[c5616319-ad7a-4fa7-be7c-93288e0eeeba]  
+[2020-05-13 14:03:20,432: INFO/ForkPoolWorker-7] Task video.tasks.watermark[c5616319-ad7a-4fa7-be7c-93288e0eeeba] succeeded in 15.135886125266552s: None
+[2020-05-13 14:05:49,957: INFO/MainProcess] Received task: video.tasks.watermark[84f9869b-796e-4e41-85fe-69b48e21665b]  
+[2020-05-13 14:06:01,979: INFO/ForkPoolWorker-7] Task video.tasks.watermark[84f9869b-796e-4e41-85fe-69b48e21665b] succeeded in 12.017912231385708s: None
+[2020-05-13 14:56:00,596: INFO/MainProcess] Received task: video.tasks.watermark[e3247012-754e-436f-a0a3-a0e8e0be0136]  
+[2020-05-13 14:56:08,148: INFO/ForkPoolWorker-7] Task video.tasks.watermark[e3247012-754e-436f-a0a3-a0e8e0be0136] succeeded in 7.549640288576484s: None
+[2020-05-13 15:34:11,593: INFO/MainProcess] Received task: video.tasks.watermark[cbcfeae6-bb12-498a-97e4-b874c4a04a9c]  
+[2020-05-13 15:34:16,954: INFO/ForkPoolWorker-7] Task video.tasks.watermark[cbcfeae6-bb12-498a-97e4-b874c4a04a9c] succeeded in 5.3601610865443945s: None
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-14 04:53:35,933: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-14 04:53:35,989: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-14 04:53:37,069: INFO/MainProcess] mingle: all alone
+[2020-05-14 04:53:37,125: INFO/MainProcess] celery@AdiRimini.Org ready.
+[2020-05-14 04:54:12,951: INFO/MainProcess] Received task: video.tasks.watermark[5c10e8f5-d027-4eda-9d7e-958369ff2027]  
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-14 04:54:25,149: INFO/ForkPoolWorker-7] Task video.tasks.watermark[5c10e8f5-d027-4eda-9d7e-958369ff2027] succeeded in 12.195664713159204s: None
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-14 05:16:53,774: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-14 05:16:53,818: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-14 05:16:54,868: INFO/MainProcess] mingle: all alone
+[2020-05-14 05:16:54,904: INFO/MainProcess] celery@AdiRimini.Org ready.
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-14 05:18:21,578: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-14 05:18:21,621: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-14 05:18:22,699: INFO/MainProcess] mingle: all alone
+[2020-05-14 05:18:22,728: INFO/MainProcess] celery@AdiRimini.Org ready.
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-14 05:20:21,208: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-14 05:20:21,246: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-14 05:20:22,303: INFO/MainProcess] mingle: all alone
+[2020-05-14 05:20:22,337: INFO/MainProcess] celery@AdiRimini.Org ready.
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-14 05:27:58,084: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-14 05:27:58,118: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-14 05:27:59,161: INFO/MainProcess] mingle: all alone
+[2020-05-14 05:27:59,196: INFO/MainProcess] celery@AdiRimini.Org ready.
+[2020-05-14 06:23:21,596: INFO/MainProcess] Received task: video.tasks.watermark[5408f773-843a-4f42-98b4-d612c9dce748]  
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-14 06:23:21,819: INFO/ForkPoolWorker-7] Task video.tasks.watermark[5408f773-843a-4f42-98b4-d612c9dce748] succeeded in 0.21656262129545212s: None
+[2020-05-14 06:24:37,057: INFO/MainProcess] Received task: video.tasks.watermark[9646dc09-e419-4885-82b3-f19845ada9c3]  
+[2020-05-14 06:24:40,474: INFO/ForkPoolWorker-7] Task video.tasks.watermark[9646dc09-e419-4885-82b3-f19845ada9c3] succeeded in 3.414831344038248s: None
+[2020-05-14 06:52:34,291: INFO/MainProcess] Received task: video.tasks.watermark[805ade01-df9c-4a3b-bb6c-077114fe867e]  
+[2020-05-14 06:54:26,706: INFO/ForkPoolWorker-7] Task video.tasks.watermark[805ade01-df9c-4a3b-bb6c-077114fe867e] succeeded in 112.41230034641922s: None
+[2020-05-14 07:47:18,648: INFO/MainProcess] Received task: video.tasks.watermark[f15a914e-868e-4218-9fec-a7bca748a57e]  
+Past duration 0.600670 too large
+Past duration 0.601677 too large
+Past duration 0.602318 too large
+Past duration 0.601326 too large
+Past duration 0.601997 too large
+Past duration 0.601326 too large
+Past duration 0.603310 too large
+Past duration 0.604317 too large
+Past duration 0.601982 too large
+Past duration 0.603996 too large
+Past duration 0.606316 too large
+Past duration 0.606987 too large
+Past duration 0.607658 too large
+Past duration 0.608665 too large
+Past duration 0.609337 too large
+Past duration 0.610008 too large
+Past duration 0.610313 too large
+Past duration 0.611305 too large
+Past duration 0.611977 too large
+Past duration 0.612648 too large
+Past duration 0.613319 too large
+Past duration 0.613991 too large
+Past duration 0.614662 too large
+Past duration 0.615669 too large
+Past duration 0.613655 too large
+Past duration 0.616676 too large
+Past duration 0.617317 too large
+Past duration 0.616005 too large
+Past duration 0.619316 too large
+Past duration 0.619987 too large
+Past duration 0.620659 too large
+Past duration 0.621315 too large
+Past duration 0.621986 too large
+Past duration 0.620979 too large
+Past duration 0.622307 too large
+Past duration 0.624336 too large
+Past duration 0.623985 too large
+Past duration 0.623329 too large
+Past duration 0.626320 too large
+    Last message repeated 1 times
+Past duration 0.625999 too large
+Past duration 0.628319 too large
+Past duration 0.629326 too large
+Past duration 0.629662 too large
+Past duration 0.630669 too large
+Past duration 0.631325 too large
+Past duration 0.632332 too large
+Past duration 0.632317 too large
+Past duration 0.633675 too large
+Past duration 0.632668 too large
+Past duration 0.633339 too large
+Past duration 0.633995 too large
+Past duration 0.634315 too large
+Past duration 0.636986 too large
+Past duration 0.635323 too large
+Past duration 0.638664 too large
+Past duration 0.639336 too large
+Past duration 0.638329 too large
+Past duration 0.639000 too large
+Past duration 0.639656 too large
+Past duration 0.641975 too large
+Past duration 0.641335 too large
+Past duration 0.643318 too large
+Past duration 0.644325 too large
+Past duration 0.643318 too large
+Past duration 0.645668 too large
+Past duration 0.644646 too large
+Past duration 0.645317 too large
+Past duration 0.648003 too large
+Past duration 0.646660 too large
+Past duration 0.649315 too large
+Past duration 0.648338 too large
+Past duration 0.650658 too large
+Past duration 0.651329 too large
+Past duration 0.652321 too large
+Past duration 0.652992 too large
+Past duration 0.653664 too large
+Past duration 0.654335 too large
+Past duration 0.655006 too large
+Past duration 0.655678 too large
+Past duration 0.656319 too large
+Past duration 0.654671 too large
+Past duration 0.655312 too large
+Past duration 0.656319 too large
+Past duration 0.655663 too large
+Past duration 0.659996 too large
+Past duration 0.660667 too large
+Past duration 0.661659 too large
+Past duration 0.662331 too large
+Past duration 0.663002 too large
+Past duration 0.663673 too large
+Past duration 0.664314 too large
+Past duration 0.664986 too large
+Past duration 0.665657 too large
+Past duration 0.666649 too large
+Past duration 0.666664 too large
+Past duration 0.667992 too large
+Past duration 0.666649 too large
+Past duration 0.667320 too large
+Past duration 0.667992 too large
+Past duration 0.668663 too large
+Past duration 0.671669 too large
+Past duration 0.600670 too large
+Past duration 0.601326 too large
+Past duration 0.600319 too large
+Past duration 0.600990 too large
+Past duration 0.603676 too large
+Past duration 0.600655 too large
+Past duration 0.604652 too large
+Past duration 0.605659 too large
+Past duration 0.606316 too large
+Past duration 0.604652 too large
+Past duration 0.607658 too large
+Past duration 0.608665 too large
+Past duration 0.609337 too large
+Past duration 0.610008 too large
+Past duration 0.610680 too large
+Past duration 0.610649 too large
+Past duration 0.611977 too large
+Past duration 0.612984 too large
+Past duration 0.613655 too large
+Past duration 0.614326 too large
+Past duration 0.614998 too large
+Past duration 0.613319 too large
+Past duration 0.616325 too large
+Past duration 0.614662 too large
+Past duration 0.618004 too large
+Past duration 0.618675 too large
+Past duration 0.619316 too large
+Past duration 0.619987 too large
+Past duration 0.617989 too large
+Past duration 0.618980 too large
+Past duration 0.619652 too large
+Past duration 0.620323 too large
+Past duration 0.623665 too large
+Past duration 0.624336 too large
+Past duration 0.625008 too large
+Past duration 0.625999 too large
+Past duration 0.624001 too large
+Past duration 0.624672 too large
+Past duration 0.625313 too large
+Past duration 0.626320 too large
+Past duration 0.629326 too large
+Past duration 0.626991 too large
+Past duration 0.629677 too large
+Past duration 0.631325 too large
+Past duration 0.632332 too large
+Past duration 0.633003 too large
+Past duration 0.633675 too large
+Past duration 0.634315 too large
+Past duration 0.634987 too large
+Past duration 0.635323 too large
+Past duration 0.636650 too large
+Past duration 0.637321 too large
+Past duration 0.635658 too large
+Past duration 0.638329 too large
+Past duration 0.639336 too large
+Past duration 0.640007 too large
+Past duration 0.640999 too large
+Past duration 0.641670 too large
+Past duration 0.641975 too large
+Past duration 0.642647 too large
+Past duration 0.643318 too large
+Past duration 0.644325 too large
+Past duration 0.644997 too large
+Past duration 0.645668 too large
+Past duration 0.646660 too large
+Past duration 0.647331 too large
+Past duration 0.648003 too large
+Past duration 0.648674 too large
+Past duration 0.649315 too large
+Past duration 0.648338 too large
+Past duration 0.649010 too large
+Past duration 0.650002 too large
+Past duration 0.650673 too large
+Past duration 0.650658 too large
+Past duration 0.653664 too large
+Past duration 0.651665 too large
+Past duration 0.655006 too large
+Past duration 0.655312 too large
+Past duration 0.656319 too large
+Past duration 0.655327 too large
+Past duration 0.655998 too large
+Past duration 0.658653 too large
+Past duration 0.657677 too large
+Past duration 0.657646 too large
+Past duration 0.658318 too large
+Past duration 0.661659 too large
+Past duration 0.659660 too large
+Past duration 0.660332 too large
+Past duration 0.661003 too large
+Past duration 0.661995 too large
+Past duration 0.662666 too large
+Past duration 0.665977 too large
+Past duration 0.663979 too large
+Past duration 0.664650 too large
+Past duration 0.667992 too large
+Past duration 0.667305 too large
+Past duration 0.669334 too large
+Past duration 0.667656 too large
+Past duration 0.668327 too large
+Past duration 0.671669 too large
+Past duration 0.669670 too large
+Past duration 0.670677 too large
+Past duration 0.673653 too large
+Past duration 0.674324 too large
+Past duration 0.674995 too large
+Past duration 0.675987 too large
+Past duration 0.676659 too large
+Past duration 0.677330 too large
+Past duration 0.675667 too large
+Past duration 0.676659 too large
+Past duration 0.679680 too large
+Past duration 0.677666 too large
+Past duration 0.679985 too large
+Past duration 0.681648 too large
+Past duration 0.682320 too large
+Past duration 0.682991 too large
+Past duration 0.683662 too large
+Past duration 0.681999 too large
+Past duration 0.682655 too large
+Past duration 0.683327 too large
+Past duration 0.684334 too large
+Past duration 0.687309 too large
+Past duration 0.685677 too large
+Past duration 0.686317 too large
+Past duration 0.689659 too large
+Past duration 0.687325 too large
+Past duration 0.689995 too large
+Past duration 0.691658 too large
+Past duration 0.689659 too large
+Past duration 0.690331 too large
+Past duration 0.693672 too large
+Past duration 0.691673 too large
+Past duration 0.691978 too large
+Past duration 0.695976 too large
+Past duration 0.694679 too large
+Past duration 0.695305 too large
+Past duration 0.697990 too large
+Past duration 0.698662 too large
+Past duration 0.699333 too large
+Past duration 0.700325 too large
+Past duration 0.700996 too large
+Past duration 0.701668 too large
+Past duration 0.702309 too large
+Past duration 0.702980 too large
+Past duration 0.703651 too large
+Past duration 0.704659 too large
+Past duration 0.704994 too large
+Past duration 0.705986 too large
+Past duration 0.705666 too large
+Past duration 0.707329 too large
+Past duration 0.706322 too large
+Past duration 0.707649 too large
+Past duration 0.709679 too large
+Past duration 0.710320 too large
+Past duration 0.708672 too large
+Past duration 0.711647 too large
+Past duration 0.709648 too large
+Past duration 0.711998 too large
+Past duration 0.713661 too large
+Past duration 0.711662 too large
+Past duration 0.713982 too large
+Past duration 0.714653 too large
+Past duration 0.713997 too large
+Past duration 0.715004 too large
+Past duration 0.717979 too large
+Past duration 0.718651 too large
+Past duration 0.719322 too large
+Past duration 0.717659 too large
+Past duration 0.720985 too large
+Past duration 0.721657 too large
+Past duration 0.722328 too large
+Past duration 0.723000 too large
+Past duration 0.723671 too large
+Past duration 0.724678 too large
+[2020-05-14 07:47:39,892: INFO/ForkPoolWorker-7] Task video.tasks.watermark[f15a914e-868e-4218-9fec-a7bca748a57e] succeeded in 21.242895668372512s: None
+[2020-05-14 08:15:02,851: INFO/MainProcess] Received task: video.tasks.watermark[91ae1bb9-5e47-4da9-bb86-3b51c5c15b5a]  
+[2020-05-14 08:16:13,417: INFO/ForkPoolWorker-7] Task video.tasks.watermark[91ae1bb9-5e47-4da9-bb86-3b51c5c15b5a] succeeded in 70.56410848721862s: None
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-14 09:42:27,998: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-14 09:42:28,036: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-14 09:42:29,090: INFO/MainProcess] mingle: all alone
+[2020-05-14 09:42:29,157: INFO/MainProcess] celery@AdiRimini.Org ready.
+[2020-05-14 09:44:40,676: INFO/MainProcess] Received task: video.tasks.watermark[fd79abad-075c-47ef-824c-8177ace56328]  
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-14 09:45:04,560: INFO/ForkPoolWorker-7] Task video.tasks.watermark[fd79abad-075c-47ef-824c-8177ace56328] succeeded in 23.879137434065342s: None
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-14 10:34:07,031: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-14 10:34:07,062: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-14 10:34:08,136: INFO/MainProcess] mingle: all alone
+[2020-05-14 10:34:08,184: INFO/MainProcess] celery@AdiRimini.Org ready.
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-14 11:01:36,861: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-14 11:01:36,905: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-14 11:01:37,963: INFO/MainProcess] mingle: all alone
+[2020-05-14 11:01:38,010: INFO/MainProcess] celery@AdiRimini.Org ready.
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-14 11:13:45,244: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-14 11:13:45,304: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-14 11:13:46,379: INFO/MainProcess] mingle: all alone
+[2020-05-14 11:13:46,424: INFO/MainProcess] celery@AdiRimini.Org ready.
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-14 11:14:42,282: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-14 11:14:42,315: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-14 11:14:43,354: INFO/MainProcess] mingle: all alone
+[2020-05-14 11:14:43,394: INFO/MainProcess] celery@AdiRimini.Org ready.
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-14 11:15:58,114: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-14 11:15:58,140: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-14 11:15:59,181: INFO/MainProcess] mingle: all alone
+[2020-05-14 11:15:59,212: INFO/MainProcess] celery@AdiRimini.Org ready.
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-14 11:26:01,641: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-14 11:26:01,675: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-14 11:26:02,735: INFO/MainProcess] mingle: all alone
+[2020-05-14 11:26:02,770: INFO/MainProcess] celery@AdiRimini.Org ready.
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-14 11:27:34,346: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-14 11:27:34,370: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-14 11:27:35,420: INFO/MainProcess] mingle: all alone
+[2020-05-14 11:27:35,451: INFO/MainProcess] celery@AdiRimini.Org ready.
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-14 11:29:17,723: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-14 11:29:17,772: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-14 11:29:18,815: INFO/MainProcess] mingle: all alone
+[2020-05-14 11:29:18,860: INFO/MainProcess] celery@AdiRimini.Org ready.
+[2020-05-14 11:30:05,056: INFO/MainProcess] Received task: video.tasks.watermark[55103c70-05c8-4e58-944d-588f02d1e64f]  
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-14 11:30:11,693: INFO/ForkPoolWorker-7] Task video.tasks.watermark[55103c70-05c8-4e58-944d-588f02d1e64f] succeeded in 6.62928931042552s: None
+[2020-05-14 13:27:18,581: INFO/MainProcess] Received task: video.tasks.watermark[36264443-2f70-4226-803a-9dbd04333e27]  
+[2020-05-14 13:27:28,145: INFO/ForkPoolWorker-7] Task video.tasks.watermark[36264443-2f70-4226-803a-9dbd04333e27] succeeded in 9.562044631689787s: None
+[2020-05-14 13:29:22,588: INFO/MainProcess] Received task: video.tasks.watermark[433dbbb2-4c5c-4d9b-9a26-a38fbfae704d]  
+[2020-05-14 13:29:39,271: INFO/ForkPoolWorker-7] Task video.tasks.watermark[433dbbb2-4c5c-4d9b-9a26-a38fbfae704d] succeeded in 16.67882984317839s: None
+[2020-05-14 19:03:51,642: INFO/MainProcess] Received task: watermarks.tasks.photo_watermark[a6945d42-6c11-49d1-9cbe-58145642e8f0]  
+[2020-05-14 19:03:52,068: ERROR/ForkPoolWorker-7] Task watermarks.tasks.photo_watermark[a6945d42-6c11-49d1-9cbe-58145642e8f0] raised unexpected: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/app/trace.py", line 385, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/app/trace.py", line 650, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/adirimini/vpodrini/project/watermarks/tasks.py", line 80, in photo_watermark
+    create_watermark(input_file_path, output_file_path, watermark)
+  File "/home/adirimini/vpodrini/project/watermarks/tasks.py", line 44, in create_watermark
+    mark = Image.open(watermark)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/PIL/Image.py", line 2843, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/valmik/PycharmProjects/vvf_online/media/watermarks/IMG_4156.PNG'
+[2020-05-14 19:14:05,760: INFO/MainProcess] Received task: watermarks.tasks.photo_watermark[e0079a73-d5f5-4318-96e0-caa08c22457a]  
+[2020-05-14 19:14:05,917: ERROR/ForkPoolWorker-7] Task watermarks.tasks.photo_watermark[e0079a73-d5f5-4318-96e0-caa08c22457a] raised unexpected: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/app/trace.py", line 385, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/app/trace.py", line 650, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/adirimini/vpodrini/project/watermarks/tasks.py", line 80, in photo_watermark
+    create_watermark(input_file_path, output_file_path, watermark)
+  File "/home/adirimini/vpodrini/project/watermarks/tasks.py", line 44, in create_watermark
+    mark = Image.open(watermark)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/PIL/Image.py", line 2843, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/valmik/PycharmProjects/vvf_online/media/watermarks/IMG_4156.PNG'
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-14 19:16:14,807: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-14 19:16:14,831: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-14 19:16:15,868: INFO/MainProcess] mingle: all alone
+[2020-05-14 19:16:15,909: INFO/MainProcess] celery@AdiRimini.Org ready.
+[2020-05-14 19:16:16,440: INFO/MainProcess] Received task: watermarks.tasks.photo_watermark[01120aab-b584-43cf-8a8e-0b90eade96de]  
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-14 19:16:17,822: INFO/ForkPoolWorker-7] Task watermarks.tasks.photo_watermark[01120aab-b584-43cf-8a8e-0b90eade96de] succeeded in 1.3740439359098673s: None
+[2020-05-14 19:38:51,646: INFO/MainProcess] Received task: watermarks.tasks.photo_watermark[f016a567-f7ba-41af-b125-a4ab1c06d6bb]  
+[2020-05-14 19:38:53,182: INFO/ForkPoolWorker-7] Task watermarks.tasks.photo_watermark[f016a567-f7ba-41af-b125-a4ab1c06d6bb] succeeded in 1.5342393480241299s: None
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-14 19:45:38,181: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-14 19:45:38,204: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-14 19:45:39,255: INFO/MainProcess] mingle: all alone
+[2020-05-14 19:45:39,306: INFO/MainProcess] celery@AdiRimini.Org ready.
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-14 19:47:41,050: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-14 19:47:41,082: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-14 19:47:42,132: INFO/MainProcess] mingle: all alone
+[2020-05-14 19:47:42,177: INFO/MainProcess] celery@AdiRimini.Org ready.
+[2020-05-14 19:48:08,931: INFO/MainProcess] Received task: watermarks.tasks.photo_watermark[430adc31-8ae7-46ff-913a-cf1f6106d0e8]  
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-14 19:48:10,003: INFO/ForkPoolWorker-7] Task watermarks.tasks.photo_watermark[430adc31-8ae7-46ff-913a-cf1f6106d0e8] succeeded in 1.0655756425112486s: None
+[2020-05-14 19:48:10,252: INFO/MainProcess] Received task: watermarks.tasks.photo_watermark[d58fd575-221f-46e0-96a6-90953f171b95]  
+[2020-05-14 19:48:12,465: INFO/ForkPoolWorker-7] Task watermarks.tasks.photo_watermark[d58fd575-221f-46e0-96a6-90953f171b95] succeeded in 2.211586559191346s: None
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-15 03:39:35,550: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-15 03:39:35,574: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-15 03:39:36,649: INFO/MainProcess] mingle: all alone
+[2020-05-15 03:39:36,691: INFO/MainProcess] celery@AdiRimini.Org ready.
+[2020-05-15 09:45:13,534: INFO/MainProcess] Received task: video.tasks.watermark[7dfee34c-fe4c-432a-8410-7a2d1bf40542]  
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-15 09:45:21,392: INFO/ForkPoolWorker-7] Task video.tasks.watermark[7dfee34c-fe4c-432a-8410-7a2d1bf40542] succeeded in 7.8542121686041355s: None
+[2020-05-15 09:47:48,680: INFO/MainProcess] Received task: video.tasks.watermark[0d048ae1-37ef-4e07-8bf8-cc203c1dea3e]  
+[2020-05-15 09:48:07,498: INFO/ForkPoolWorker-7] Task video.tasks.watermark[0d048ae1-37ef-4e07-8bf8-cc203c1dea3e] succeeded in 18.815420186147094s: None
+[2020-05-15 12:24:24,374: INFO/MainProcess] Received task: video.tasks.watermark[3b5621de-be2f-464e-828e-83b263ec7ac3]  
+[2020-05-15 12:24:42,470: INFO/ForkPoolWorker-7] Task video.tasks.watermark[3b5621de-be2f-464e-828e-83b263ec7ac3] succeeded in 18.093334916979074s: None
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-16 02:38:51,699: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-16 02:38:51,723: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-16 02:38:52,765: INFO/MainProcess] mingle: all alone
+[2020-05-16 02:38:52,809: INFO/MainProcess] celery@AdiRimini.Org ready.
+[2020-05-16 11:59:56,387: INFO/MainProcess] Received task: video.tasks.watermark[96d63391-bc11-481e-8932-0a8089165b13]  
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-16 12:00:01,771: INFO/ForkPoolWorker-7] Task video.tasks.watermark[96d63391-bc11-481e-8932-0a8089165b13] succeeded in 5.377202279865742s: None
+[2020-05-16 12:01:27,467: INFO/MainProcess] Received task: video.tasks.watermark[09a144d9-cb28-4191-8675-43c9e8051add]  
+ffmpeg version 2.8.15-0ubuntu0.16.04.1 Copyright (c) 2000-2018 the FFmpeg developers
+  built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.10) 20160609
+  configuration: --prefix=/usr --extra-version=0ubuntu0.16.04.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --cc=cc --cxx=g++ --enable-gpl --enable-shared --disable-stripping --disable-decoder=libopenjpeg --disable-decoder=libschroedinger --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxvid --enable-libzvbi --enable-openal --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-frei0r --enable-libx264 --enable-libopencv
+  libavutil      54. 31.100 / 54. 31.100
+  libavcodec     56. 60.100 / 56. 60.100
+  libavformat    56. 40.101 / 56. 40.101
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 40.101 /  5. 40.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.101 /  1.  2.101
+  libpostproc    53.  3.100 / 53.  3.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/home/adirimini/vpodrini/project/media/video/original/VID-20200516-WA0053_IcBoxU9.mp4':
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 1
+    compatible_brands: isommp41mp42
+    creation_time   : 2020-05-16 10:23:35
+  Duration: 00:00:13.51, start: 0.000000, bitrate: 1614 kb/s
+    Stream #0:0(und): Video: h264 (Baseline) (avc1 / 0x31637661), yuv420p(tv, bt709), 848x480, 1547 kb/s, 29.97 fps, 29.97 tbr, 600 tbn, 1200 tbc (default)
+    Metadata:
+      creation_time   : 2020-05-16 10:23:35
+      handler_name    : Core Media Video
+    Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 62 kb/s (default)
+    Metadata:
+      creation_time   : 2020-05-16 10:23:35
+      handler_name    : Core Media Audio
+Input #1, png_pipe, from '/home/adirimini/vpodrini/project/media/watermarks/logo.png':
+  Duration: N/A, bitrate: N/A
+    Stream #1:0: Video: png, rgba(pc), 1920x1080 [SAR 2835:2835 DAR 16:9], 25 tbr, 25 tbn, 25 tbc
+[libx264 @ 0x2383240] using SAR=1/1
+[libx264 @ 0x2383240] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 AVX2 LZCNT BMI2
+[libx264 @ 0x2383240] profile High, level 3.1
+[libx264 @ 0x2383240] 264 - core 148 r2643 5c65704 - H.264/MPEG-4 AVC codec - Copyleft 2003-2015 - http://www.videolan.org/x264.html - options: cabac=1 ref=1 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=2 psy=1 psy_rd=1.00:0.00 mixed_ref=0 me_range=16 chroma_me=1 trellis=0 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=0 threads=15 lookahead_threads=5 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=1 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=10 rc=crf mbtree=1 crf=18.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to '/home/adirimini/vpodrini/project/media/video/watermark/VID-20200516-WA0053_IcBoxU9.mp4':
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 1
+    compatible_brands: isommp41mp42
+    encoder         : Lavf56.40.101
+    Stream #0:0: Video: h264 (libx264) ([33][0][0][0] / 0x0021), yuv420p, 1280x720 [SAR 1:1 DAR 16:9], q=-1--1, 29.97 fps, 30k tbn, 29.97 tbc (default)
+    Metadata:
+      encoder         : Lavc56.60.100 libx264
+    Stream #0:1(und): Audio: aac ([64][0][0][0] / 0x0040), 44100 Hz, stereo, fltp, 128 kb/s (default)
+    Metadata:
+      creation_time   : 2020-05-16 10:23:35
+      handler_name    : Core Media Audio
+      encoder         : Lavc56.60.100 aac
+Stream mapping:
+  Stream #0:0 (h264) -> scale (graph 0)
+  Stream #1:0 (png) -> scale (graph 0)
+  overlay (graph 0) -> Stream #0:0 (libx264)
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+frame=   21 fps=0.0 q=0.0 size=       0kB time=00:00:01.99 bitrate=   0.2kbits/s    frame=   71 fps= 69 q=24.0 size=     945kB time=00:00:03.64 bitrate=2124.4kbits/s    frame=  127 fps= 83 q=24.0 size=    2277kB time=00:00:05.52 bitrate=3375.4kbits/s    frame=  184 fps= 91 q=24.0 size=    3468kB time=00:00:07.43 bitrate=3823.3kbits/s    frame=  239 fps= 94 q=24.0 size=    4404kB time=00:00:09.26 bitrate=3894.1kbits/s    frame=  297 fps= 98 q=24.0 size=    5563kB time=00:00:11.19 bitrate=4071.7kbits/s    frame=  340 fps= 96 q=24.0 size=    6194kB time=00:00:12.63 bitrate=4016.7kbits/s    frame=  404 fps=100 q=24.0 size=    6847kB time=00:00:13.51 bitrate=4150.7kbits/s    frame=  405 fps= 98 q=-1.0 Lsize=    7159kB time=00:00:13.56 bitrate=4324.5kbits/s    
+video:6927kB audio:217kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.202597%
+[libx264 @ 0x2383240] frame I:2     Avg QP:17.67  size: 80988
+[libx264 @ 0x2383240] frame P:263   Avg QP:18.27  size: 21200
+[libx264 @ 0x2383240] frame B:140   Avg QP:21.49  size:  9678
+[libx264 @ 0x2383240] consecutive B-frames: 42.0% 29.1% 20.0%  8.9%
+[libx264 @ 0x2383240] mb I  I16..4: 11.7% 36.6% 51.7%
+[libx264 @ 0x2383240] mb P  I16..4:  9.6%  8.5%  1.8%  P16..4: 32.7% 20.3% 10.5%  0.0%  0.0%    skip:16.7%
+[libx264 @ 0x2383240] mb B  I16..4:  2.2%  1.3%  0.4%  B16..8: 26.1% 12.1%  2.1%  direct: 9.3%  skip:46.6%  L0:36.0% L1:45.9% BI:18.1%
+[libx264 @ 0x2383240] 8x8 transform intra:41.6% inter:31.3%
+[libx264 @ 0x2383240] coded y,uvDC,uvAC intra: 34.7% 20.9% 5.0% inter: 19.7% 14.0% 1.2%
+[libx264 @ 0x2383240] i16 v,h,dc,p: 37% 39% 17%  7%
+[libx264 @ 0x2383240] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 21% 37% 26%  2%  3%  2%  3%  2%  4%
+[libx264 @ 0x2383240] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 21% 26% 20%  5%  6%  5%  6%  5%  6%
+[libx264 @ 0x2383240] i8c dc,h,v,p: 74% 14% 10%  2%
+[libx264 @ 0x2383240] Weighted P-Frames: Y:1.5% UV:0.8%
+[libx264 @ 0x2383240] kb/s:4198.72
+[2020-05-16 12:01:32,321: INFO/ForkPoolWorker-7] Task video.tasks.watermark[09a144d9-cb28-4191-8675-43c9e8051add] succeeded in 4.852447170764208s: None

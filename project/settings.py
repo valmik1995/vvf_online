@@ -58,7 +58,7 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'project.urls'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 TEMPLATES = [
     {
@@ -77,6 +77,10 @@ TEMPLATES = [
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# Redirect to home URL after login (Default redirects to /accounts/profile/)
+LOGIN_REDIRECT_URL = '/'
+
 
 WSGI_APPLICATION = 'project.wsgi.application'
 
@@ -136,7 +140,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 STATIC_URL = '/static/'
@@ -151,8 +154,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 IMAGES_DIR = os.path.join(MEDIA_ROOT, 'media/images')
 
 
-#STATIC_ROOT = '/home/adirimini/vpodrini/project/static/'
-STATIC_ROOT = os.path.join(BASE_DIR,"/static/")
+STATIC_ROOT = '/home/adirimini/vpodrini/project/static/'
+#STATIC_ROOT = os.path.join(BASE_DIR,"/static/")
+
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',

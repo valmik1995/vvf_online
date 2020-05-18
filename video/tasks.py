@@ -55,7 +55,7 @@ def watermark(id):
 
     # SUBPROCESS OUTPUT INVECE PERCORSO ASSOLUTO PER SALVARE
     output = os.path.join(settings.MEDIA_ROOT, output_file_name)
-    codino = '/home/adirimini/vpodrini/project/media/watermarks/CoEmSicurezza.mov'
+    codino = '/home/adirimini/vpodrini/project/media/watermarks/CoEmCoronavirus.mov'
 
     width = int(video.formato)
     height = int(width/16*9)
