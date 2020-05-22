@@ -9,7 +9,7 @@ from video.models import Video
 def video_720(id, height):
         width = int(height * 16/9)
         video = Video.objects.get(id= id)
-        watermark = '/Users/valmik/PycharmProjects/vvf_online/media/watermarks/IMG_4156.PNG'
+        watermark = '/home/adirimini/vpodrini/project/media/watermarks/IMG_4156.PNG'
         if height == 720:
             bitrate = '4000k'
         else:
@@ -55,7 +55,7 @@ def watermark(id):
 
     # SUBPROCESS OUTPUT INVECE PERCORSO ASSOLUTO PER SALVARE
     output = os.path.join(settings.MEDIA_ROOT, output_file_name)
-    codino = '/Users/valmik/PycharmProjects/vvf_online/media/watermarks/CoEmCoronavirus.mov'
+    codino = '/home/adirimini/vpodrini/project/media/watermarks/CoEmCoronavirus.mov'
 
     width = int(video.formato)
     height = int(width/16*9)
@@ -69,7 +69,7 @@ def watermark(id):
         bitrate = '4000k'
 
     if posizione == 'ORIZ' and codin == 'CODIN' and logo == 'LOGO':
-        watermark = '/Users/valmik/PycharmProjects/vvf_online/media/watermarks/logo.png'
+        watermark = '/home/adirimini/vpodrini/project/media/watermarks/logo.png'
         subprocess.call(['ffmpeg',
         '-y', '-loglevel', 'warning', '-i',
         input,
@@ -91,7 +91,7 @@ def watermark(id):
         output
         ])
     elif posizione == 'VERT'and codin == 'CODIN' and logo == 'LOGO':
-        watermark = '/Users/valmik/PycharmProjects/vvf_online/media/watermarks/logo_vertical.png'
+        watermark = '/home/adirimini/vpodrini/project/media/watermarks/logo_vertical.png'
         subprocess.call(['ffmpeg',
         '-y', '-loglevel', 'warning', '-i',
         input,
@@ -116,7 +116,7 @@ def watermark(id):
         output
         ])
     elif posizione == 'ORIZ' and codin == 'SENZA' and logo == 'LOGO':
-        watermark = '/Users/valmik/PycharmProjects/vvf_online/media/watermarks/logo.png'
+        watermark = '/home/adirimini/vpodrini/project/media/watermarks/logo.png'
         subprocess.call(['ffmpeg',
         '-i', input,
         '-i', watermark,
@@ -131,7 +131,7 @@ def watermark(id):
         output
         ])
     elif posizione == 'VERT' and codin == 'SENZA' and logo == 'LOGO':
-        watermark = '/Users/valmik/PycharmProjects/vvf_online/media/watermarks/logo_vertical.png'
+        watermark = '/home/adirimini/vpodrini/project/media/watermarks/logo_vertical.png'
         subprocess.call(['ffmpeg',
         '-i', input,
         '-i', watermark,

@@ -984,3 +984,147 @@
   . watermarks.tasks.increment
   . watermarks.tasks.photo_watermark
 
+ 
+ -------------- celery@AdiRimini.Org v4.4.2 (cliffs)
+--- ***** ----- 
+-- ******* ---- Linux-4.4.0-171-generic-x86_64-with-debian-stretch-sid 2020-05-22 08:12:15
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         project:0x7f6dbd5bbef0
+- ** ---------- .> transport:   amqp://guest:**@localhost:5672//
+- ** ---------- .> results:     postgresql+psycopg2://vvf:**@localhost/vvf
+- *** --- * --- .> concurrency: 10 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . caricamento.tasks.process_file
+  . video.tasks.video_720
+  . video.tasks.watermark
+  . watermarks.tasks.add
+  . watermarks.tasks.increment
+  . watermarks.tasks.photo_watermark
+
+ 
+ -------------- celery@AdiRimini.Org v4.4.2 (cliffs)
+--- ***** ----- 
+-- ******* ---- Linux-4.4.0-171-generic-x86_64-with-debian-stretch-sid 2020-05-22 08:16:53
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         project:0x7f9e86a08da0
+- ** ---------- .> transport:   amqp://guest:**@localhost:5672//
+- ** ---------- .> results:     postgresql+psycopg2://vvf:**@localhost/vvf
+- *** --- * --- .> concurrency: 10 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . caricamento.tasks.process_file
+  . video.tasks.video_720
+  . video.tasks.watermark
+  . watermarks.tasks.add
+  . watermarks.tasks.increment
+  . watermarks.tasks.photo_watermark
+
+ 
+ -------------- celery@AdiRimini.Org v4.4.2 (cliffs)
+--- ***** ----- 
+-- ******* ---- Linux-4.4.0-171-generic-x86_64-with-debian-stretch-sid 2020-05-22 08:17:21
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         project:0x7f7950ac6f28
+- ** ---------- .> transport:   amqp://guest:**@localhost:5672//
+- ** ---------- .> results:     postgresql+psycopg2://vvf:**@localhost/vvf
+- *** --- * --- .> concurrency: 10 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . caricamento.tasks.process_file
+  . video.tasks.video_720
+  . video.tasks.watermark
+  . watermarks.tasks.add
+  . watermarks.tasks.increment
+  . watermarks.tasks.photo_watermark
+
+ 
+ -------------- celery@AdiRimini.Org v4.4.2 (cliffs)
+--- ***** ----- 
+-- ******* ---- Linux-4.4.0-171-generic-x86_64-with-debian-stretch-sid 2020-05-22 08:19:36
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         project:0x7f90b98c8d68
+- ** ---------- .> transport:   amqp://guest:**@localhost:5672//
+- ** ---------- .> results:     postgresql+psycopg2://vvf:**@localhost/vvf
+- *** --- * --- .> concurrency: 10 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . caricamento.tasks.process_file
+  . video.tasks.video_720
+  . video.tasks.watermark
+  . watermarks.tasks.add
+  . watermarks.tasks.increment
+  . watermarks.tasks.photo_watermark
+
+ 
+ -------------- celery@AdiRimini.Org v4.4.2 (cliffs)
+--- ***** ----- 
+-- ******* ---- Linux-4.4.0-171-generic-x86_64-with-debian-stretch-sid 2020-05-22 08:22:22
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         project:0x7f03f82f9f60
+- ** ---------- .> transport:   amqp://guest:**@localhost:5672//
+- ** ---------- .> results:     postgresql+psycopg2://vvf:**@localhost/vvf
+- *** --- * --- .> concurrency: 10 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . caricamento.tasks.process_file
+  . video.tasks.video_720
+  . video.tasks.watermark
+  . watermarks.tasks.add
+  . watermarks.tasks.increment
+  . watermarks.tasks.photo_watermark
+
+ 
+ -------------- celery@AdiRimini.Org v4.4.2 (cliffs)
+--- ***** ----- 
+-- ******* ---- Linux-4.4.0-171-generic-x86_64-with-debian-stretch-sid 2020-05-22 08:24:37
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         project:0x7f0966f9aef0
+- ** ---------- .> transport:   amqp://guest:**@localhost:5672//
+- ** ---------- .> results:     postgresql+psycopg2://vvf:**@localhost/vvf
+- *** --- * --- .> concurrency: 10 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . caricamento.tasks.process_file
+  . video.tasks.video_720
+  . video.tasks.watermark
+  . watermarks.tasks.add
+  . watermarks.tasks.increment
+  . watermarks.tasks.photo_watermark
+

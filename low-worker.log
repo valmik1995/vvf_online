@@ -2386,3 +2386,1060 @@ video:6927kB audio:217kB subtitle:0kB other streams:0kB global headers:0kB muxin
 [libx264 @ 0x2383240] Weighted P-Frames: Y:1.5% UV:0.8%
 [libx264 @ 0x2383240] kb/s:4198.72
 [2020-05-16 12:01:32,321: INFO/ForkPoolWorker-7] Task video.tasks.watermark[09a144d9-cb28-4191-8675-43c9e8051add] succeeded in 4.852447170764208s: None
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+
+worker: Warm shutdown (MainProcess)
+[2020-05-22 08:12:04,465: WARNING/MainProcess] Exception ignored in:
+[2020-05-22 08:12:04,467: WARNING/MainProcess] <function _releaseLock at 0x7f41e810d598>
+[2020-05-22 08:12:04,467: WARNING/MainProcess] Traceback (most recent call last):
+[2020-05-22 08:12:04,467: WARNING/MainProcess] File "/usr/local/lib/python3.7/logging/__init__.py", line 221, in _releaseLock
+[2020-05-22 08:12:04,468: WARNING/MainProcess] def _releaseLock():
+[2020-05-22 08:12:04,468: WARNING/MainProcess] File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/apps/worker.py", line 284, in _handle_request
+[2020-05-22 08:12:04,468: WARNING/MainProcess] raise exc(exitcode)
+[2020-05-22 08:12:04,468: WARNING/MainProcess] celery.exceptions
+[2020-05-22 08:12:04,469: WARNING/MainProcess] .
+[2020-05-22 08:12:04,469: WARNING/MainProcess] WorkerShutdown
+[2020-05-22 08:12:04,469: WARNING/MainProcess] :
+[2020-05-22 08:12:04,469: WARNING/MainProcess] 0
+[2020-05-22 08:12:06,293: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-22 08:12:06,335: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-22 08:12:07,384: INFO/MainProcess] mingle: all alone
+[2020-05-22 08:12:07,439: WARNING/MainProcess] /home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py:203: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  leak, never use this setting in production environments!''')
+[2020-05-22 08:12:07,440: INFO/MainProcess] celery@AdiRimini.Org ready.
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-22 08:12:17,487: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-22 08:12:17,526: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-22 08:12:18,593: INFO/MainProcess] mingle: all alone
+[2020-05-22 08:12:18,615: WARNING/MainProcess] /home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py:203: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  leak, never use this setting in production environments!''')
+[2020-05-22 08:12:18,615: INFO/MainProcess] celery@AdiRimini.Org ready.
+
+worker: Warm shutdown (MainProcess)
+Traceback (most recent call last):
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/kombu/utils/objects.py", line 42, in __get__
+    return obj.__dict__[self.__name__]
+KeyError: 'data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/adirimini/vpodrini/project/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 495, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    return self.handle_argv(self.prog_name, argv[1:])
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 487, in handle_argv
+    return self.execute(command, argv)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 419, in execute
+    ).run_from_argv(self.prog_name, argv[1:], command=argv[0])
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/worker.py", line 221, in run_from_argv
+    *self.parse_options(prog_name, argv, command))
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/base.py", line 428, in parse_options
+    self.parser = self.create_parser(prog_name, command)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/base.py", line 444, in create_parser
+    self.add_arguments(parser)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/worker.py", line 278, in add_arguments
+    default=conf.worker_state_db,
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/utils/collections.py", line 134, in __getattr__
+    return self[k]
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/utils/collections.py", line 444, in __getitem__
+    return getitem(k)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/utils/collections.py", line 287, in __getitem__
+    return mapping[_key]
+  File "/usr/local/lib/python3.7/collections/__init__.py", line 1021, in __getitem__
+    if key in self.data:
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/kombu/utils/objects.py", line 44, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/app/base.py", line 141, in data
+    return self.callback()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/app/base.py", line 954, in _finalize_pending_conf
+    conf = self._conf = self._load_config()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/app/base.py", line 964, in _load_config
+    self.loader.config_from_object(self._config_source)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/loaders/base.py", line 131, in config_from_object
+    self._conf = force_mapping(obj)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/utils/collections.py", line 54, in force_mapping
+    if isinstance(m, (LazyObject, LazySettings)):
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/utils/functional.py", line 224, in inner
+    self._setup()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/conf/__init__.py", line 63, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/conf/__init__.py", line 142, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/local/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/adirimini/vpodrini/project/project/settings.py", line 27
+    ALLOWED_HOSTS = ['valeriopodrini.it]
+                                       ^
+SyntaxError: EOL while scanning string literal
+Traceback (most recent call last):
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/kombu/utils/objects.py", line 42, in __get__
+    return obj.__dict__[self.__name__]
+KeyError: 'data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/adirimini/vpodrini/project/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 495, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    return self.handle_argv(self.prog_name, argv[1:])
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 487, in handle_argv
+    return self.execute(command, argv)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 419, in execute
+    ).run_from_argv(self.prog_name, argv[1:], command=argv[0])
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/worker.py", line 221, in run_from_argv
+    *self.parse_options(prog_name, argv, command))
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/base.py", line 428, in parse_options
+    self.parser = self.create_parser(prog_name, command)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/base.py", line 444, in create_parser
+    self.add_arguments(parser)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/worker.py", line 278, in add_arguments
+    default=conf.worker_state_db,
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/utils/collections.py", line 134, in __getattr__
+    return self[k]
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/utils/collections.py", line 444, in __getitem__
+    return getitem(k)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/utils/collections.py", line 287, in __getitem__
+    return mapping[_key]
+  File "/usr/local/lib/python3.7/collections/__init__.py", line 1021, in __getitem__
+    if key in self.data:
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/kombu/utils/objects.py", line 44, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/app/base.py", line 141, in data
+    return self.callback()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/app/base.py", line 954, in _finalize_pending_conf
+    conf = self._conf = self._load_config()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/app/base.py", line 964, in _load_config
+    self.loader.config_from_object(self._config_source)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/loaders/base.py", line 131, in config_from_object
+    self._conf = force_mapping(obj)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/utils/collections.py", line 54, in force_mapping
+    if isinstance(m, (LazyObject, LazySettings)):
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/utils/functional.py", line 224, in inner
+    self._setup()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/conf/__init__.py", line 63, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/conf/__init__.py", line 142, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/local/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/adirimini/vpodrini/project/project/settings.py", line 27
+    ALLOWED_HOSTS = ['valeriopodrini.it]
+                                       ^
+SyntaxError: EOL while scanning string literal
+Traceback (most recent call last):
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/kombu/utils/objects.py", line 42, in __get__
+    return obj.__dict__[self.__name__]
+KeyError: 'data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/adirimini/vpodrini/project/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 495, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    return self.handle_argv(self.prog_name, argv[1:])
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 487, in handle_argv
+    return self.execute(command, argv)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 419, in execute
+    ).run_from_argv(self.prog_name, argv[1:], command=argv[0])
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/worker.py", line 221, in run_from_argv
+    *self.parse_options(prog_name, argv, command))
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/base.py", line 428, in parse_options
+    self.parser = self.create_parser(prog_name, command)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/base.py", line 444, in create_parser
+    self.add_arguments(parser)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/worker.py", line 278, in add_arguments
+    default=conf.worker_state_db,
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/utils/collections.py", line 134, in __getattr__
+    return self[k]
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/utils/collections.py", line 444, in __getitem__
+    return getitem(k)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/utils/collections.py", line 287, in __getitem__
+    return mapping[_key]
+  File "/usr/local/lib/python3.7/collections/__init__.py", line 1021, in __getitem__
+    if key in self.data:
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/kombu/utils/objects.py", line 44, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/app/base.py", line 141, in data
+    return self.callback()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/app/base.py", line 954, in _finalize_pending_conf
+    conf = self._conf = self._load_config()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/app/base.py", line 964, in _load_config
+    self.loader.config_from_object(self._config_source)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/loaders/base.py", line 131, in config_from_object
+    self._conf = force_mapping(obj)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/utils/collections.py", line 54, in force_mapping
+    if isinstance(m, (LazyObject, LazySettings)):
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/utils/functional.py", line 224, in inner
+    self._setup()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/conf/__init__.py", line 63, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/conf/__init__.py", line 142, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/local/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/adirimini/vpodrini/project/project/settings.py", line 27
+    ALLOWED_HOSTS = ['valeriopodrini.it]
+                                       ^
+SyntaxError: EOL while scanning string literal
+Traceback (most recent call last):
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/kombu/utils/objects.py", line 42, in __get__
+    return obj.__dict__[self.__name__]
+KeyError: 'data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/adirimini/vpodrini/project/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 495, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    return self.handle_argv(self.prog_name, argv[1:])
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 487, in handle_argv
+    return self.execute(command, argv)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 419, in execute
+    ).run_from_argv(self.prog_name, argv[1:], command=argv[0])
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/worker.py", line 221, in run_from_argv
+    *self.parse_options(prog_name, argv, command))
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/base.py", line 428, in parse_options
+    self.parser = self.create_parser(prog_name, command)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/base.py", line 444, in create_parser
+    self.add_arguments(parser)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/worker.py", line 278, in add_arguments
+    default=conf.worker_state_db,
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/utils/collections.py", line 134, in __getattr__
+    return self[k]
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/utils/collections.py", line 444, in __getitem__
+    return getitem(k)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/utils/collections.py", line 287, in __getitem__
+    return mapping[_key]
+  File "/usr/local/lib/python3.7/collections/__init__.py", line 1021, in __getitem__
+    if key in self.data:
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/kombu/utils/objects.py", line 44, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/app/base.py", line 141, in data
+    return self.callback()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/app/base.py", line 954, in _finalize_pending_conf
+    conf = self._conf = self._load_config()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/app/base.py", line 964, in _load_config
+    self.loader.config_from_object(self._config_source)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/loaders/base.py", line 131, in config_from_object
+    self._conf = force_mapping(obj)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/utils/collections.py", line 54, in force_mapping
+    if isinstance(m, (LazyObject, LazySettings)):
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/utils/functional.py", line 224, in inner
+    self._setup()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/conf/__init__.py", line 63, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/conf/__init__.py", line 142, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/local/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/adirimini/vpodrini/project/project/settings.py", line 27
+    ALLOWED_HOSTS = ['valeriopodrini.it]
+                                       ^
+SyntaxError: EOL while scanning string literal
+Traceback (most recent call last):
+  File "/home/adirimini/vpodrini/project/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 495, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    return self.handle_argv(self.prog_name, argv[1:])
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 487, in handle_argv
+    return self.execute(command, argv)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 419, in execute
+    ).run_from_argv(self.prog_name, argv[1:], command=argv[0])
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/worker.py", line 223, in run_from_argv
+    return self(*args, **options)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/base.py", line 253, in __call__
+    ret = self.run(*args, **kwargs)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/worker.py", line 258, in run
+    **kwargs)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/worker/worker.py", line 96, in __init__
+    self.app.loader.init_worker()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/loaders/base.py", line 114, in init_worker
+    self.import_default_modules()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/loaders/base.py", line 108, in import_default_modules
+    raise response
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/utils/dispatch/signal.py", line 288, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py", line 84, in on_import_modules
+    self.worker_fixup.validate_models()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py", line 123, in validate_models
+    run_checks()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/core/checks/registry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/urls/resolvers.py", line 407, in check
+    for pattern in self.url_patterns:
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/urls/resolvers.py", line 588, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/urls/resolvers.py", line 581, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/adirimini/vpodrini/project/project/urls.py", line 28, in <module>
+    path('notizia/', include('notizia.urls'))
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/adirimini/vpodrini/project/notizia/urls.py", line 3, in <module>
+    from . import views
+  File "/home/adirimini/vpodrini/project/notizia/views.py", line 17, in <module>
+    from notizia.forms import NotiziaForm, NotiziaFullForm
+  File "/home/adirimini/vpodrini/project/notizia/forms.py", line 2, in <module>
+    from .models import Notizia
+  File "/home/adirimini/vpodrini/project/notizia/models.py", line 7, in <module>
+    class Notizia(models.Model):
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/db/models/base.py", line 115, in __new__
+    "INSTALLED_APPS." % (module, name)
+RuntimeError: Model class notizia.models.Notizia doesn't declare an explicit app_label and isn't in an application in INSTALLED_APPS.
+Traceback (most recent call last):
+  File "/home/adirimini/vpodrini/project/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 495, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    return self.handle_argv(self.prog_name, argv[1:])
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 487, in handle_argv
+    return self.execute(command, argv)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 419, in execute
+    ).run_from_argv(self.prog_name, argv[1:], command=argv[0])
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/worker.py", line 223, in run_from_argv
+    return self(*args, **options)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/base.py", line 253, in __call__
+    ret = self.run(*args, **kwargs)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/worker.py", line 258, in run
+    **kwargs)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/worker/worker.py", line 96, in __init__
+    self.app.loader.init_worker()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/loaders/base.py", line 114, in init_worker
+    self.import_default_modules()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/loaders/base.py", line 108, in import_default_modules
+    raise response
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/utils/dispatch/signal.py", line 288, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py", line 84, in on_import_modules
+    self.worker_fixup.validate_models()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py", line 123, in validate_models
+    run_checks()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/core/checks/registry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/urls/resolvers.py", line 407, in check
+    for pattern in self.url_patterns:
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/urls/resolvers.py", line 588, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/urls/resolvers.py", line 581, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/adirimini/vpodrini/project/project/urls.py", line 28, in <module>
+    path('notizia/', include('notizia.urls'))
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/adirimini/vpodrini/project/notizia/urls.py", line 3, in <module>
+    from . import views
+  File "/home/adirimini/vpodrini/project/notizia/views.py", line 17, in <module>
+    from notizia.forms import NotiziaForm, NotiziaFullForm
+  File "/home/adirimini/vpodrini/project/notizia/forms.py", line 2, in <module>
+    from .models import Notizia
+  File "/home/adirimini/vpodrini/project/notizia/models.py", line 7, in <module>
+    class Notizia(models.Model):
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/db/models/base.py", line 115, in __new__
+    "INSTALLED_APPS." % (module, name)
+RuntimeError: Model class notizia.models.Notizia doesn't declare an explicit app_label and isn't in an application in INSTALLED_APPS.
+Traceback (most recent call last):
+  File "/home/adirimini/vpodrini/project/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 495, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    return self.handle_argv(self.prog_name, argv[1:])
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 487, in handle_argv
+    return self.execute(command, argv)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 419, in execute
+    ).run_from_argv(self.prog_name, argv[1:], command=argv[0])
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/worker.py", line 223, in run_from_argv
+    return self(*args, **options)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/base.py", line 253, in __call__
+    ret = self.run(*args, **kwargs)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/worker.py", line 258, in run
+    **kwargs)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/worker/worker.py", line 96, in __init__
+    self.app.loader.init_worker()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/loaders/base.py", line 114, in init_worker
+    self.import_default_modules()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/loaders/base.py", line 108, in import_default_modules
+    raise response
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/utils/dispatch/signal.py", line 288, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py", line 84, in on_import_modules
+    self.worker_fixup.validate_models()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py", line 123, in validate_models
+    run_checks()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/core/checks/registry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/urls/resolvers.py", line 407, in check
+    for pattern in self.url_patterns:
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/urls/resolvers.py", line 588, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/urls/resolvers.py", line 581, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/adirimini/vpodrini/project/project/urls.py", line 28, in <module>
+    path('notizia/', include('notizia.urls'))
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/adirimini/vpodrini/project/notizia/urls.py", line 3, in <module>
+    from . import views
+  File "/home/adirimini/vpodrini/project/notizia/views.py", line 17, in <module>
+    from notizia.forms import NotiziaForm, NotiziaFullForm
+  File "/home/adirimini/vpodrini/project/notizia/forms.py", line 2, in <module>
+    from .models import Notizia
+  File "/home/adirimini/vpodrini/project/notizia/models.py", line 7, in <module>
+    class Notizia(models.Model):
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/db/models/base.py", line 115, in __new__
+    "INSTALLED_APPS." % (module, name)
+RuntimeError: Model class notizia.models.Notizia doesn't declare an explicit app_label and isn't in an application in INSTALLED_APPS.
+Traceback (most recent call last):
+  File "/home/adirimini/vpodrini/project/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 495, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    return self.handle_argv(self.prog_name, argv[1:])
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 487, in handle_argv
+    return self.execute(command, argv)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 419, in execute
+    ).run_from_argv(self.prog_name, argv[1:], command=argv[0])
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/worker.py", line 223, in run_from_argv
+    return self(*args, **options)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/base.py", line 253, in __call__
+    ret = self.run(*args, **kwargs)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/worker.py", line 258, in run
+    **kwargs)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/worker/worker.py", line 96, in __init__
+    self.app.loader.init_worker()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/loaders/base.py", line 114, in init_worker
+    self.import_default_modules()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/loaders/base.py", line 108, in import_default_modules
+    raise response
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/utils/dispatch/signal.py", line 288, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py", line 84, in on_import_modules
+    self.worker_fixup.validate_models()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py", line 123, in validate_models
+    run_checks()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/core/checks/registry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/urls/resolvers.py", line 407, in check
+    for pattern in self.url_patterns:
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/urls/resolvers.py", line 588, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/urls/resolvers.py", line 581, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/adirimini/vpodrini/project/project/urls.py", line 28, in <module>
+    path('notizia/', include('notizia.urls'))
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/adirimini/vpodrini/project/notizia/urls.py", line 3, in <module>
+    from . import views
+  File "/home/adirimini/vpodrini/project/notizia/views.py", line 17, in <module>
+    from notizia.forms import NotiziaForm, NotiziaFullForm
+  File "/home/adirimini/vpodrini/project/notizia/forms.py", line 2, in <module>
+    from .models import Notizia
+  File "/home/adirimini/vpodrini/project/notizia/models.py", line 7, in <module>
+    class Notizia(models.Model):
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/db/models/base.py", line 115, in __new__
+    "INSTALLED_APPS." % (module, name)
+RuntimeError: Model class notizia.models.Notizia doesn't declare an explicit app_label and isn't in an application in INSTALLED_APPS.
+Traceback (most recent call last):
+  File "/home/adirimini/vpodrini/project/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 495, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    return self.handle_argv(self.prog_name, argv[1:])
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 487, in handle_argv
+    return self.execute(command, argv)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 419, in execute
+    ).run_from_argv(self.prog_name, argv[1:], command=argv[0])
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/worker.py", line 223, in run_from_argv
+    return self(*args, **options)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/base.py", line 253, in __call__
+    ret = self.run(*args, **kwargs)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/worker.py", line 258, in run
+    **kwargs)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/worker/worker.py", line 96, in __init__
+    self.app.loader.init_worker()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/loaders/base.py", line 114, in init_worker
+    self.import_default_modules()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/loaders/base.py", line 108, in import_default_modules
+    raise response
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/utils/dispatch/signal.py", line 288, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py", line 84, in on_import_modules
+    self.worker_fixup.validate_models()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py", line 123, in validate_models
+    run_checks()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/core/checks/registry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/urls/resolvers.py", line 407, in check
+    for pattern in self.url_patterns:
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/urls/resolvers.py", line 588, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/urls/resolvers.py", line 581, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/adirimini/vpodrini/project/project/urls.py", line 28, in <module>
+    path('notizia/', include('notizia.urls'))
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/adirimini/vpodrini/project/notizia/urls.py", line 3, in <module>
+    from . import views
+  File "/home/adirimini/vpodrini/project/notizia/views.py", line 17, in <module>
+    from notizia.forms import NotiziaForm, NotiziaFullForm
+  File "/home/adirimini/vpodrini/project/notizia/forms.py", line 2, in <module>
+    from .models import Notizia
+  File "/home/adirimini/vpodrini/project/notizia/models.py", line 7, in <module>
+    class Notizia(models.Model):
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/db/models/base.py", line 115, in __new__
+    "INSTALLED_APPS." % (module, name)
+RuntimeError: Model class notizia.models.Notizia doesn't declare an explicit app_label and isn't in an application in INSTALLED_APPS.
+Traceback (most recent call last):
+  File "/home/adirimini/vpodrini/project/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 495, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    return self.handle_argv(self.prog_name, argv[1:])
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 487, in handle_argv
+    return self.execute(command, argv)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 419, in execute
+    ).run_from_argv(self.prog_name, argv[1:], command=argv[0])
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/worker.py", line 223, in run_from_argv
+    return self(*args, **options)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/base.py", line 253, in __call__
+    ret = self.run(*args, **kwargs)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/worker.py", line 258, in run
+    **kwargs)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/worker/worker.py", line 96, in __init__
+    self.app.loader.init_worker()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/loaders/base.py", line 114, in init_worker
+    self.import_default_modules()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/loaders/base.py", line 108, in import_default_modules
+    raise response
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/utils/dispatch/signal.py", line 288, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py", line 84, in on_import_modules
+    self.worker_fixup.validate_models()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py", line 123, in validate_models
+    run_checks()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/core/checks/registry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/urls/resolvers.py", line 407, in check
+    for pattern in self.url_patterns:
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/urls/resolvers.py", line 588, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/urls/resolvers.py", line 581, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/adirimini/vpodrini/project/project/urls.py", line 28, in <module>
+    path('notizia/', include('notizia.urls'))
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/adirimini/vpodrini/project/notizia/urls.py", line 3, in <module>
+    from . import views
+  File "/home/adirimini/vpodrini/project/notizia/views.py", line 17, in <module>
+    from notizia.forms import NotiziaForm, NotiziaFullForm
+  File "/home/adirimini/vpodrini/project/notizia/forms.py", line 2, in <module>
+    from .models import Notizia
+  File "/home/adirimini/vpodrini/project/notizia/models.py", line 7, in <module>
+    class Notizia(models.Model):
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/db/models/base.py", line 115, in __new__
+    "INSTALLED_APPS." % (module, name)
+RuntimeError: Model class notizia.models.Notizia doesn't declare an explicit app_label and isn't in an application in INSTALLED_APPS.
+Traceback (most recent call last):
+  File "/home/adirimini/vpodrini/project/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 495, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    return self.handle_argv(self.prog_name, argv[1:])
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 487, in handle_argv
+    return self.execute(command, argv)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 419, in execute
+    ).run_from_argv(self.prog_name, argv[1:], command=argv[0])
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/worker.py", line 223, in run_from_argv
+    return self(*args, **options)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/base.py", line 253, in __call__
+    ret = self.run(*args, **kwargs)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/worker.py", line 258, in run
+    **kwargs)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/worker/worker.py", line 96, in __init__
+    self.app.loader.init_worker()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/loaders/base.py", line 114, in init_worker
+    self.import_default_modules()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/loaders/base.py", line 108, in import_default_modules
+    raise response
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/utils/dispatch/signal.py", line 288, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py", line 84, in on_import_modules
+    self.worker_fixup.validate_models()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py", line 123, in validate_models
+    run_checks()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/core/checks/registry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/urls/resolvers.py", line 407, in check
+    for pattern in self.url_patterns:
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/urls/resolvers.py", line 588, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/urls/resolvers.py", line 581, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/adirimini/vpodrini/project/project/urls.py", line 28, in <module>
+    path('notizia/', include('notizia.urls'))
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/adirimini/vpodrini/project/notizia/urls.py", line 3, in <module>
+    from . import views
+  File "/home/adirimini/vpodrini/project/notizia/views.py", line 17, in <module>
+    from notizia.forms import NotiziaForm, NotiziaFullForm
+  File "/home/adirimini/vpodrini/project/notizia/forms.py", line 2, in <module>
+    from .models import Notizia
+  File "/home/adirimini/vpodrini/project/notizia/models.py", line 7, in <module>
+    class Notizia(models.Model):
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/db/models/base.py", line 115, in __new__
+    "INSTALLED_APPS." % (module, name)
+RuntimeError: Model class notizia.models.Notizia doesn't declare an explicit app_label and isn't in an application in INSTALLED_APPS.
+Traceback (most recent call last):
+  File "/home/adirimini/vpodrini/project/env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 495, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    return self.handle_argv(self.prog_name, argv[1:])
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 487, in handle_argv
+    return self.execute(command, argv)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/celery.py", line 419, in execute
+    ).run_from_argv(self.prog_name, argv[1:], command=argv[0])
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/worker.py", line 223, in run_from_argv
+    return self(*args, **options)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/base.py", line 253, in __call__
+    ret = self.run(*args, **kwargs)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/bin/worker.py", line 258, in run
+    **kwargs)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/worker/worker.py", line 96, in __init__
+    self.app.loader.init_worker()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/loaders/base.py", line 114, in init_worker
+    self.import_default_modules()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/loaders/base.py", line 108, in import_default_modules
+    raise response
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/utils/dispatch/signal.py", line 288, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py", line 84, in on_import_modules
+    self.worker_fixup.validate_models()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py", line 123, in validate_models
+    run_checks()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/core/checks/registry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/urls/resolvers.py", line 407, in check
+    for pattern in self.url_patterns:
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/urls/resolvers.py", line 588, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/urls/resolvers.py", line 581, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/adirimini/vpodrini/project/project/urls.py", line 28, in <module>
+    path('notizia/', include('notizia.urls'))
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/adirimini/vpodrini/project/notizia/urls.py", line 3, in <module>
+    from . import views
+  File "/home/adirimini/vpodrini/project/notizia/views.py", line 17, in <module>
+    from notizia.forms import NotiziaForm, NotiziaFullForm
+  File "/home/adirimini/vpodrini/project/notizia/forms.py", line 2, in <module>
+    from .models import Notizia
+  File "/home/adirimini/vpodrini/project/notizia/models.py", line 7, in <module>
+    class Notizia(models.Model):
+  File "/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/django/db/models/base.py", line 115, in __new__
+    "INSTALLED_APPS." % (module, name)
+RuntimeError: Model class notizia.models.Notizia doesn't declare an explicit app_label and isn't in an application in INSTALLED_APPS.
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-22 08:16:55,569: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-22 08:16:55,607: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-22 08:16:56,652: INFO/MainProcess] mingle: all alone
+[2020-05-22 08:16:56,685: WARNING/MainProcess] /home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py:203: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  leak, never use this setting in production environments!''')
+[2020-05-22 08:16:56,685: INFO/MainProcess] celery@AdiRimini.Org ready.
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-22 08:17:23,352: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-22 08:17:23,379: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-22 08:17:24,421: INFO/MainProcess] mingle: all alone
+[2020-05-22 08:17:24,462: INFO/MainProcess] celery@AdiRimini.Org ready.
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-22 08:19:38,482: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-22 08:19:38,504: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-22 08:19:39,546: INFO/MainProcess] mingle: all alone
+[2020-05-22 08:19:39,572: INFO/MainProcess] celery@AdiRimini.Org ready.
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-22 08:22:24,761: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-22 08:22:24,783: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-22 08:22:25,820: INFO/MainProcess] mingle: all alone
+[2020-05-22 08:22:25,859: INFO/MainProcess] celery@AdiRimini.Org ready.
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-22 08:24:39,343: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-22 08:24:39,391: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-22 08:24:40,458: INFO/MainProcess] mingle: all alone
+[2020-05-22 08:24:40,499: WARNING/MainProcess] /home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py:203: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  leak, never use this setting in production environments!''')
+[2020-05-22 08:24:40,500: INFO/MainProcess] celery@AdiRimini.Org ready.
+
+worker: Warm shutdown (MainProcess)
+/home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/platforms.py:801: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-05-22 08:31:28,809: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2020-05-22 08:31:28,853: INFO/MainProcess] mingle: searching for neighbors
+[2020-05-22 08:31:29,902: INFO/MainProcess] mingle: all alone
+[2020-05-22 08:31:29,950: WARNING/MainProcess] /home/adirimini/vpodrini/project/env/lib/python3.7/site-packages/celery/fixups/django.py:203: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  leak, never use this setting in production environments!''')
+[2020-05-22 08:31:29,950: INFO/MainProcess] celery@AdiRimini.Org ready.
