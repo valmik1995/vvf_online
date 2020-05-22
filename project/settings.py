@@ -24,7 +24,7 @@ SECRET_KEY = 'v66%u1k=(y^f11^3#b^#okyh&q*@7afu52ywz4_@=$r(e6cn8c'
 
 # SECURITY WARNING: don't run with debug turnedR
 
-ALLOWED_HOSTS = ['valeriopodrini.it']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'video',
     'compressor',
+    'notizia',
 ]
 
 MIDDLEWARE = [
@@ -57,8 +58,9 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'project.urls'
 
+
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 TEMPLATES = [
     {
@@ -77,10 +79,8 @@ TEMPLATES = [
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-
 # Redirect to home URL after login (Default redirects to /accounts/profile/)
 LOGIN_REDIRECT_URL = '/'
-
 
 WSGI_APPLICATION = 'project.wsgi.application'
 
@@ -140,13 +140,14 @@ USE_L10N = True
 
 USE_TZ = True
 
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 STATIC_URL = '/static/'
 
 # Django si aspetterà di trovare files in una cartella chiamata "static" presente in BASE_DIR.
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 
 MEDIA_URL = 'media/'
@@ -154,7 +155,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 IMAGES_DIR = os.path.join(MEDIA_ROOT, 'media/images')
 
 
-STATIC_ROOT = '/home/adirimini/vpodrini/project/static/'
+STATIC_ROOT = '/Users/valmik/PycharmProjects/vvf_online/static'
 #STATIC_ROOT = os.path.join(BASE_DIR,"/static/")
 
 STATICFILES_FINDERS = (
