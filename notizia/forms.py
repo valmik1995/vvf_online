@@ -4,7 +4,7 @@ from .models import Notizia
 class NotiziaForm(forms.ModelForm):
     class Meta:
         model = Notizia
-        fields = ['title','text'] #make sure to mention field here, if nothing is mentioned then all will be required.
+        fields = ['title','description'] #make sure to mention field here, if nothing is mentioned then all will be required.
 
 class NotiziaFullForm(NotiziaForm): #extending form
     images = forms.FileField(widget=forms.ClearableFileInput(attrs={'multiple': True}))

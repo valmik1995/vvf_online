@@ -51,6 +51,7 @@ class NotiziaCreate(CreateView):
     model = Notizia
     fields = ['title']
 
+
 def addNotiziaView(request):
     posts = Notizia.objects.all()
     response_data = {}
@@ -64,14 +65,14 @@ def addNotiziaView(request):
             return HttpResponse(data, content_type="application/json", status=403)
         user = request.user
         title = form.cleaned_data['title']
-        text = form.cleaned_data['text']
-        notizia_obj = Notizia.objects.create(user=user,title=title,text=text) #create will create as well as save too in db.
+        description = form.cleaned_data['description']
+        notizia_obj = Notizia.objects.create(user=user,title=title,description=description) #create will create as well as save too in db.
         for f in files:
             Images.objects.create(note=notizia_obj,image=f)
-        object = {"title": title, "text": text}
+        object = {"title": title, "description": description}
         response_data['title'] = title
-        response_data['text'] = text
-        return JsonResponse({'message': 'success'})
+        response_data['description'] = description
+        return JsonResponse(response_data)
 
     return render(request, 'notizia/notizia_form.html', {'posts':posts})
 
@@ -79,6 +80,7 @@ def addNotiziaView(request):
 
 class NotiziaListView(ListView):
     model = Notizia
+    template_name = 'notizia/notizia_list.html'
     paginate_by = 100  # if pagination is desired
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -96,8 +98,8 @@ class NotiziaDetailView(DetailView):
 @csrf_exempt
 def ajax_posting(request):
     if request.is_ajax():
-        first_name = request.POST.get('notizia-title', None) # getting data from input first_name id
-        last_name = request.POST.get('notizia-description', None)  # getting data from input last_name id
+        title = request.POST.get('notizia-title', None) # getting data from input first_name id
+        description = request.POST.get('notizia-description', None)  # getting data from input last_name id
         if first_name and last_name: #cheking if first_name and last_name have value
             response = {
                          'msg':'Your form has been submitted successfully' # response message

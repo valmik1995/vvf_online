@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-
 $('.notizia').click(function() {
     $.ajax({
       type: "POST",
@@ -20,6 +19,7 @@ $('.notizia').click(function() {
       }
     });
   });
+
 
   $('.get-more').click(function() {
     $.ajax({

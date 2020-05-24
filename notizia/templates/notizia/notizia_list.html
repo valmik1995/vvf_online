@@ -7,21 +7,19 @@
 {% block photos_content %}
 
 <h1>Notizia</h1>
-<ul>
-{% for notizia in object_list %}
-    <li><a href="/notizia/{{ notizia.id }}">{{ notizia.id }}</a> - {{ notizia.created_date|date }} - {{ notizia.title }} - {{ notizia.text }}</li>
+<div class="row mb-2 posts">
+                    {% for post in object_list %}
+                    <div class="col-md-6">
+                        <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                            <div class="col p-4 d-flex flex-column position-static">
+                                <h3 class="mb-0">{{post.title}}</h3>
+                                <p class="mb-auto">{{post.description}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
 
-    {% for image in notizia.images_set.all %}
-    <div class="col-lg-3 col-md-4 col-6">
-      <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="/media/{{ image.image }}" alt="">
-          </a>
-    </div>
-    {% endfor %}
-{% empty %}
-    <li>No articles yet.</li>
+            </div>
 
-{% endfor %}
-</ul>
 
 {% endblock %}
