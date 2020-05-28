@@ -14,6 +14,11 @@
                             <div class="col p-4 d-flex flex-column position-static">
                                 <h3 class="mb-0">{{post.title}}</h3>
                                 <p class="mb-auto">{{post.description}}</p>
+
+                                {% for category in notizia.image_set.all %}
+                                			{{ category.image }}
+                                			{% endfor %}
+
                             </div>
                         </div>
                     </div>

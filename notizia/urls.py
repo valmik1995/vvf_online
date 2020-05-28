@@ -6,7 +6,7 @@ from .views import *
 app_name = 'notizia'
 
 urlpatterns = [
-    path('add/', addNotiziaView, name='notizia_add'),
+    path('create/', addNotiziaView, name='notizia_create'),
     path('list/', NotiziaListView.as_view(), name='notizia_list'),
     path('<int:pk>', NotiziaDetailView.as_view(), name='notizia_detail'),
     path('ajax-posting/', ajax_posting, name='ajax_posting'),

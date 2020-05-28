@@ -72,16 +72,38 @@ def addNotiziaView(request):
         object = {"title": title, "description": description}
         response_data['title'] = title
         response_data['description'] = description
-        return JsonResponse(response_data)
+        return HttpResponseRedirect('/notizia/list/')
 
     return render(request, 'notizia/notizia_form.html', {'posts':posts})
 
+# def addNotiziaView(request):
+#     posts = Notizia.objects.all()
+#     response_data = {}
+#
+#     if request.POST.get('action') == 'post':
+#         title = request.POST.get('title')
+#         description = request.POST.get('description')
+#         files = request.FILES.get('img')
+#         user = request.user
+#
+#
+#
+#         response_data['title'] = title
+#         response_data['description'] = description
+#
+#         notizia_obj = Notizia.objects.create(user=user,title = title,description = description)
+#         for f in files:
+#             Images.objects.create(note=notizia_obj,image=f)
+#         return JsonResponse(response_data)
+#
+#     return render(request, 'notizia/notizia_form.html', {'posts':posts})
 
 
 class NotiziaListView(ListView):
     model = Notizia
     template_name = 'notizia/notizia_list.html'
     paginate_by = 100  # if pagination is desired
+    ordering = ['-title']
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['now'] = timezone.now()
@@ -98,8 +120,8 @@ class NotiziaDetailView(DetailView):
 @csrf_exempt
 def ajax_posting(request):
     if request.is_ajax():
-        title = request.POST.get('notizia-title', None) # getting data from input first_name id
-        description = request.POST.get('notizia-description', None)  # getting data from input last_name id
+        first_name = request.POST.get('first_name', None) # getting data from input first_name id
+        last_name = request.POST.get('last_name', None)  # getting data from input last_name id
         if first_name and last_name: #cheking if first_name and last_name have value
             response = {
                          'msg':'Your form has been submitted successfully' # response message
