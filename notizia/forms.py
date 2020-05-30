@@ -1,5 +1,5 @@
 from django import forms
-from .models import Notizia
+from .models import Notizia, News
 
 class NotiziaForm(forms.ModelForm):
     class Meta:
@@ -11,3 +11,11 @@ class NotiziaFullForm(NotiziaForm): #extending form
 
     class Meta(NotiziaForm.Meta):
         fields = NotiziaForm.Meta.fields + ['images',]
+
+
+class NewsForm(forms.ModelForm):
+    files = forms.FileField(widget=forms.ClearableFileInput(attrs={'multiple': True}))
+
+    class Meta:
+        model = News
+        fields = ['title','description','files']

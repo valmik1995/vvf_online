@@ -2,7 +2,7 @@
 {% block uploads_active %}active{% endblock %}
 {% load static %}
 
-{% block title %}Multiple Images{% endblock %}
+{% block title %}News{% endblock %}
 
 {% block photos_content %}
 
@@ -29,7 +29,7 @@
 
 <script src="{% static 'notizia/message.js' %}"></script> -->
 
-<div class="row mb-2 posts">
+<!-- <div class="row mb-2 posts">
   {% for post in posts %}
   <div class="col-md-6">
     <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
@@ -47,7 +47,7 @@
     e.preventDefault();
     var data = new FormData();
     var img = $('#notizia-image')[0].files[0];
-    data.append('image', img);
+    data.append('img', img);
 
 
     $.ajax({
@@ -57,7 +57,6 @@
       data: {
         title: $('#notizia-title').val(),
         description: $('#notizia-description').val(),
-        image: $('#notizia-images').files,
         csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(),
         action: 'post'
       },
@@ -80,7 +79,7 @@
       }
     });
   });
-</script>
+</script> -->
 
 
 

@@ -12,12 +12,17 @@
                     <div class="col-md-6">
                         <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                             <div class="col p-4 d-flex flex-column position-static">
-                                <h3 class="mb-0">{{post.title}}</h3>
+                                <h3 class="mb-0"><a href="../{{post.id}}/delete/">{{post.title}}</a></h3>
                                 <p class="mb-auto">{{post.description}}</p>
+{{post.id}}
+{% for images in post.images_set.all %}
+<div class="col-lg-3 col-md-4 col-6">
+  <a href="#" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" src="/media/{{ images.image }}" alt="">
+      </a>
+</div>
+{% endfor %}
 
-                                {% for category in notizia.image_set.all %}
-                                			{{ category.image }}
-                                			{% endfor %}
 
                             </div>
                         </div>

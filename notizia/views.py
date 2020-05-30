@@ -1,7 +1,7 @@
 from __future__ import unicode_literals
 import json
 import pdb
-from django.shortcuts import render, HttpResponse, redirect
+from django.shortcuts import render, HttpResponse, redirect, get_object_or_404
 from django.template.loader import render_to_string
 from django.http import HttpResponseRedirect, JsonResponse, HttpResponse, Http404
 from django.urls import reverse, reverse_lazy
@@ -11,9 +11,7 @@ from project.celery import app
 from django_celery_results.models import TaskResult
 from celery.result import AsyncResult
 from django.utils import timezone
-from django.views.generic.edit import CreateView, DeleteView, UpdateView
-from django.views.generic.list import ListView
-from django.views.generic.detail import DetailView
+from django.views.generic import CreateView, DeleteView, UpdateView, ListView, DetailView
 from notizia.forms import NotiziaForm, NotiziaFullForm
 from notizia.models import Notizia, Images
 from django.core import serializers
@@ -47,56 +45,52 @@ def add_todo(request):
         raise Http404
 
 
-class NotiziaCreate(CreateView):
-    model = Notizia
-    fields = ['title']
-
-
-def addNotiziaView(request):
-    posts = Notizia.objects.all()
-    response_data = {}
-    form = NotiziaFullForm(request.POST or None, request.FILES or None)
-    files = request.FILES.getlist('images')
-    if form.is_valid():
-        file_ = form.cleaned_data['images']
-        image_types = ['image/png', 'image/jpg', 'image/jpeg', 'image/gif', 'image/gif']
-        if file_.content_type not in image_types:
-            data = json.dumps({'errore': 'Formato Immagine non supportato.'})
-            return HttpResponse(data, content_type="application/json", status=403)
-        user = request.user
-        title = form.cleaned_data['title']
-        description = form.cleaned_data['description']
-        notizia_obj = Notizia.objects.create(user=user,title=title,description=description) #create will create as well as save too in db.
-        for f in files:
-            Images.objects.create(note=notizia_obj,image=f)
-        object = {"title": title, "description": description}
-        response_data['title'] = title
-        response_data['description'] = description
-        return HttpResponseRedirect('/notizia/list/')
-
-    return render(request, 'notizia/notizia_form.html', {'posts':posts})
 
 # def addNotiziaView(request):
 #     posts = Notizia.objects.all()
 #     response_data = {}
-#
-#     if request.POST.get('action') == 'post':
-#         title = request.POST.get('title')
-#         description = request.POST.get('description')
-#         files = request.FILES.get('img')
+#     form = NotiziaFullForm(request.POST or None, request.FILES or None)
+#     files = request.FILES.getlist('images')
+#     if form.is_valid():
+#         file_ = form.cleaned_data['images']
+#         image_types = ['image/png', 'image/jpg', 'image/jpeg', 'image/gif', 'image/gif']
+#         if file_.content_type not in image_types:
+#             data = json.dumps({'errore': 'Formato Immagine non supportato.'})
+#             return HttpResponse(data, content_type="application/json", status=403)
 #         user = request.user
-#
-#
-#
-#         response_data['title'] = title
-#         response_data['description'] = description
-#
-#         notizia_obj = Notizia.objects.create(user=user,title = title,description = description)
+#         title = form.cleaned_data['title']
+#         description = form.cleaned_data['description']
+#         notizia_obj = Notizia.objects.create(user=user,title=title,description=description) #create will create as well as save too in db.
 #         for f in files:
 #             Images.objects.create(note=notizia_obj,image=f)
-#         return JsonResponse(response_data)
+#         object = {"title": title, "description": description}
+#         response_data['title'] = title
+#         response_data['description'] = description
+#         return HttpResponseRedirect('/notizia/list/')
 #
 #     return render(request, 'notizia/notizia_form.html', {'posts':posts})
+
+def addNotiziaView(request, *args, **kwargs):
+    posts = Notizia.objects.all()
+    response_data = {}
+
+    if request.POST.get('action') == 'post':
+        title = request.POST.get('title')
+        description = request.POST.get('description')
+        files = request.FILES.get('image')
+        user = request.user
+
+
+
+        response_data['title'] = title
+        response_data['description'] = description
+
+        notizia_obj = Notizia.objects.create(user=user,title = title,description = description)
+
+        Images.objects.create(note=notizia_obj,image=files)
+        return JsonResponse(response_data)
+
+    return render(request, 'notizia/notizia_form.html', {'posts':posts})
 
 
 class NotiziaListView(ListView):
@@ -115,6 +109,34 @@ class NotiziaDetailView(DetailView):
         context = super().get_context_data(**kwargs)
         context['now'] = timezone.now()
         return context
+
+# class NotiziaDeleteView(DeleteView):
+#     template_name = 'notizia/notizia_delete.html'
+#
+#     def get_object(self):
+#         id_ = self.kwargs.get("id")
+#         return get_object_or_404(Images, note_id=id_)
+#
+#     def get_success_url(self):
+#         return reverse('notizia:notizia_list')
+
+# class ImagesDeleteView(DeleteView):
+#     template_name = 'notizia/notizia_delete.html'
+#
+#     def get_object(self):
+#         id_ = self.kwargs.get("id")
+#         return get_object_or_404(Images, id=id_)
+#
+#     def get_success_url(self):
+#         return reverse('notizia:notizia_list')
+
+def ImagesDeleteView(request, pk):
+    query = Images.objects.filter(note_id=pk).delete()
+    instance = Notizia.objects.get(id=pk)
+    instance.delete()
+    return HttpResponse("Deleted!")
+
+
 
 # ajax_posting function
 @csrf_exempt
