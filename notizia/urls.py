@@ -2,6 +2,8 @@ from django.conf.urls import url
 from django.urls import path
 from . import views
 from .views import *
+from comuni_italiani.autocomplete.views import *
+
 
 app_name = 'notizia'
 
@@ -12,6 +14,9 @@ urlpatterns = [
     # path('<int:pk>/delete/', notizia_delete_view, name='notizia_delete'),
     path('<int:pk>/delete/', ImagesDeleteView, name='images_delete'),
     path('ajax-posting/', ajax_posting, name='ajax_posting'),
+    path('comune/', ComuneAutocomplete.as_view(), name='comune-autocomplete'),
+    path('regione/', RegioneAutocomplete.as_view(), name='regione-autocomplete'),
+    path('cittametropolitana/', CittaMetropolitanaAutocomplete.as_view(),name='cittametropolitana-autocomplete',),
 
     # path('my_ajax_request/', requestAjax, name='my_ajax_request'),
     # path('more-todo', more_todo, name='more_todo'),
