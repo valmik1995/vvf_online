@@ -12,7 +12,7 @@ from django_celery_results.models import TaskResult
 from celery.result import AsyncResult
 from django.utils import timezone
 from django.views.generic import CreateView, DeleteView, UpdateView, ListView, DetailView
-from notizia.forms import NotiziaForm, NotiziaFullForm
+from notizia.forms import NotiziaForm
 from notizia.models import Notizia, Images
 from django.core import serializers
 from django.views.decorators.csrf import csrf_exempt
