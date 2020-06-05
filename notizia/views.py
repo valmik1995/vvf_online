@@ -12,11 +12,12 @@ from django_celery_results.models import TaskResult
 from celery.result import AsyncResult
 from django.utils import timezone
 from django.views.generic import CreateView, DeleteView, UpdateView, ListView, DetailView
-from notizia.forms import NotiziaForm
-from notizia.models import Notizia, Images
+from notizia.forms import NotiziaForm, NotiziaFullForm
+from notizia.models import Notizia, Images, Country
 from django.core import serializers
 from django.views.decorators.csrf import csrf_exempt
 from django.views.generic.base import TemplateView
+from dal import autocomplete
 
 
 class HomePageView(TemplateView):
@@ -44,7 +45,36 @@ def add_todo(request):
     else:
         raise Http404
 
+class NotiziaCreateView(CreateView):
+    def get(self, request, *args, **kwargs):
+        context = {'form': NotiziaFullForm()}
+        return render(request, 'notizia/notizia_form_autocomplete.html', context)
 
+    def post(self, request, *args, **kwargs):
+        form = NotiziaFullForm(request.POST or None, request.FILES or None)
+        files = request.FILES.getlist('images')
+        if form.is_valid():
+            notizia = form.save()
+            notizia.save()
+            for f in files:
+                Images.objects.create(note_id=notizia.id,image=f)
+
+            return HttpResponseRedirect(reverse_lazy('notizia:notizia_detail', args=[notizia.id]))
+        return render(request, 'notizia/notizia_form_autocomplete.html', {'form': form})
+
+
+# class CountryAutocompleteView(autocomplete.Select2QuerySetView):
+#     def get_queryset(self):
+#         if not self.request.user.is_authenticated():
+#             return Country.objects.none()
+#
+#         qs = Country.objects.all()
+#
+#         if self.q:
+#             qs = qs.filter(name__icontains=self.q)
+#
+#         return qs
+#
 
 # def addNotiziaView(request):
 #     posts = Notizia.objects.all()
@@ -68,29 +98,29 @@ def add_todo(request):
 #         response_data['description'] = description
 #         return HttpResponseRedirect('/notizia/list/')
 #
+#     return render(request, 'notizia/notizia_form_autocomplete.html', {'posts':posts})
+
+# def addNotiziaView(request, *args, **kwargs):
+#     posts = Notizia.objects.all()
+#     response_data = {}
+#
+#     if request.POST.get('action') == 'post':
+#         title = request.POST.get('title')
+#         description = request.POST.get('description')
+#         files = request.FILES.get('image')
+#         user = request.user
+#
+#
+#
+#         response_data['title'] = title
+#         response_data['description'] = description
+#
+#         notizia_obj = Notizia.objects.create(user=user,title = title,description = description)
+#
+#         Images.objects.create(note=notizia_obj,image=files)
+#         return JsonResponse(response_data)
+#
 #     return render(request, 'notizia/notizia_form.html', {'posts':posts})
-
-def addNotiziaView(request, *args, **kwargs):
-    posts = Notizia.objects.all()
-    response_data = {}
-
-    if request.POST.get('action') == 'post':
-        title = request.POST.get('title')
-        description = request.POST.get('description')
-        files = request.FILES.get('image')
-        user = request.user
-
-
-
-        response_data['title'] = title
-        response_data['description'] = description
-
-        notizia_obj = Notizia.objects.create(user=user,title = title,description = description)
-
-        Images.objects.create(note=notizia_obj,image=files)
-        return JsonResponse(response_data)
-
-    return render(request, 'notizia/notizia_form.html', {'posts':posts})
 
 
 class NotiziaListView(ListView):

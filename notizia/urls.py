@@ -8,12 +8,13 @@ from comuni_italiani.autocomplete.views import *
 app_name = 'notizia'
 
 urlpatterns = [
-    path('create/', addNotiziaView, name='notizia_create'),
+    path('create/', NotiziaCreateView.as_view(), name='notizia_create'),
     path('list/', NotiziaListView.as_view(), name='notizia_list'),
     path('<int:pk>/', NotiziaDetailView.as_view(), name='notizia_detail'),
     # path('<int:pk>/delete/', notizia_delete_view, name='notizia_delete'),
     path('<int:pk>/delete/', ImagesDeleteView, name='images_delete'),
     path('ajax-posting/', ajax_posting, name='ajax_posting'),
+    # path('citta/', CountryAutocompleteView.as_view(), name='citta-autocomplete'),
     path('comune/', ComuneAutocomplete.as_view(), name='comune-autocomplete'),
     path('regione/', RegioneAutocomplete.as_view(), name='regione-autocomplete'),
     path('cittametropolitana/', CittaMetropolitanaAutocomplete.as_view(),name='cittametropolitana-autocomplete',),
