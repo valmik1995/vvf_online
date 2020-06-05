@@ -1,6 +1,7 @@
 from dal import autocomplete
 from django import forms
-from .models import Notizia, News, Anagrafica
+from notizia.models import Notizia, News, Anagrafica, Country
+from .validators import MimetypeValidator
 
 class NotiziaForm(forms.ModelForm):
     class Meta:
@@ -9,11 +10,18 @@ class NotiziaForm(forms.ModelForm):
 
 
 class NotiziaFullForm(NotiziaForm): #extending form
-    images = forms.FileField(widget=forms.ClearableFileInput(attrs={'multiple': True}))
+    images = forms.FileField(widget=forms.ClearableFileInput(attrs={'multiple': True}), validators=[MimetypeValidator('application/pdf')],
+        help_text="Upload a PDF file")
+    widgets = {
+        'citta': autocomplete.ModelSelect2(url='comune-autocomplete',
+        attrs={
+            'theme': 'bootstrap'
+        })
+    }
 
     class Meta(NotiziaForm.Meta):
         fields = NotiziaForm.Meta.fields + ['images',]
-        widgets = {'comune': autocomplete.ModelSelect2Multiple(url='comune-autocomplete')}
+
 
 class NewsForm(forms.ModelForm):
     files = forms.FileField(widget=forms.ClearableFileInput(attrs={'multiple': True}))
@@ -27,8 +35,3 @@ class AnagraficaForm(forms.ModelForm):
     class Meta:
         model = Anagrafica
         fields = ('__all__')
-        widgets = {
-            'comune': autocomplete.ModelSelect2Multiple(
-                url='comune-autocomplete'
-            )
-        }

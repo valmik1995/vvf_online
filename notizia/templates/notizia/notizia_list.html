@@ -14,7 +14,11 @@
                             <div class="col p-4 d-flex flex-column position-static">
                                 <h3 class="mb-0"><a href="../{{post.id}}/delete/">{{post.title}}</a></h3>
                                 <p class="mb-auto">{{post.description}}</p>
-{{post.id}}
+<span>{{post.id}}</span><p>{{post.citta}}</p>
+{% for citta in post.citta_set.all %}
+{{citta.citta}}
+{% endfor %}
+
 {% for images in post.images_set.all %}
 <div class="col-lg-3 col-md-4 col-6">
   <a href="#" class="d-block mb-4 h-100">

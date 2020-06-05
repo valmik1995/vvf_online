@@ -160,6 +160,9 @@ MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 IMAGES_DIR = os.path.join(MEDIA_ROOT, 'media/images')
 
+IMAGE_TYPES = ('png', 'jpg', 'jpeg')
+VIDEO_TYPES = ('mov', 'mp4', 'mts')
+
 
 STATIC_ROOT = '/Users/valmik/PycharmProjects/vvf_online/static/'
 #STATIC_ROOT = os.path.join(BASE_DIR,"/static/")
