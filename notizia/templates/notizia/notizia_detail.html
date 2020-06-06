@@ -6,17 +6,27 @@
 
 {% block photos_content %}
 
-<h1>{{ object.title }}</h1>
+<h1>{{ object.comune.name }} ({{ object.comune.provincia.codice_targa }}) - {{ object.title }}</h1>
 <p>{{ object.description }}</p>
 <div class="container">
   <div class="row text-center text-lg-left">
 {% for images in object.images_set.all %}
 <div class="col-lg-3 col-md-4 col-6">
   <a href="/notizia/images/{{images.id}}/delete/" class="d-block mb-4 h-100">
-        <img class="img-fluid img-thumbnail" src="/media/{{ images.image }}" alt="">
+        <img class="img-fluid img-thumbnail" src="{{ images.image.url }}" alt="">
       </a>
 </div>
 {% endfor %}
+
+{% for video in object.videonotizia_set.all %}
+<div align="center" class="embed-responsive embed-responsive-16by9">
+    <video width="320" height="240" controls>
+        <source src="/media/{{ video.video }}" type="video/mp4">
+    </video>
+</div>
+{% endfor %}
+
+
   </div>
 </div>
 <!-- <p>Published: {{ object.created_date|date }}</p>

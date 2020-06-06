@@ -48,8 +48,7 @@ INSTALLED_APPS = [
     'video',
     'compressor',
     'notizia',
-    'comuni_italiani',
-    'comuni_italiani.autocomplete',
+    'imagekit',
 ]
 
 MIDDLEWARE = [
@@ -156,7 +155,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, '/static/')]
 
 
-MEDIA_URL = 'media/'
+MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 IMAGES_DIR = os.path.join(MEDIA_ROOT, 'media/images')
 

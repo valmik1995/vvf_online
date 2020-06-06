@@ -18,6 +18,8 @@ from django.urls import path, include
 from django.conf.urls import url, include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib.staticfiles.storage import staticfiles_storage
+from django.views.generic.base import RedirectView
 
 
 urlpatterns = [
@@ -27,8 +29,9 @@ urlpatterns = [
     url(r'^', include('watermarks.urls')),
     path('video/', include('video.urls')),
     path('notizia/', include('notizia.urls')),
+    path('favicon.ico', RedirectView.as_view(url=staticfiles_storage.url('images/templates/favicon.ico'))),
 ]
 
 if settings.DEBUG is True:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_URL)
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_URL)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

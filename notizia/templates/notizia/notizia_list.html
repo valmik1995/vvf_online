@@ -8,32 +8,41 @@
 
 <h1>Notizia</h1>
 <div class="row mb-2 posts">
-                    {% for post in object_list %}
-                    <div class="col-md-6">
-                        <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                            <div class="col p-4 d-flex flex-column position-static">
-                                <h3 class="mb-0"><a href="../{{post.id}}/delete/">{{post.title}}</a></h3>
-                                <p class="mb-auto">{{post.description}}</p>
-<span>{{post.id}}</span><p>{{post.citta}}</p>
-{% for citta in post.citta_set.all %}
-{{citta.citta}}
-{% endfor %}
+  {% for post in object_list %}
+  <div class="col-md-12">
 
-{% for images in post.images_set.all %}
-<div class="col-lg-3 col-md-4 col-6">
-  <a href="#" class="d-block mb-4 h-100">
-        <img class="img-fluid img-thumbnail" src="/media/{{ images.image }}" alt="">
-      </a>
+    <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+
+      {% for images in post.images_set.all reversed %}
+      {% if forloop.first %}
+      <div class="col-lg-3 col-md-4 col-6 pt-2 pl-2">
+        <a href="../{{post.id}}/" class="d-block mb-4 h-100">
+          <img class="img-fluid img-thumbnail" src="{{ images.image_thumbnail.url }}" alt="">
+
+        </a>
+      </div>
+      {% endif %}
+      {% endfor %}
+
+<!-- {% if post.images_set.all %}
+Number of immagini: {{ post.images_set.all|length }}
+{% else %}
+    No athletes.
+{% endif %} -->
+
+
+      <div class="col pt-2 pl-2 d-flex flex-column position-static">
+        <h3 class="mb-0"><a href="../{{post.id}}/">{{post.comune.name}} ({{post.comune.provincia.codice_targa}}) - {{post.title}}</a></h3>
+        <p class="mb-auto">{{post.description}}</p>
+
+
+      </div>
+    </div>
+
+  </div>
+  {% endfor %}
+
 </div>
-{% endfor %}
-
-
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
-
-            </div>
 
 
 {% endblock %}

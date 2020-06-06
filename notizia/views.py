@@ -1,23 +1,38 @@
 from __future__ import unicode_literals
 import json
 import pdb
+from dal import autocomplete
 from django.shortcuts import render, HttpResponse, redirect, get_object_or_404
 from django.template.loader import render_to_string
 from django.http import HttpResponseRedirect, JsonResponse, HttpResponse, Http404
 from django.urls import reverse, reverse_lazy
 from django.views import View
 from django.views.decorators.csrf import csrf_exempt
+from django.contrib.auth.decorators import login_required
 from project.celery import app
 from django_celery_results.models import TaskResult
 from celery.result import AsyncResult
 from django.utils import timezone
 from django.views.generic import CreateView, DeleteView, UpdateView, ListView, DetailView
 from notizia.forms import NotiziaForm, NotiziaFullForm
-from notizia.models import Notizia, Images, Country
+from notizia.models import Notizia, Images, Country, VideoNotizia
 from django.core import serializers
 from django.views.decorators.csrf import csrf_exempt
 from django.views.generic.base import TemplateView
 from dal import autocomplete
+
+class ComuneAutocomplete(autocomplete.Select2QuerySetView):
+    def get_queryset(self):
+        # Don't forget to filter out results depending on the visitor !
+        if not self.request.user.is_authenticated():
+            return Comune.objects.none()
+
+        qs = Comune.objects.all()
+
+        if self.q:
+            qs = qs.filter(name__istartswith=self.q)
+
+        return qs
 
 
 class HomePageView(TemplateView):
@@ -45,6 +60,19 @@ def add_todo(request):
     else:
         raise Http404
 
+@login_required
+def notizia_update(request, pk, template_name='notizia/notizia_form_autocomplete.html'):
+    if request.user.is_superuser:
+        book= get_object_or_404(Notizia, pk=pk)
+    else:
+        book= get_object_or_404(Notizia, pk=pk, user=request.user)
+    form = NotiziaFullForm(request.POST or None, request.FILES or None, instance=book)
+    if form.is_valid():
+        form.save()
+        return redirect('notizia:notizia_list')
+    return render(request, template_name, {'form':form})
+
+
 class NotiziaCreateView(CreateView):
     def get(self, request, *args, **kwargs):
         context = {'form': NotiziaFullForm()}
@@ -53,11 +81,16 @@ class NotiziaCreateView(CreateView):
     def post(self, request, *args, **kwargs):
         form = NotiziaFullForm(request.POST or None, request.FILES or None)
         files = request.FILES.getlist('images')
+        video = request.FILES.getlist('video')
         if form.is_valid():
             notizia = form.save()
+            notizia.user = request.user
             notizia.save()
             for f in files:
                 Images.objects.create(note_id=notizia.id,image=f)
+
+            for v in video:
+                VideoNotizia.objects.create(note_id=notizia.id,video=v)
 
             return HttpResponseRedirect(reverse_lazy('notizia:notizia_detail', args=[notizia.id]))
         return render(request, 'notizia/notizia_form_autocomplete.html', {'form': form})
@@ -164,7 +197,7 @@ def ImagesDeleteView(request, pk):
     query = Images.objects.filter(note_id=pk).delete()
     instance = Notizia.objects.get(id=pk)
     instance.delete()
-    return HttpResponse("Deleted!")
+    return HttpResponseRedirect(reverse_lazy('notizia:notizia_list'))
 
 
 
