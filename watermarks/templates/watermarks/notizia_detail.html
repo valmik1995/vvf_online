@@ -13,7 +13,7 @@
 {% for images in object.images_set.all %}
 <div class="col-lg-3 col-md-4 col-6">
   <a href="#" class="d-block mb-4 h-100">
-        <img class="img-fluid img-thumbnail" src="/media/{{ images.image }}" alt="">
+        <img class="img-fluid img-thumbnail" src="{{ images.image.url }}" alt="">
       </a>
 </div>
 {% endfor %}
@@ -23,4 +23,3 @@
 <p>Date: {{ now|date }} {{ now|time }}</p> -->
 
 {% endblock %}
-

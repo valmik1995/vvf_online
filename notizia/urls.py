@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from django.urls import path
+from django.urls import path, re_path
 from . import views
 from .views import *
 
@@ -10,6 +10,7 @@ app_name = 'notizia'
 urlpatterns = [
     path('create/', NotiziaCreateView.as_view(), name='notizia_create'),
     path('list/', NotiziaListView.as_view(), name='notizia_list'),
+    re_path(r'^list/(?P<comune>/[A-Z]{1}+)/', NotiziaListViewComune.as_view(), name='notizia_list_comune'),
     path('<int:pk>/', NotiziaDetailView.as_view(), name='notizia_detail'),
     path('<int:pk>/update/', views.notizia_update, name='notizia_update'),
     # path('<int:pk>/delete/', notizia_delete_view, name='notizia_delete'),

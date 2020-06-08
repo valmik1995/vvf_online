@@ -15,7 +15,7 @@ from celery.result import AsyncResult
 from django.utils import timezone
 from django.views.generic import CreateView, DeleteView, UpdateView, ListView, DetailView
 from notizia.forms import NotiziaForm, NotiziaFullForm
-from notizia.models import Notizia, Images, Country, VideoNotizia
+from notizia.models import Notizia, Images, Country, VideoNotizia, Comune
 from django.core import serializers
 from django.views.decorators.csrf import csrf_exempt
 from django.views.generic.base import TemplateView
@@ -159,8 +159,10 @@ class NotiziaCreateView(CreateView):
 class NotiziaListView(ListView):
     model = Notizia
     template_name = 'notizia/notizia_list.html'
-    paginate_by = 100  # if pagination is desired
+    paginate_by = 10  # if pagination is desired
     ordering = ['-title']
+
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['now'] = timezone.now()
@@ -172,6 +174,15 @@ class NotiziaDetailView(DetailView):
         context = super().get_context_data(**kwargs)
         context['now'] = timezone.now()
         return context
+
+class NotiziaListViewComune(ListView):
+    template_name = 'notizia/notizia_list.html'
+
+
+    def get_queryset(self):
+        self.comune = get_object_or_404(Comune, name=self.kwargs['comune'])
+        return Notizia.objects.filter(comune=self.comune)
+
 
 # class NotiziaDeleteView(DeleteView):
 #     template_name = 'notizia/notizia_delete.html'

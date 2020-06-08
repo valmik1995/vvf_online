@@ -34,8 +34,8 @@
 
     {% for photo in photos %}
     <div class="col-lg-3 col-md-4 col-6">
-      <a href="/{{ photo.file.url }}" class="d-block mb-4 h-100" download>
-        <img class="img-fluid img-thumbnail" src="/{{ photo.file.url }}" alt="">
+      <a href="{{ photo.file.url }}" class="d-block mb-4 h-100" download>
+        <img class="img-fluid img-thumbnail" src="{{ photo.file.url }}" alt="">
       </a>
     </div>
     {% endfor %}
@@ -56,8 +56,8 @@
 
     {% for photo in photos %}
     <div class="col-lg-3 col-md-4 col-6">
-      <a href="/{{ photo.file_watermark.url }}" class="d-block mb-4 h-100" download>
-        <img class="img-fluid img-thumbnail" src="/{{ photo.file_watermark.url }}" alt="">
+      <a href="{{ photo.file_watermark.url }}" class="d-block mb-4 h-100" download>
+        <img class="img-fluid img-thumbnail" src="{{ photo.file_watermark.url }}" alt="">
       </a>
     </div>
     {% endfor %}

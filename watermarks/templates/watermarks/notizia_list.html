@@ -11,7 +11,7 @@
 {% for notizia in object_list %}
     <li><a href="/notizia/{{ notizia.id }}">{{ notizia.id }}</a> - {{ notizia.created_date|date }} - {{ notizia.title }} - {{ notizia.text }}</li>
     {% for images in notizia.images_set.all %}
-    {{ images.image }}
+    {{ images.image.url }}
     {% endfor %}
 {% empty %}
     <li>No articles yet.</li>
@@ -20,4 +20,3 @@
 </ul>
 
 {% endblock %}
-
