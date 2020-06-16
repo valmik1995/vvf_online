@@ -15,7 +15,7 @@ from celery.result import AsyncResult
 from django.utils import timezone
 from django.views.generic import CreateView, DeleteView, UpdateView, ListView, DetailView
 from notizia.forms import NotiziaForm, NotiziaFullForm
-from notizia.models import Notizia, Images, Country, VideoNotizia, Comune
+from notizia.models import Notizia, Images, Country, VideoNotizia, Comune, Provincia, Regione
 from django.core import serializers
 from django.views.decorators.csrf import csrf_exempt
 from django.views.generic.base import TemplateView
@@ -178,10 +178,17 @@ class NotiziaDetailView(DetailView):
 class NotiziaListViewComune(ListView):
     template_name = 'notizia/notizia_list.html'
 
-
     def get_queryset(self):
         self.comune = get_object_or_404(Comune, name=self.kwargs['comune'])
         return Notizia.objects.filter(comune=self.comune)
+
+class NotiziaListViewProvincia(ListView):
+    template_name = 'notizia/notizia_list.html'
+
+    def get_queryset(self):
+        self.provincia = get_object_or_404(Provincia, name=self.kwargs['provincia'])
+        return Notizia.objects.filter(comune__provincia__name = self.provincia)
+
 
 
 # class NotiziaDeleteView(DeleteView):

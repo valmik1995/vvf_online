@@ -1,9 +1,12 @@
+import datetime
 from django.db import models
 from django.conf import settings
 from django.contrib.auth.models import User
 from django.template.defaultfilters import slugify
 from imagekit.models import ImageSpecField
 from pilkit.processors import ResizeToFill
+
+
 
 class Regione(models.Model):
     codice_regione = models.IntegerField(primary_key=True, verbose_name="codice Istat")
@@ -74,6 +77,7 @@ class Country(models.Model):
 class Notizia(models.Model):
     user = models.ForeignKey(User,on_delete=models.CASCADE,null=True)
     title = models.CharField(max_length=30)
+    slug = models.SlugField(max_length = 250, null=True, blank=True, unique=True)
     description = models.TextField(null=True,blank=True)
     # citta = models.ForeignKey('comuni_italiani.Comune', on_delete=models.PROTECT)
     # citta = models.ForeignKey(Country, on_delete=models.CASCADE)
@@ -86,7 +90,16 @@ class Notizia(models.Model):
         verbose_name_plural = "Notizie"
 
     def get_absolute_url(self):
-        return reverse("notizia:notizia_list", kwargs={"id": self.id})
+        return reverse("notizia:notizia_list", kwargs={"slug": self.slug})
+
+    def save(self, *args, **kwargs): # new
+        date = datetime.date.today()
+        if not self.slug:
+            self.slug = '%i/%i/%i/%s/%s' % (
+            date.year, date.month, date.day, slugify(self.comune.name), slugify(self.title)
+            )
+        return super().save(*args, **kwargs)
+
 
 
 class Images(models.Model):

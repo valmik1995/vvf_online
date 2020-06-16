@@ -5,8 +5,8 @@ from . import forms
 
 @admin.register(Notizia)
 class NotiziaAdmin(admin.ModelAdmin):
-    fields = ['title', 'description', 'comune']
-    list_display = ("title", "comune", "user_id")
+    fields = ['title', 'description', 'comune', 'slug']
+    list_display = ("title", "comune", "slug")
 
 
 @admin.register(Images)
