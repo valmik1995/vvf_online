@@ -32,7 +32,7 @@ Number of immagini: {{ post.images_set.all|length }}
 
 
       <div class="col pt-2 pl-2 d-flex flex-column position-static">
-        <h3 class="mb-0"><a href="../{{post.id}}/">{{post.comune.name}} ({{post.comune.provincia.codice_targa}}) - {{post.title}}</a></h3>
+        <h3 class="mb-0 notizia"><a href="../{{post.slug}}/">{{post.comune.name}} ({{post.comune.provincia.codice_targa}}) - {{post.title}}</a></h3>
         <p class="mb-auto">{{post.description}}</p>
 
 

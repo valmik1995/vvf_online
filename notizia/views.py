@@ -186,9 +186,13 @@ class NotiziaListViewProvincia(ListView):
     template_name = 'notizia/notizia_list.html'
 
     def get_queryset(self):
-        self.provincia = get_object_or_404(Provincia, name=self.kwargs['provincia'])
-        return Notizia.objects.filter(comune__provincia__name = self.provincia)
+        return Notizia.objects.filter(comune__provincia__name = self.kwargs['provincia'])
 
+class NotiziaListViewRegione(ListView):
+    template_name = 'notizia/notizia_list.html'
+
+    def get_queryset(self):
+        return Notizia.objects.filter(comune__provincia__regione__name = self.kwargs['regione'])
 
 
 # class NotiziaDeleteView(DeleteView):

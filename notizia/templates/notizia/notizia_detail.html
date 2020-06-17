@@ -14,17 +14,19 @@
 <div class="col-lg-3 col-md-4 col-6">
   <a href="/notizia/images/{{images.id}}/delete/" class="d-block mb-4 h-100">
         <img class="img-fluid img-thumbnail" src="{{ images.image.url }}" alt="">
-      </a>
+  </a>
 </div>
 {% endfor %}
 
-{% for video in object.videonotizia_set.all %}
-<div align="center" class="embed-responsive embed-responsive-16by9">
-    <video width="320" height="240" controls>
-        <source src="/media/{{ video.video }}" type="video/mp4">
-    </video>
-</div>
-{% endfor %}
+    {% for video in object.videonotizia_set.all %}
+    <div align="center" class="embed-responsive embed-responsive-16by9">
+        <video poster="" width="320" height="240" controls>
+            <source src="{{ video.video.url }}" type="video/mp4">
+        </video>
+
+    </div>
+    {% endfor %}
+
 
 
   </div>
