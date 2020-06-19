@@ -14,8 +14,8 @@
   <form id="post-form" method="post" class="notizia-form" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form|crispy }}
-    {{ form.media }}  
-    <input type="submit" />
+    {{ form.media }}
+    <input type="submit" value="Update" />
   </form>
 </div>
 

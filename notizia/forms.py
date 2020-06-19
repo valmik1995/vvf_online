@@ -1,5 +1,6 @@
 from dal import autocomplete
 from django import forms
+from bootstrap_datepicker_plus import DatePickerInput
 from notizia.models import Notizia, News, Country
 from notizia.validators import FileMimeValidator, FileMimeValidatorVideo
 
@@ -7,8 +8,11 @@ from notizia.validators import FileMimeValidator, FileMimeValidatorVideo
 class NotiziaForm(forms.ModelForm):
     class Meta:
         model = Notizia
-        fields = ['title','description','comune'] #make sure to mention field here, if nothing is mentioned then all will be required.
+        fields = ['title','description','comune', 'date'] #make sure to mention field here, if nothing is mentioned then all will be required.
 
+        widgets = {
+        'date': DatePickerInput(format='%m/%d/%Y'),
+        }
 
 class NotiziaFullForm(NotiziaForm): #extending form
     images = forms.FileField(widget=forms.ClearableFileInput(attrs={'multiple': True}), validators=[

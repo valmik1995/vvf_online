@@ -1,4 +1,5 @@
 import datetime
+from datetime import date
 from django.db import models
 from django.conf import settings
 from django.contrib.auth.models import User
@@ -79,12 +80,13 @@ class Notizia(models.Model):
     title = models.CharField(max_length=30)
     slug = models.SlugField(max_length = 250, null=True, blank=True, unique=True)
     description = models.TextField(null=True,blank=True)
+    date = models.DateTimeField()
     # citta = models.ForeignKey('comuni_italiani.Comune', on_delete=models.PROTECT)
     # citta = models.ForeignKey(Country, on_delete=models.CASCADE)
     comune = models.ForeignKey(Comune, on_delete=models.CASCADE)
     created_date = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
-
+    
     class Meta:
         ordering = ['-last_modified']
         verbose_name_plural = "Notizie"

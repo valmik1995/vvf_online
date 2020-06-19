@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_extensions',
     'django_celery_results',
+    'bootstrap_datepicker_plus',
+    'rest_framework',
     'celery',
     'watermarks',
     'caricamento',
@@ -48,6 +50,7 @@ INSTALLED_APPS = [
     'video',
     'compressor',
     'notizia',
+    'eventi',
     'imagekit',
 ]
 

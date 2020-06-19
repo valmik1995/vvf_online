@@ -60,17 +60,25 @@ def add_todo(request):
     else:
         raise Http404
 
-@login_required
-def notizia_update(request, pk, template_name='notizia/notizia_form_autocomplete.html'):
-    if request.user.is_superuser:
-        book= get_object_or_404(Notizia, pk=pk)
-    else:
-        book= get_object_or_404(Notizia, pk=pk, user=request.user)
-    form = NotiziaFullForm(request.POST or None, request.FILES or None, instance=book)
-    if form.is_valid():
-        form.save()
-        return redirect('notizia:notizia_list')
-    return render(request, template_name, {'form':form})
+
+# def notizia_update(request, pk, template_name='notizia/notizia_form_autocomplete.html'):
+#     if request.user.is_superuser:
+#         notizia= get_object_or_404(Notizia, pk=pk)
+#     else:
+#         notizia= get_object_or_404(Notizia, pk=pk, user=request.user)
+#     form = NotiziaFullForm(request.POST or None, request.FILES or None, instance=notizia)
+#     if form.is_valid():
+#         form.save()
+#         return redirect('notizia:notizia_list')
+#     return render(request, template_name, {'form':form})
+
+class NotiziaUpdateView(UpdateView):
+    model = Notizia
+    template_name_suffix = '_update_form'
+    form_class = NotiziaFullForm
+
+
+
 
 
 class NotiziaCreateView(CreateView):
