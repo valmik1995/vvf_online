@@ -28,6 +28,7 @@ urlpatterns = [
     url(r'^', include('caricamento.urls')),
     url(r'^', include('watermarks.urls')),
     path('video/', include('video.urls')),
+    path('eventi/', include('eventi.urls')),
     path('notizia/', include('notizia.urls')),
     path('favicon.ico', RedirectView.as_view(url=staticfiles_storage.url('images/templates/favicon.ico'))),
 ]

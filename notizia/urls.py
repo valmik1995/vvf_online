@@ -10,6 +10,7 @@ router.register('notizia', views.NotiziaView)
 app_name = 'notizia'
 
 urlpatterns = [
+    path('rest-framework/', include(router.urls)),
     path('create/', NotiziaCreateView.as_view(), name='notizia_create'),
     path('list/', NotiziaListView.as_view(), name='notizia_list'),
     path('<regione>', NotiziaListViewRegione.as_view(), name='notizia_list_regione'),
@@ -31,5 +32,4 @@ urlpatterns = [
     # path('add-todo', add_todo, name='add_todo'),
     # path('ajax-notizia', addNotiziaView, name='ajax-notizia'),
     # path('', HomePageView.as_view(), name='home'),
-    path('rest-framework/', include(router.urls)),
 ]

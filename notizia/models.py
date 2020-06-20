@@ -86,7 +86,7 @@ class Notizia(models.Model):
     comune = models.ForeignKey(Comune, on_delete=models.CASCADE)
     created_date = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
-    
+
     class Meta:
         ordering = ['-last_modified']
         verbose_name_plural = "Notizie"
