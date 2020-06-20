@@ -20,6 +20,12 @@ from django.core import serializers
 from django.views.decorators.csrf import csrf_exempt
 from django.views.generic.base import TemplateView
 from dal import autocomplete
+from rest_framework import viewsets
+from .serializers import NotiziaSerializer
+
+class NotiziaView(viewsets.ModelViewSet):
+    queryset = Notizia.objects.all()
+    serializer_class = NotiziaSerializer
 
 class ComuneAutocomplete(autocomplete.Select2QuerySetView):
     def get_queryset(self):

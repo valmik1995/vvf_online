@@ -8,5 +8,5 @@ ajax_router.register(r'', RelatedImageAJAXView)
 
 
 urlpatterns = [
-  url(r'^related_images/', include(ajax_router.urls)),
+    url(r'^related_images/', include(ajax_router.urls)),
 ]

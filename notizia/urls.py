@@ -1,9 +1,11 @@
 from django.conf.urls import url
-from django.urls import path, re_path
+from django.urls import path, re_path, include
 from . import views
 from .views import *
+from rest_framework import routers
 
-
+router = routers.DefaultRouter()
+router.register('notizia', views.NotiziaView)
 
 app_name = 'notizia'
 
@@ -29,4 +31,5 @@ urlpatterns = [
     # path('add-todo', add_todo, name='add_todo'),
     # path('ajax-notizia', addNotiziaView, name='ajax-notizia'),
     # path('', HomePageView.as_view(), name='home'),
+    path('rest-framework/', include(router.urls)),
 ]

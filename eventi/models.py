@@ -12,5 +12,5 @@ class Eventi(models.Model):
   description = models.TextField()
 
 class EventiImage(models.Model):
-  image = models.ForeignKey(RelatedImage)
-  eventi = models.ForeignKey(Eventi)
+  image = models.ForeignKey(RelatedImage, on_delete=models.CASCADE)
+  eventi = models.ForeignKey(Eventi, on_delete=models.CASCADE)

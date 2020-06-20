@@ -2,8 +2,6 @@ from django import forms
 from notizia.models import RelatedImage, Eventi, EventiImage
 
 
-
-
 class EventiForm(forms.ModelForm):
     image = forms.ModelChoiceField(
         queryset=RelatedImage.objects.all(),
