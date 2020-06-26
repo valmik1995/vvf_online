@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'notizia',
     'eventi',
     'imagekit',
+    'storia',
 ]
 
 MIDDLEWARE = [

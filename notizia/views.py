@@ -85,8 +85,6 @@ class NotiziaUpdateView(UpdateView):
 
 
 
-
-
 class NotiziaCreateView(CreateView):
     def get(self, request, *args, **kwargs):
         context = {'form': NotiziaFullForm()}
