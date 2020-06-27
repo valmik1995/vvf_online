@@ -22,22 +22,24 @@ def create_to_storia(request):
 
 class StoriaCreateView(CreateView):
     def get(self, request, *args, **kwargs):
-        context = {'form': storiaFullForm()}
-        return render(request, 'storia/storia_form_autocomplete.html', context)
+        context = {'form': StoriaModelForm()}
+        return render(request, 'storia/storia_form.html', context)
 
     def post(self, request, *args, **kwargs):
-        form = storiaFullForm(request.POST or None, request.FILES or None)
+        form = StoriaModelForm(request.POST or None, request.FILES or None)
         files = request.FILES.getlist('images')
         video = request.FILES.getlist('video')
         if form.is_valid():
-            storia = form.save()
+            storia = form.save(commit=False)
             storia.user = request.user
             storia.save()
             for f in files:
-                Images.objects.create(note_id=storia.id,image=f)
+                storia = StoriaFile(file=f, storia=storia_instance)
+                file.save()
 
             for v in video:
-                Videostoria.objects.create(note_id=storia.id,video=v)
+                storia = StoriaVideoFile(file=f, storia=storia_instance)
+                file.save()
 
             return HttpResponseRedirect(reverse_lazy('storia:storia_detail', args=[storia.id]))
-        return render(request, 'storia/storia_form_autocomplete.html', {'form': form})
+        return render(request, 'storia/storia_form.html', {'form': form})

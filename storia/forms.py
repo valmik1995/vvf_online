@@ -12,3 +12,11 @@ class StoriaFileModelForm(forms.ModelForm):
         widgets = {
             'file': ClearableFileInput(attrs={'multiple': True}),
         }
+
+class StoriaVideoFileModelForm(forms.ModelForm):
+    class Meta:
+        model = StoriaVideoFile
+        fields = ['file']
+        widgets = {
+            'file': ClearableFileInput(attrs={'multiple': True}),
+        }
