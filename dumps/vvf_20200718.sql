@@ -956,6 +956,113 @@ ALTER SEQUENCE public.notizia_video_id_seq OWNED BY public.notizia_videonotizia.
 
 
 --
+-- Name: storia_storia; Type: TABLE; Schema: public; Owner: vvf
+--
+
+CREATE TABLE public.storia_storia (
+    id integer NOT NULL,
+    text text NOT NULL,
+    user_id integer NOT NULL
+);
+
+
+ALTER TABLE public.storia_storia OWNER TO vvf;
+
+--
+-- Name: storia_storia_id_seq; Type: SEQUENCE; Schema: public; Owner: vvf
+--
+
+CREATE SEQUENCE public.storia_storia_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.storia_storia_id_seq OWNER TO vvf;
+
+--
+-- Name: storia_storia_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: vvf
+--
+
+ALTER SEQUENCE public.storia_storia_id_seq OWNED BY public.storia_storia.id;
+
+
+--
+-- Name: storia_storiafile; Type: TABLE; Schema: public; Owner: vvf
+--
+
+CREATE TABLE public.storia_storiafile (
+    id integer NOT NULL,
+    file character varying(100) NOT NULL,
+    storia_id integer NOT NULL,
+    title character varying(30)
+);
+
+
+ALTER TABLE public.storia_storiafile OWNER TO vvf;
+
+--
+-- Name: storia_storiafile_id_seq; Type: SEQUENCE; Schema: public; Owner: vvf
+--
+
+CREATE SEQUENCE public.storia_storiafile_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.storia_storiafile_id_seq OWNER TO vvf;
+
+--
+-- Name: storia_storiafile_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: vvf
+--
+
+ALTER SEQUENCE public.storia_storiafile_id_seq OWNED BY public.storia_storiafile.id;
+
+
+--
+-- Name: storia_storiavideofile; Type: TABLE; Schema: public; Owner: vvf
+--
+
+CREATE TABLE public.storia_storiavideofile (
+    id integer NOT NULL,
+    title character varying(30),
+    file character varying(100) NOT NULL,
+    storia_id integer NOT NULL
+);
+
+
+ALTER TABLE public.storia_storiavideofile OWNER TO vvf;
+
+--
+-- Name: storia_storiavideofile_id_seq; Type: SEQUENCE; Schema: public; Owner: vvf
+--
+
+CREATE SEQUENCE public.storia_storiavideofile_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.storia_storiavideofile_id_seq OWNER TO vvf;
+
+--
+-- Name: storia_storiavideofile_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: vvf
+--
+
+ALTER SEQUENCE public.storia_storiavideofile_id_seq OWNED BY public.storia_storiavideofile.id;
+
+
+--
 -- Name: taggit_tag; Type: TABLE; Schema: public; Owner: vvf
 --
 
@@ -1361,6 +1468,27 @@ ALTER TABLE ONLY public.notizia_videonotizia ALTER COLUMN id SET DEFAULT nextval
 
 
 --
+-- Name: storia_storia id; Type: DEFAULT; Schema: public; Owner: vvf
+--
+
+ALTER TABLE ONLY public.storia_storia ALTER COLUMN id SET DEFAULT nextval('public.storia_storia_id_seq'::regclass);
+
+
+--
+-- Name: storia_storiafile id; Type: DEFAULT; Schema: public; Owner: vvf
+--
+
+ALTER TABLE ONLY public.storia_storiafile ALTER COLUMN id SET DEFAULT nextval('public.storia_storiafile_id_seq'::regclass);
+
+
+--
+-- Name: storia_storiavideofile id; Type: DEFAULT; Schema: public; Owner: vvf
+--
+
+ALTER TABLE ONLY public.storia_storiavideofile ALTER COLUMN id SET DEFAULT nextval('public.storia_storiavideofile_id_seq'::regclass);
+
+
+--
 -- Name: taggit_tag id; Type: DEFAULT; Schema: public; Owner: vvf
 --
 
@@ -1555,6 +1683,18 @@ COPY public.auth_permission (id, name, content_type_id, codename) FROM stdin;
 130	Can change eventi image	32	change_eventiimage
 131	Can delete eventi image	32	delete_eventiimage
 132	Can view eventi image	32	view_eventiimage
+133	Can add storia	33	add_storia
+134	Can change storia	33	change_storia
+135	Can delete storia	33	delete_storia
+136	Can view storia	33	view_storia
+137	Can add storia file	34	add_storiafile
+138	Can change storia file	34	change_storiafile
+139	Can delete storia file	34	delete_storiafile
+140	Can view storia file	34	view_storiafile
+141	Can add storia video file	35	add_storiavideofile
+142	Can change storia video file	35	change_storiavideofile
+143	Can delete storia video file	35	delete_storiavideofile
+144	Can view storia video file	35	view_storiavideofile
 \.
 
 
@@ -1952,6 +2092,10 @@ COPY public.celery_taskmeta (id, task_id, status, result, date_done, traceback, 
 381	b8c47936-2338-4b10-9f0b-7f27ffefb95c	SUCCESS	\N	2020-06-17 04:51:16.842244	\N	\N	\N	\N	\N	\N	\N
 382	d77719c8-1e41-4d75-afb3-d55e4029a9c5	SUCCESS	\N	2020-06-17 05:18:20.138623	\N	\N	\N	\N	\N	\N	\N
 383	c5f9a7be-7568-4d74-be9e-647944f88e1c	SUCCESS	\N	2020-06-17 05:18:39.885563	\N	\N	\N	\N	\N	\N	\N
+384	29ef7a19-03f2-4a01-bdc7-538aa68ec8bc	SUCCESS	\N	2020-06-24 13:35:36.246692	\N	\N	\N	\N	\N	\N	\N
+385	f8298ba9-29c0-429c-89f3-d3614a6af633	SUCCESS	\N	2020-06-24 13:39:17.37634	\N	\N	\N	\N	\N	\N	\N
+386	d2fedcff-4089-4398-9d01-56b38445e83c	SUCCESS	\N	2020-06-24 13:41:13.118863	\N	\N	\N	\N	\N	\N	\N
+387	99b1def7-5cc5-475b-8457-53a2665029fd	SUCCESS	\N	2020-06-24 13:42:24.171885	\N	\N	\N	\N	\N	\N	\N
 \.
 
 
@@ -10059,6 +10203,13 @@ COPY public.django_admin_log (id, action_time, object_id, object_repr, action_fl
 8	2020-06-16 11:48:29.189781+02	20	Notizia object (20)	2	[]	17	1
 9	2020-06-18 16:37:45.250743+02	44	Images object (44)	3		16	1
 10	2020-06-18 16:37:45.262189+02	43	Images object (43)	3		16	1
+11	2020-06-26 16:05:46.867339+02	1	Storia object (1)	1	[{"added": {}}, {"added": {"name": "storia file", "object": "StoriaFile object (1)"}}]	33	1
+12	2020-06-26 16:05:53.757702+02	1	Storia object (1)	2	[]	33	1
+13	2020-06-26 16:11:17.028622+02	2	Storia object (2)	1	[{"added": {}}, {"added": {"name": "storia file", "object": "StoriaFile object (2)"}}]	33	1
+14	2020-06-26 16:11:23.55253+02	2	Storia object (2)	2	[{"deleted": {"name": "storia file", "object": "StoriaFile object (None)"}}]	33	1
+15	2020-06-26 16:11:39.565975+02	1	Storia object (1)	2	[{"deleted": {"name": "storia file", "object": "StoriaFile object (None)"}}]	33	1
+16	2020-06-27 11:18:49.126551+02	2	Storia object (2)	3		33	1
+17	2020-06-27 11:18:49.140744+02	1	Storia object (1)	3		33	1
 \.
 
 
@@ -10108,6 +10259,9 @@ COPY public.django_content_type (id, app_label, model) FROM stdin;
 30	eventi	eventi
 31	eventi	relatedimage
 32	eventi	eventiimage
+33	storia	storia
+34	storia	storiafile
+35	storia	storiavideofile
 \.
 
 
@@ -10163,6 +10317,9 @@ COPY public.django_migrations (id, app, name, applied) FROM stdin;
 66	notizia	0008_notizia_date	2020-06-17 12:16:08.134887+02
 67	eventi	0001_initial	2020-06-20 12:33:21.910011+02
 68	notizia	0009_auto_20200620_1033	2020-06-20 12:33:21.941965+02
+70	storia	0001_initial	2020-06-26 16:04:59.538951+02
+71	storia	0002_storiafile_title	2020-06-26 16:10:29.756391+02
+72	storia	0003_storiavideofile	2020-06-27 11:16:43.874291+02
 \.
 
 
@@ -10209,6 +10366,9 @@ COPY public.eventi_eventiimage (id, eventi_id, image_id) FROM stdin;
 --
 
 COPY public.eventi_relatedimage (id, image) FROM stdin;
+1	eventi_images/ad916aa_2.jpg
+2	eventi_images/ad916aa_4.jpg
+3	eventi_images/ad916aa_0.jpg
 \.
 
 
@@ -18205,7 +18365,7 @@ COPY public.notizia_notizia (id, title, description, created_date, last_modified
 21	INCENDIO FIENILE	Intervento in corso a Moiano di Città della Pieve, in provincia di Perugia, per l’incendio in un fienile: bruciate decine di covoni di paglia, fiamme circoscritte e sotto controllo. Tre squadre di vigili del fuoco al lavoro.	2020-06-16 11:15:02.236423+02	2020-06-16 11:48:01.744204+02	4668	1	incendio-fienile	2020-06-17 12:16:08.126572+02
 20	Incendio Fienile	Tre squadre di Vigili del fuoco al lavoro per bonificare e mettere in sicurezza il fienile di un’azienda agricola coinvolto stamattina da un incendio. Le fiamme hanno coinvolto anche alcuni mezzi all’interno. L’intervento dei Vigili del fuoco a Montescudo-Monte Colombo (RN)	2020-06-16 11:13:02.94204+02	2020-06-16 11:48:29.188352+02	4383	1	incendio-fienile-1	2020-06-17 12:16:08.126572+02
 25	INCENDIO AZIENDA AGRICOLA	I vigili del fuoco di Bologna sono impegnati dalla serata di ieri per spegnere l’incendio in un'azienda agricola in località Le Budrie. A bruciare circa 1.500 balle di fieno sistemate in un fienile vicino alle stalle: le squadre hanno spostato gli animali mettendoli in sicurezza e circoscritto il rogo che aveva avvolto l'intera struttura. L'intervento è ancora in corso per la bonifica e messa in sicurezza dell’area.	2020-06-16 11:53:31.068621+02	2020-06-16 11:53:31.078072+02	4281	1	2020/6/16/san-giovanni-in-persiceto/incendio-azienda-agricola	2020-06-17 12:16:08.126572+02
-24	Incendio Fienile	I Vigili del fuoco di Bergamo sono ancora al lavoro con diverse squadre, e il rinforzo dei volontari di Romano di Lombardia, bonificare l’area coinvolta nella notte dalle fiamme in un’azienda agricola a Brusaporto. A bruciare oltre 1.500 quintali di fieno e due macchinari imballatori.	2020-06-16 11:50:24.37469+02	2020-06-17 19:21:38.464625+02	1775	1	2020/6/16/bergamo-bergamo/incendio-fienile	2020-06-17 12:16:08+02
+24	Incendio Fienile	I Vigili del fuoco di Bergamo sono ancora al lavoro con diverse squadre, e il rinforzo dei volontari di Romano di Lombardia, bonificare l’area coinvolta nella notte dalle fiamme un’azienda agricola a Brusaporto. A bruciare oltre 1.500 quintali di fieno e due macchinari imballatori.	2020-06-16 11:50:24.37469+02	2020-06-21 17:31:39.390755+02	1775	1	2020/6/16/bergamo-bergamo/incendio-fienile	2020-06-17 12:16:08+02
 \.
 
 
@@ -18369,6 +18529,30 @@ COPY public.notizia_videonotizia (id, video, note_id) FROM stdin;
 
 
 --
+-- Data for Name: storia_storia; Type: TABLE DATA; Schema: public; Owner: vvf
+--
+
+COPY public.storia_storia (id, text, user_id) FROM stdin;
+\.
+
+
+--
+-- Data for Name: storia_storiafile; Type: TABLE DATA; Schema: public; Owner: vvf
+--
+
+COPY public.storia_storiafile (id, file, storia_id, title) FROM stdin;
+\.
+
+
+--
+-- Data for Name: storia_storiavideofile; Type: TABLE DATA; Schema: public; Owner: vvf
+--
+
+COPY public.storia_storiavideofile (id, title, file, storia_id) FROM stdin;
+\.
+
+
+--
 -- Data for Name: taggit_tag; Type: TABLE DATA; Schema: public; Owner: vvf
 --
 
@@ -18405,6 +18589,7 @@ COPY public.taggit_taggeditem (id, object_id, content_type_id, tag_id) FROM stdi
 --
 
 COPY public.video_video (id, title, content, video, video_480, video_720, formato, codino, posizione, logo) FROM stdin;
+212	Quarto		video/original/ad944aa.mp4		video/watermark/ad944aa.mp4	1280	CODIN	ORIZ	LOGO
 \.
 
 
@@ -18498,7 +18683,6 @@ COPY public.watermarks_notizia (id, title, text, created_date, last_modified, us
 --
 
 COPY public.watermarks_photo (id, title, file, file_watermark, uploaded_at) FROM stdin;
-115		photos/ad979aa_1.jpg	watermarks/ad979aa_1.jpg	2020-06-17 07:18:39.237029+02
 \.
 
 
@@ -18520,7 +18704,7 @@ SELECT pg_catalog.setval('public.auth_group_permissions_id_seq', 1, false);
 -- Name: auth_permission_id_seq; Type: SEQUENCE SET; Schema: public; Owner: vvf
 --
 
-SELECT pg_catalog.setval('public.auth_permission_id_seq', 132, true);
+SELECT pg_catalog.setval('public.auth_permission_id_seq', 144, true);
 
 
 --
@@ -18569,7 +18753,7 @@ SELECT pg_catalog.setval('public.comuni_italiani_comune_id_seq', 7904, true);
 -- Name: django_admin_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: vvf
 --
 
-SELECT pg_catalog.setval('public.django_admin_log_id_seq', 10, true);
+SELECT pg_catalog.setval('public.django_admin_log_id_seq', 17, true);
 
 
 --
@@ -18583,14 +18767,14 @@ SELECT pg_catalog.setval('public.django_celery_results_taskresult_id_seq', 1, tr
 -- Name: django_content_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: vvf
 --
 
-SELECT pg_catalog.setval('public.django_content_type_id_seq', 32, true);
+SELECT pg_catalog.setval('public.django_content_type_id_seq', 35, true);
 
 
 --
 -- Name: django_migrations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: vvf
 --
 
-SELECT pg_catalog.setval('public.django_migrations_id_seq', 68, true);
+SELECT pg_catalog.setval('public.django_migrations_id_seq', 72, true);
 
 
 --
@@ -18611,7 +18795,7 @@ SELECT pg_catalog.setval('public.eventi_eventiimage_id_seq', 1, false);
 -- Name: eventi_relatedimage_id_seq; Type: SEQUENCE SET; Schema: public; Owner: vvf
 --
 
-SELECT pg_catalog.setval('public.eventi_relatedimage_id_seq', 1, false);
+SELECT pg_catalog.setval('public.eventi_relatedimage_id_seq', 3, true);
 
 
 --
@@ -18657,6 +18841,27 @@ SELECT pg_catalog.setval('public.notizia_video_id_seq', 6, true);
 
 
 --
+-- Name: storia_storia_id_seq; Type: SEQUENCE SET; Schema: public; Owner: vvf
+--
+
+SELECT pg_catalog.setval('public.storia_storia_id_seq', 2, true);
+
+
+--
+-- Name: storia_storiafile_id_seq; Type: SEQUENCE SET; Schema: public; Owner: vvf
+--
+
+SELECT pg_catalog.setval('public.storia_storiafile_id_seq', 2, true);
+
+
+--
+-- Name: storia_storiavideofile_id_seq; Type: SEQUENCE SET; Schema: public; Owner: vvf
+--
+
+SELECT pg_catalog.setval('public.storia_storiavideofile_id_seq', 1, false);
+
+
+--
 -- Name: taggit_tag_id_seq; Type: SEQUENCE SET; Schema: public; Owner: vvf
 --
 
@@ -18674,7 +18879,7 @@ SELECT pg_catalog.setval('public.taggit_taggeditem_id_seq', 41, true);
 -- Name: task_id_sequence; Type: SEQUENCE SET; Schema: public; Owner: vvf
 --
 
-SELECT pg_catalog.setval('public.task_id_sequence', 383, true);
+SELECT pg_catalog.setval('public.task_id_sequence', 387, true);
 
 
 --
@@ -18688,7 +18893,7 @@ SELECT pg_catalog.setval('public.taskset_id_sequence', 1, false);
 -- Name: video_video_id_seq; Type: SEQUENCE SET; Schema: public; Owner: vvf
 --
 
-SELECT pg_catalog.setval('public.video_video_id_seq', 209, true);
+SELECT pg_catalog.setval('public.video_video_id_seq', 212, true);
 
 
 --
@@ -18709,7 +18914,7 @@ SELECT pg_catalog.setval('public.watermarks_notizia_id_seq', 169, true);
 -- Name: watermarks_photo_id_seq; Type: SEQUENCE SET; Schema: public; Owner: vvf
 --
 
-SELECT pg_catalog.setval('public.watermarks_photo_id_seq', 115, true);
+SELECT pg_catalog.setval('public.watermarks_photo_id_seq', 116, true);
 
 
 --
@@ -19062,6 +19267,30 @@ ALTER TABLE ONLY public.notizia_regione
 
 ALTER TABLE ONLY public.notizia_videonotizia
     ADD CONSTRAINT notizia_video_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: storia_storia storia_storia_pkey; Type: CONSTRAINT; Schema: public; Owner: vvf
+--
+
+ALTER TABLE ONLY public.storia_storia
+    ADD CONSTRAINT storia_storia_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: storia_storiafile storia_storiafile_pkey; Type: CONSTRAINT; Schema: public; Owner: vvf
+--
+
+ALTER TABLE ONLY public.storia_storiafile
+    ADD CONSTRAINT storia_storiafile_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: storia_storiavideofile storia_storiavideofile_pkey; Type: CONSTRAINT; Schema: public; Owner: vvf
+--
+
+ALTER TABLE ONLY public.storia_storiavideofile
+    ADD CONSTRAINT storia_storiavideofile_pkey PRIMARY KEY (id);
 
 
 --
@@ -19557,6 +19786,27 @@ CREATE INDEX notizia_video_note_id_63275625 ON public.notizia_videonotizia USING
 
 
 --
+-- Name: storia_storia_user_id_dcb4f44e; Type: INDEX; Schema: public; Owner: vvf
+--
+
+CREATE INDEX storia_storia_user_id_dcb4f44e ON public.storia_storia USING btree (user_id);
+
+
+--
+-- Name: storia_storiafile_storia_id_b9cdb536; Type: INDEX; Schema: public; Owner: vvf
+--
+
+CREATE INDEX storia_storiafile_storia_id_b9cdb536 ON public.storia_storiafile USING btree (storia_id);
+
+
+--
+-- Name: storia_storiavideofile_storia_id_e332c65d; Type: INDEX; Schema: public; Owner: vvf
+--
+
+CREATE INDEX storia_storiavideofile_storia_id_e332c65d ON public.storia_storiavideofile USING btree (storia_id);
+
+
+--
 -- Name: taggit_tag_name_58eb2ed9_like; Type: INDEX; Schema: public; Owner: vvf
 --
 
@@ -19786,6 +20036,30 @@ ALTER TABLE ONLY public.notizia_provincia
 
 ALTER TABLE ONLY public.notizia_videonotizia
     ADD CONSTRAINT notizia_video_note_id_63275625_fk_notizia_notizia_id FOREIGN KEY (note_id) REFERENCES public.notizia_notizia(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: storia_storia storia_storia_user_id_dcb4f44e_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: vvf
+--
+
+ALTER TABLE ONLY public.storia_storia
+    ADD CONSTRAINT storia_storia_user_id_dcb4f44e_fk_auth_user_id FOREIGN KEY (user_id) REFERENCES public.auth_user(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: storia_storiafile storia_storiafile_storia_id_b9cdb536_fk_storia_storia_id; Type: FK CONSTRAINT; Schema: public; Owner: vvf
+--
+
+ALTER TABLE ONLY public.storia_storiafile
+    ADD CONSTRAINT storia_storiafile_storia_id_b9cdb536_fk_storia_storia_id FOREIGN KEY (storia_id) REFERENCES public.storia_storia(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: storia_storiavideofile storia_storiavideofile_storia_id_e332c65d_fk_storia_storia_id; Type: FK CONSTRAINT; Schema: public; Owner: vvf
+--
+
+ALTER TABLE ONLY public.storia_storiavideofile
+    ADD CONSTRAINT storia_storiavideofile_storia_id_e332c65d_fk_storia_storia_id FOREIGN KEY (storia_id) REFERENCES public.storia_storia(id) DEFERRABLE INITIALLY DEFERRED;
 
 
 --
